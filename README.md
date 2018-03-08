@@ -1,5 +1,5 @@
 # dbVar (https://www.ncbi.nlm.nih.gov/dbvar)
-## dbVar is NCBI's database of genomic structural variation – insertions, deletions, duplications, inversions, mobile element insertions, translocations, and complex chromosomal rearrangements
+## dbVar is NCBI's database of human genomic structural variation â€“ insertions, deletions, duplications, inversions, mobile elements, and translocations
 ============================
 
 ### directory layout
