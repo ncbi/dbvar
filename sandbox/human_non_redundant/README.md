@@ -221,9 +221,9 @@ multiple platforms.
 Please see README files for deletions, insertions, and duplications and gains, 
 additional details.
 
-deletions README: https://github.com/ncbi/dbvar/blob/master/sandbox/human_non_redundant/del/README_del.md
-insertions README: coming soon
-duplications and gains README: coming a bit later
+* deletions README: https://github.com/ncbi/dbvar/blob/master/sandbox/human_non_redundant/del/README_del.md
+* insertions README: coming soon
+* duplications and gains README: coming a bit later
 
 # Brief Outline of algorithm used to generate NR-SVs.
 
