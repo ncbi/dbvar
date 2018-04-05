@@ -3,7 +3,7 @@
 ## ****This work is subject to change due to work in progress****
 
 ## Last updated: 
-04/04/18
+04/05/18
 
 ## Link to FTP site: 
 
@@ -29,18 +29,18 @@ The variant types in the NR "aggregated deletions and losses" file are:
 
 Records in the aggregated_deletion_loss files contain the following tab-separated fields.
 
-| chr | outer_most_start | outermost_stop | SV_count | variant_type | method | analysis | platform | study | SV |
+| chr | outermost_start | outermost_stop | SV_count | variant_type | method | analysis | platform | study | SV |
 
 
 ## Example record 1:
 
-chr | outer_most_start | outermost_stop | SV_count | variant_type | method | analysis | platform | study | SV 
+chr | outermost_start | outermost_stop | SV_count | variant_type | method | analysis | platform | study | SV 
 ----|------------------|----------------|----------|--------------|--------|----------|----------|-------|---
 1 | 10001 | 1535693 | 1  | deletion;  | Oligo_aCGH;  | Probe_signal_intensity; | NA;  | Boone2013;  | nssv1614481;
 
 ### Explanation:
 
-* The non-redundant coordinates for this record in dbvar are chr1, with
+* The non-redundant coordinates for this record in dbVar are chr1, with
 an outermost start of 10001 and outermost stop of 1535693.
 
 * The SV_count of 1 indicates there is only one SV with an exact match to the 
@@ -69,62 +69,25 @@ https://www.ncbi.nlm.nih.gov/dbvar/variants/nsv933473/
 
 ## Example record 2:
 
-chr | outer_most_start | outermost_stop | SV_count | variant_type | method | analysis | platform | study | SV 
+chr | outermost_start | outermost_stop | SV_count | variant_type | method | analysis | platform | study | SV 
 ----|------------------|----------------|----------|--------------|--------|----------|----------|-------|---
 1 | 72300544 | 72346418 | 7 | copy_number_loss;deletion; | Oligo_aCGH;Sequencing; | Probe_signal_intensity;Read_depth; | Agilent 24M aCGH;Illumina IIx; | Park2010;Ju2010; | nssv1423530:nssv1425248:nssv1428032:nssv1428830:nssv1434173:nssv1439464:nssv1420391;
 
 ### Explanation:
 
-* This is a more complicated example deletiion NR record containing multiple 
+* This is a more complicated example deletion NR record containing multiple 
 variants with multiple types, methods, and analyses from multiple studies, using 
 multiple platforms.
 
-# Mehods include eg:
+# Overview of all NR files 
 
-* BAC_aCGH
-* Curated
-* MLPA
-* Merging
-* Multiple
-* Not_provided
-* Oligo_aCGH
-* Optical_mapping
-* ROMA
-* SNP_array
-* Sequencing
-* qPCR
-* ROMA
-* SNP_array
-* Sequencing
-
-# Analyses include, eg:
-
-* Curated
-* Genotyping
-* Local_sequence_assembly
-* Manual_observation
-* Merging
-* Multiple
-* Not_provided
-* Optical_mapping
-* Other
-* Paired-end_mapping
-* Probe_signal_intensity
-* Read_depth
-* Read_depth_and_paired-end_mapping
-* SNP_genotyping_analysis
-* Sequence_alignment
-* Split_read_and_paired-end_mapping
-* Split_read_mapping
-* de_novo_sequence_assembly
-
-For an overview of all the NR files please see the README at
+Please see the README at
 
 https://github.com/ncbi/dbvar/tree/master/sandbox/human_non_redundant
 
 # Questions or feedback
 
-For questions or feedback please email John Garner at jg95r@nih.gov
+For questions or feedback please email John Garner at dbvar-dev@ncbi.nlm.nih.gov
 
 # Thank you!
 
