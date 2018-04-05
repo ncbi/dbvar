@@ -162,7 +162,6 @@ https://www.ncbi.nlm.nih.gov/dbvar/?term=nssv1614481
 
 * From the latter page you may click on the "Variant Region ID" on the left to see
 the variant's region in the NCBI Variation Viewer at:
-
 https://www.ncbi.nlm.nih.gov/dbvar/variants/nsv933473/
 
 ## Example record 2:
