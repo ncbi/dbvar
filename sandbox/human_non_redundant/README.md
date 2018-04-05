@@ -149,7 +149,7 @@ given placement.  This count does not include SVs with a partial match.
 * The method of "Oligo_aCGH" and the analysis of "Probe_signal_intensity" 
 indicate how the one variant was evaluated.
 
-* NA indicates the no platform was specified this one deletion variant.
+* NA indicates the no platform was specified for this one deletion variant.
 
 * Boone2013 is the study name as found in dbVar.
 
