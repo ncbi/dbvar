@@ -3,7 +3,7 @@
 ## ****This work is subject to change due to work in progress****
 
 ## Last updated: 
-04/04/18
+04/05/18
 
 ## Link to FTP site: 
 
@@ -138,7 +138,7 @@ chr | outer_most_start | outermost_stop | SV_count | variant_type | method | ana
 
 ### Explanation:
 
-* The non-redundant coordinates for this record in dbvar are chr1, with
+* The non-redundant coordinates for this record in dbVar are chr1, with
 an outermost start of 10001 and outermost stop of 1535693.
 
 * The SV_count of 1 indicates there is only one SV with an exact match to the 
@@ -173,11 +173,11 @@ chr | outer_most_start | outermost_stop | SV_count | variant_type | method | ana
 
 ### Explanation:
 
-* This is a more complicated example deletiion NR record containing multiple 
+* This is a more complicated example deletion NR record containing multiple 
 variants with multiple types, methods, and analyses from multiple studies, using 
 multiple platforms.
 
-# Mehods include eg:
+# Methods include e.g.:
 
 * BAC_aCGH
 * Curated
@@ -195,7 +195,7 @@ multiple platforms.
 * SNP_array
 * Sequencing
 
-# Analyses include, eg:
+# Analyses include, e.g.:
 
 * Curated
 * Genotyping
@@ -216,15 +216,18 @@ multiple platforms.
 * Split_read_mapping
 * de_novo_sequence_assembly
 
-# README files for del, dup and ins
+# README files for deletion, duplications and gains, and insertions
 
 Please see README files for deletions, insertions, and duplications and gains, 
-under the current GitHub directory for additional details.
+additional details.
+
+deletions README: https://github.com/ncbi/dbvar/blob/master/sandbox/human_non_redundant/del/README_del.md
+insertions README: coming soon
+duplications and gains README: coming a bit later
 
 # Brief Outline of algorithm used to generate NR-SVs.
 
-The algorithm makes use of existing processes, so it is not designed as if
-it had been done from the ground up.
+The algorithm makes use of previously existing scripts.
 
 Input files are generated from the dbVar database with tab separated values and
 contain SVs by assembly, type, and other relevant fields.
@@ -238,11 +241,11 @@ neccessary fields required by the nr process.
 The XML is then parsed to generate SV records with coordinates, type, 
 method, analysis, platform, insertion_length, SV accession and study.  
 
-The SV records are then proccessed to genearte the NR records described above. 
+The SV records are then proccessed to generate the NR records described above. 
 
 # Questions or feedback
 
-For questions or feedback please email John Garner at jg95r@nih.gov
+For questions or feedback please email John Garner at dbvar-dev@ncbi.nlm.nih.gov
 
 # Thank you!
 
