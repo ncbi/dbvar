@@ -36,7 +36,7 @@ Records in the aggregated_deletion_loss files contain the following tab-separate
 
 chr | outermost_start | outermost_stop | SV_count | variant_type | method | analysis | platform | study | SV 
 ----|------------------|----------------|----------|--------------|--------|----------|----------|-------|---
-1 | 10001 | 1535693 | 1  | deletion;  | Oligo_aCGH;  | Probe_signal_intensity; | NA;  | Boone2013;  | nssv1614481;
+1 | 10001 | 1535693 | 1  | deletion  | Oligo_aCGH  | Probe_signal_intensity | NA  | Boone2013  | nssv1614481
 
 ### Explanation:
 
@@ -71,7 +71,7 @@ https://www.ncbi.nlm.nih.gov/dbvar/variants/nsv933473/
 
 chr | outermost_start | outermost_stop | SV_count | variant_type | method | analysis | platform | study | SV 
 ----|------------------|----------------|----------|--------------|--------|----------|----------|-------|---
-1 | 72300544 | 72346418 | 7 | copy_number_loss;deletion; | Oligo_aCGH;Sequencing; | Probe_signal_intensity;Read_depth; | Agilent 24M aCGH;Illumina IIx; | Park2010;Ju2010; | nssv1423530:nssv1425248:nssv1428032:nssv1428830:nssv1434173:nssv1439464:nssv1420391;
+1 | 72300544 | 72346418 | 7 | copy_number_loss;deletion | Oligo_aCGH;Sequencing | Probe_signal_intensity;Read_depth | Agilent 24M aCGH;Illumina IIx | Park2010;Ju2010 | nssv1423530:nssv1425248:nssv1428032:nssv1428830:nssv1434173:nssv1439464:nssv1420391
 
 ### Explanation:
 
