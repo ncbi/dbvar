@@ -160,7 +160,7 @@ indicate how the one variant was evaluated.
 
 * URLs using the study name or variant_accession can be created to access the data
 in dbVar, e.g.:
-https://www.ncbi.nlm.nih.gov/dbvar/?term=Boone2013
+https://www.ncbi.nlm.nih.gov/dbvar/?term=Boone2013  
 https://www.ncbi.nlm.nih.gov/dbvar/?term=nssv1614481
 
 * From the latter page you may click on the "Variant Region ID" on the left to see
