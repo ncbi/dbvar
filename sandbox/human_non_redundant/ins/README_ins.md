@@ -62,7 +62,7 @@ indicate how the variant was evaluated.
 
 * URLs using the study name or variant_accession can be created to access the data
 in dbVar, e.g.:
-https://www.ncbi.nlm.nih.gov/dbvar/?term=Fan2017
+https://www.ncbi.nlm.nih.gov/dbvar/?term=Fan2017  
 https://www.ncbi.nlm.nih.gov/dbvar/?term=nssv14027289
 
 * From the latter page you may click on the "Variant Region ID" on the left to see
