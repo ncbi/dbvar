@@ -3,7 +3,7 @@
 ## ****This work is subject to change due to work in progress****
 
 ## Last updated: 
-04/05/18
+04/12/18
 
 ## Link to FTP site: 
 
@@ -104,26 +104,29 @@ NR coordinates | GRCh37 nr files
 
 # Files
 
-The "nr SVs" will be in six files on the FTP site:
+The "nr SVs" will be in six ASCII text files with tab-separated values on the 
+FTP site.
 
-## Available now:
+## Files available now:
 
 * del/all_nr_GRCh37_aggregated_deletion_loss.tsv
 * del/all_nr_GRCh38_aggregated_deletion_loss.tsv
 
 ftp://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/human_non_redundant/del
 
-## Coming soon:
-
 * ins/all_nr_GRCh37_aggregated_insertions.tsv  
 * ins/all_nr_GRCh38_aggregated_insertions.tsv  
 
-## Coming a bit later:
+ftp://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/human_non_redundant/ins
+
+## Files coming a bit later:
 
 * dup/all_nr_GRCh37_aggregated_duplication_gain.tsv  
 * dup/all_nr_GRCh38_aggregated_duplication_gain.tsv  
 
-# Records in the aggregated_deletion_loss files 
+# Example NR Records: 
+
+## Records in the aggregated_deletion_loss files 
 
 Records in the aggregated_deletion_loss files contain the following tab-separated fields.
 
@@ -132,7 +135,7 @@ Records in the aggregated_deletion_loss files contain the following tab-separate
 
 ## Example record 1:
 
-chr | outermost_start | outermost_stop | SV_count | variant_type | method | analysis | platform | study | SV 
+chr | outermost_start | outermost_stop | ssv_count | variant_type | method | analysis | platform | study | ssv 
 ----|------------------|----------------|----------|--------------|--------|----------|----------|-------|---
 1 | 10001 | 1535693 | 1  | deletion | Oligo_aCGH  | Probe_signal_intensity | NA  | Boone2013  | nssv1614481
 
@@ -141,8 +144,8 @@ chr | outermost_start | outermost_stop | SV_count | variant_type | method | anal
 * The non-redundant coordinates for this record in dbVar are chr1, with
 an outermost start of 10001 and outermost stop of 1535693.
 
-* The SV_count of 1 indicates there is only one SV with an exact match to the 
-given placement.  This count does not include SVs with a partial match.
+* The ssv_count of 1 indicates there is only one ssv with an exact match to the 
+given placement.  This count does not include ssvs with a partial match.
 
 * The variant_call_type is "deletion".
 
@@ -166,7 +169,7 @@ https://www.ncbi.nlm.nih.gov/dbvar/variants/nsv933473/
 
 ## Example record 2:
 
-chr | outermost_start | outermost_stop | SV_count | variant_type | method | analysis | platform | study | SV 
+chr | outermost_start | outermost_stop | ssv_count | variant_type | method | analysis | platform | study | ssv 
 ----|------------------|----------------|----------|--------------|--------|----------|----------|-------|---
 1 | 72300544 | 72346418 | 7 | copy_number_loss;deletion | Oligo_aCGH;Sequencing | Probe_signal_intensity;Read_depth | Agilent 24M aCGH;Illumina IIx | Park2010;Ju2010 | nssv1423530:nssv1425248:nssv1428032:nssv1428830:nssv1434173:nssv1439464:nssv1420391
 
@@ -215,13 +218,13 @@ multiple platforms.
 * Split_read_mapping
 * de_novo_sequence_assembly
 
-# README files for deletion, duplications and gains, and insertions
+# README files for deletion, insertions, and duplications and gains
 
 Please see README files for deletions, insertions, and duplications and gains, 
 additional details.
 
 * deletions README: https://github.com/ncbi/dbvar/blob/master/sandbox/human_non_redundant/del/README_del.md
-* insertions README: coming soon
+* insertions README: https://github.com/ncbi/dbvar/blob/master/sandbox/human_non_redundant/del/README_ins.md
 * duplications and gains README: coming a bit later
 
 # Brief Outline of algorithm used to generate NR-SVs.
@@ -244,12 +247,13 @@ The SV records are then proccessed to generate the NR records described above.
 
 # Questions or feedback
 
-For questions or feedback please email John Garner at dbvar-dev@ncbi.nlm.nih.gov
+* Please email John Garner at dbvar-dev@ncbi.nlm.nih.gov
+* Please create an issue on this GitHub page.
 
-# Thank you!
+# Thanks!
 
 Thanks for your interest in the dbVar human "non-redundant structural variations" (nr SVs) 
 data files from NCBI.
 
-Please check back soon for updates.
+Please check back for updates soon.
 
