@@ -1,6 +1,6 @@
 # dbVar Structural Variant (SV) Datasets
 
-## ****This is a work in progress and subject to change****
+## ****This is a work in progress and is subject to change****
 
 Advances in genomic technologies have revealed structural variations (SV) to be prevalent in all human DNA, and subsequent research has increasingly implicated SV in phenotypic diversity and disease. In the next few years millions of genomes will be sequenced, leading to the discovery of many millions of SVs that will need to be analyzed to understand their functional impacts. A critical step in variant analysis and interpretation is the comparison of SVs found in an individual or population with known variants extant in public databases such as dbVar. This "case-control"-like comparison is needed to gain biological insight into novel variants from existing variants and their annotations. To address this need, dbVar proposes the creation of structural variation reference datasets of known SV, complete with rich genomic and biological annotations, for use in novel SV analysis, annotaion, and related workflows.
 
