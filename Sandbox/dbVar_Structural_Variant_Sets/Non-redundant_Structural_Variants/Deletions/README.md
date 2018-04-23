@@ -5,9 +5,9 @@
 ## Last updated: 
 04/12/18
 
-## Link to FTP site: 
+## FTP Link: 
 
-ftp://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/human_non_redundant/del
+https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/human_non_redundant/del
 
 # Introduction
 
