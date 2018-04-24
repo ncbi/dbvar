@@ -2,12 +2,12 @@
 
 ## ****This work is subject to change due to work in progress****
 
-## Last updated: 
-04/12/18
+## Last updated:
+04/24/18
 
-## Link to FTP site: 
+## Link to FTP site:
 
-ftp://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/human_non_redundant/
+https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/human_non_redundant/
 
 # Introduction
 
@@ -21,12 +21,12 @@ An overview of "Structural Variation" is found here:
 
 ## Description of data files:
 
-Sets of "non-redundant structural variations" (nr SVs) derived from dbVar are 
-available via FTP as tab delimited files by assembly, GRCh37 & GRCh38, and by 
+Sets of "non-redundant structural variations" (nr SVs) derived from dbVar are
+available via FTP as tab delimited files by assembly, GRCh37 & GRCh38, and by
 type of variant.  
 
-Non-redundant refers to variant coordinates, i.e. chr, outermost start, and 
-outermost stop.  Please note: the non-redundant coordinates are based strictly 
+Non-redundant refers to variant coordinates, i.e. chr, outermost start, and
+outermost stop.  Please note: the non-redundant coordinates are based strictly
 on exact overlap of coordinates, not on partial overlaps.  
 
 ## Variant types
@@ -50,7 +50,7 @@ The variant types in each of the three "aggregation types" are:
    * copy_number_gain
    * copy_number_variation
    * duplication
-   * tandem_duplication 
+   * tandem_duplication
 
 * "aggregated insertions" include:
    * alu_insertion
@@ -90,7 +90,7 @@ sva_insertion |  1097 |  1087
 
 NR coordinates | GRCh38 nr files
 -----------|----------------------------------------------
-  2207235  | all_nr_GRCh38_aggregated_deletion_loss.tsv 
+  2207235  | all_nr_GRCh38_aggregated_deletion_loss.tsv
    326596  | all_nr_GRCh38_aggregated_duplication_gain.tsv
   1101221  | all_nr_GRCh38_aggregated_insertions.tsv
   3635052  | total
@@ -104,7 +104,7 @@ NR coordinates | GRCh37 nr files
 
 # Files
 
-The "nr SVs" will be in six ASCII text files with tab-separated values on the 
+The "nr SVs" will be in six ASCII text files with tab-separated values on the
 FTP site.
 
 ## Files available now:
@@ -124,9 +124,9 @@ ftp://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/human_non_redundant/ins
 * dup/all_nr_GRCh37_aggregated_duplication_gain.tsv  
 * dup/all_nr_GRCh38_aggregated_duplication_gain.tsv  
 
-# Example NR Records: 
+# Example NR Records:
 
-## Records in the aggregated_deletion_loss files 
+## Records in the aggregated_deletion_loss files
 
 Records in the aggregated_deletion_loss files contain the following tab-separated fields.
 
@@ -135,7 +135,7 @@ Records in the aggregated_deletion_loss files contain the following tab-separate
 
 ## Example record 1:
 
-chr | outermost_start | outermost_stop | ssv_count | variant_type | method | analysis | platform | study | ssv 
+chr | outermost_start | outermost_stop | ssv_count | variant_type | method | analysis | platform | study | ssv
 ----|------------------|----------------|----------|--------------|--------|----------|----------|-------|---
 1 | 10001 | 1535693 | 1  | deletion | Oligo_aCGH  | Probe_signal_intensity | NA  | Boone2013  | nssv1614481
 
@@ -144,12 +144,12 @@ chr | outermost_start | outermost_stop | ssv_count | variant_type | method | ana
 * The non-redundant coordinates for this record in dbVar are chr1, with
 an outermost start of 10001 and outermost stop of 1535693.
 
-* The ssv_count of 1 indicates there is only one ssv with an exact match to the 
+* The ssv_count of 1 indicates there is only one ssv with an exact match to the
 given placement.  This count does not include ssvs with a partial match.
 
 * The variant_call_type is "deletion".
 
-* The method of "Oligo_aCGH" and the analysis of "Probe_signal_intensity" 
+* The method of "Oligo_aCGH" and the analysis of "Probe_signal_intensity"
 indicate how the one variant was evaluated.
 
 * NA indicates the no platform was specified for this one deletion variant.
@@ -169,14 +169,14 @@ https://www.ncbi.nlm.nih.gov/dbvar/variants/nsv933473/
 
 ## Example record 2:
 
-chr | outermost_start | outermost_stop | ssv_count | variant_type | method | analysis | platform | study | ssv 
+chr | outermost_start | outermost_stop | ssv_count | variant_type | method | analysis | platform | study | ssv
 ----|------------------|----------------|----------|--------------|--------|----------|----------|-------|---
 1 | 72300544 | 72346418 | 7 | copy_number_loss;deletion | Oligo_aCGH;Sequencing | Probe_signal_intensity;Read_depth | Agilent 24M aCGH;Illumina IIx | Park2010;Ju2010 | nssv1423530:nssv1425248:nssv1428032:nssv1428830:nssv1434173:nssv1439464:nssv1420391
 
 ### Explanation:
 
-* This is a more complicated example deletion NR record containing multiple 
-variants with multiple types, methods, and analyses from multiple studies, using 
+* This is a more complicated example deletion NR record containing multiple
+variants with multiple types, methods, and analyses from multiple studies, using
 multiple platforms.
 
 # Methods include e.g.:
@@ -220,7 +220,7 @@ multiple platforms.
 
 # README files for deletion, insertions, and duplications and gains
 
-Please see README files for deletions, insertions, and duplications and gains, 
+Please see README files for deletions, insertions, and duplications and gains,
 additional details.
 
 * deletions README: https://github.com/ncbi/dbvar/blob/master/sandbox/human_non_redundant/del/README_del.md
@@ -234,16 +234,16 @@ The algorithm makes use of previously existing scripts.
 Input files are generated from the dbVar database with tab separated values and
 contain SVs by assembly, type, and other relevant fields.
 
-Selected type files are grouped into "aggregated type files" as specified above, 
+Selected type files are grouped into "aggregated type files" as specified above,
 by chr.
 
-The "aggregated type files" are converted into XML records containing all the 
+The "aggregated type files" are converted into XML records containing all the
 neccessary fields required by the nr process.
 
-The XML is then parsed to generate SV records with coordinates, type, 
+The XML is then parsed to generate SV records with coordinates, type,
 method, analysis, platform, insertion_length, SV accession and study.  
 
-The SV records are then proccessed to generate the NR records described above. 
+The SV records are then proccessed to generate the NR records described above.
 
 # Questions or feedback
 
@@ -252,8 +252,7 @@ The SV records are then proccessed to generate the NR records described above.
 
 # Thanks!
 
-Thanks for your interest in the dbVar human "non-redundant structural variations" (nr SVs) 
+Thanks for your interest in the dbVar human "non-redundant structural variations" (nr SVs)
 data files from NCBI.
 
 Please check back for updates soon.
-
