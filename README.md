@@ -5,6 +5,7 @@
 ### directory layout
 
     .
-    +-- specs                   # dbVar Design and Schema Specifications 
-    +-- tutorials               # Scripts and tutorials for using dbVar data
+    +-- Structural_Variant_Sets              # dbVar Reference SV Project & Data
+    +-- specs                                # dbVar Design and Schema Specifications     
+    +-- tutorials                            # Initial dir and README setup
     +-- README.md
