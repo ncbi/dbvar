@@ -7,7 +7,7 @@
 
 ## Link to FTP site:
 
-https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/human_non_redundant/del
+https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/human_non_redundant/dup
 
 # Introduction
 
