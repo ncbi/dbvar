@@ -5,7 +5,7 @@
 ### directory layout
 
     .
-    +-- Sandbox/dbVar_Structural_Variant_Sets      # dbVar Reference SV Project & Data 
+    +-- Sandbox/dbVar_Structural_Variant_Sets      # dbVar Reference SV Project & Data
     +-- specs                                      # dbVar Design and Schema Specifications     
-    +-- tutorials                                  # Initial dir and README setup 
+    +-- tutorials                                  # Initial dir and README setup
     +-- README.md
