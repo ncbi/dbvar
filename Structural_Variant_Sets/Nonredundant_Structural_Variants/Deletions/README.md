@@ -82,11 +82,11 @@ multiple platforms.
 
 Please see the README at
 
-https://github.com/ncbi/dbvar/tree/Tim-clean-up/Structural_Variant_Sets/Nonredundant_Structural_Variants
+https://github.com/ncbi/dbvar/Structural_Variant_Sets/Nonredundant_Structural_Variants
 
 # Questions or feedback
 
-* Please email dbvar@ncbi.nlm.nih.gov, or
+* Please email dbvar@ncbi.nlm.nih.gov or
 * Please create an issue on this GitHub page.
 
 # Thanks!

@@ -225,8 +225,8 @@ multiple platforms.
 Please see README files for deletions, insertions, and duplications and gains,
 additional details.
 
-* Deletions: https://github.com/ncbi/dbvar/blob/master/Structural_Variant_Sets/Nonredundant_Structural_Variants/Deletions/README.md
-* Insertions: https://github.com/ncbi/dbvar/blob/master/Structural_Variant_Sets/Nonredundant_Structural_Variants/Insertions/README.md
+* Deletions: https://github.com/ncbi/dbvar/Structural_Variant_Sets/Nonredundant_Structural_Variants/Deletions/README.md
+* Insertions: https://github.com/ncbi/dbvar/Structural_Variant_Sets/Nonredundant_Structural_Variants/Insertions/README.md
 * Duplications: coming a bit later
 
 # Brief Outline of algorithm used to generate NR-SVs.
@@ -249,7 +249,7 @@ The SV records are then proccessed to generate the NR records described above.
 
 # Questions or feedback
 
-* Please email dbvar@ncbi.nlm.nih.gov, or
+* Please email dbvar@ncbi.nlm.nih.gov or
 * Please create an issue on this GitHub page.
 
 # Thanks!
