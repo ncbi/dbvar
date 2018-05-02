@@ -7,7 +7,7 @@
 
 ## Link to FTP site:
 
-https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/human_non_redundant/
+https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/
 
 # Introduction
 
@@ -109,20 +109,22 @@ FTP site.
 
 ## Files available now:
 
-* del/all_nr_GRCh37_aggregated_deletion_loss.tsv
-* del/all_nr_GRCh38_aggregated_deletion_loss.tsv
+* all_nr_GRCh37_aggregated_deletion_loss.tsv.gz
+* all_nr_GRCh38_aggregated_deletion_loss.tsv.gz
 
-ftp://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/human_non_redundant/del
+https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/
 
-* ins/all_nr_GRCh37_aggregated_insertions.tsv  
-* ins/all_nr_GRCh38_aggregated_insertions.tsv  
+* all_nr_GRCh37_aggregated_insertions.tsv.gz
+* all_nr_GRCh38_aggregated_insertions.tsv.gz
 
-ftp://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/human_non_redundant/ins
+https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions/
 
 ## Files coming a bit later:
 
-* dup/all_nr_GRCh37_aggregated_duplication_gain.tsv  
-* dup/all_nr_GRCh38_aggregated_duplication_gain.tsv  
+* all_nr_GRCh37_aggregated_duplication_gain.tsv
+* all_nr_GRCh38_aggregated_duplication_gain.tsv
+
+https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications/
 
 # Example NR Records:
 
@@ -223,9 +225,9 @@ multiple platforms.
 Please see README files for deletions, insertions, and duplications and gains,
 additional details.
 
-* deletions README: https://github.com/ncbi/dbvar/blob/master/sandbox/human_non_redundant/del/README_del.md
-* insertions README: https://github.com/ncbi/dbvar/blob/master/sandbox/human_non_redundant/del/README_ins.md
-* duplications and gains README: coming a bit later
+* Deletions: https://github.com/ncbi/dbvar/blob/master/Structural_Variant_Sets/Nonredundant_Structural_Variants/Deletions/README.md
+* Insertions: https://github.com/ncbi/dbvar/blob/master/Structural_Variant_Sets/Nonredundant_Structural_Variants/Insertions/README.md
+* Duplications: coming a bit later
 
 # Brief Outline of algorithm used to generate NR-SVs.
 
@@ -247,7 +249,7 @@ The SV records are then proccessed to generate the NR records described above.
 
 # Questions or feedback
 
-* Please email John Garner at dbvar-dev@ncbi.nlm.nih.gov
+* Please email dbvar@ncbi.nlm.nih.gov, or
 * Please create an issue on this GitHub page.
 
 # Thanks!

@@ -7,15 +7,15 @@
 
 ## Link to FTP site:
 
-https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/human_non_redundant/ins
+https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions/
 
 # Introduction
 
 The non-redundant structural variants, "nr SVs", of type "insertion" are in two
 files on the FTP site:
 
-ins/all_nr_GRCh37_aggregated_insertions.tsv
-ins/all_nr_GRCh38_aggregated_insertions.tsv
+all_nr_GRCh37_aggregated_insertions.tsv.gz
+all_nr_GRCh38_aggregated_insertions.tsv.gz
 
 The variant types in the NR "aggregated insertions" file are:
 
@@ -85,11 +85,11 @@ platforms with different names, and having different insertion_lengths.
 
 Please see the README at
 
-https://github.com/ncbi/dbvar/tree/master/sandbox/human_non_redundant
+https://github.com/ncbi/dbvar/tree/Tim-clean-up/Structural_Variant_Sets/Nonredundant_Structural_Variants
 
 # Questions or feedback
 
-* Please email John Garner at dbvar-dev@ncbi.nlm.nih.gov
+* Please email dbvar@ncbi.nlm.nih.gov, or
 * Please create an issue on this GitHub page.
 
 # Thanks!

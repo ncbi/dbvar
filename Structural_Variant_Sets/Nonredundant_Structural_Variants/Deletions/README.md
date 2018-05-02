@@ -7,15 +7,15 @@
 
 ## FTP Link:
 
-https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/human_non_redundant/del
+https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/
 
 # Introduction
 
 The non-redundant structural variants, "nr SVs", of type "deletion" are in two
 files on the FTP site:
 
-del/all_nr_GRCh37_aggregated_deletion_loss.tsv
-del/all_nr_GRCh38_aggregated_deletion_loss.tsv
+all_nr_GRCh37_aggregated_deletion_loss.tsv.gz
+all_nr_GRCh38_aggregated_deletion_loss.tsv.gz
 
 The variant types in the NR "aggregated deletions and losses" file are:
 
@@ -82,11 +82,11 @@ multiple platforms.
 
 Please see the README at
 
-https://github.com/ncbi/dbvar/tree/master/sandbox/human_non_redundant
+https://github.com/ncbi/dbvar/tree/Tim-clean-up/Structural_Variant_Sets/Nonredundant_Structural_Variants
 
 # Questions or feedback
 
-* Please email John Garner at dbvar-dev@ncbi.nlm.nih.gov
+* Please email dbvar@ncbi.nlm.nih.gov, or
 * Please create an issue on this GitHub page.
 
 # Thanks!
