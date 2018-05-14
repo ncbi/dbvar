@@ -1,0 +1,2118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:simpleType name="positive-decimal">
+        <xs:annotation>
+            <xs:documentation>The positive-decimal type specifies a positive decimal value.</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:decimal">
+            <xs:minExclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="AlignmentCV">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="First Pass"/>
+            <xs:enumeration value="Second Pass"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="AnalysisTypeCV">
+        <xs:annotation>
+            <xs:documentation>
+                Controlled vocabulary for Analysis Type
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="BAC assembly"/>
+            <xs:enumeration value="Curated"/>
+            <xs:enumeration value="de novo and local sequence assembly"/>
+            <xs:enumeration value="de novo sequence assembly"/>
+            <xs:enumeration value="Genotyping"/>
+            <xs:enumeration value="Local sequence assembly"/>
+            <xs:enumeration value="Manual observation"/>
+            <xs:enumeration value="MCD analysis"/>
+            <xs:enumeration value="Merging"/>
+            <xs:enumeration value="Multiple"/>
+            <xs:enumeration value="Not provided"/>
+            <xs:enumeration value="One end anchored assembly"/>
+            <xs:enumeration value="Optical mapping"/>
+            <xs:enumeration value="Other"/>
+            <xs:enumeration value="Paired-end mapping"/>
+            <xs:enumeration value="Probe signal intensity"/>
+            <xs:enumeration value="Read depth"/>
+            <xs:enumeration value="Read depth and paired-end mapping"/>
+            <xs:enumeration value="Sequence alignment"/>
+            <xs:enumeration value="SNP genotyping analysis"/>
+            <xs:enumeration value="Split read and paired-end mapping"/>
+            <xs:enumeration value="Split read mapping"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="BreakpointPairCV">
+        <xs:annotation>
+            <xs:documentation>
+                Controlled vocabulary to identify if this is From or To in a breakpoint pair               
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="From"/>
+            <xs:enumeration value="To"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ClinicalSignificanceCV">
+        <xs:annotation>
+            <xs:documentation>
+                Controlled vocabulary for clinical_significance: Keeping only to support ISCA studies. Other studies should NOT have clinical_significance.
+                Studies with clinical_significance should be submitted directly to ClinVar.    
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Affects"/>
+            <xs:enumeration value="Benign"/>
+            <xs:enumeration value="Likely benign"/>
+            <xs:enumeration value="Likely pathogenic"/>
+            <xs:enumeration value="Pathogenic"/>
+            <xs:enumeration value="Uncertain significance"/>
+            <xs:enumeration value="not provided"/>
+            <xs:enumeration value="confers sensitivity"/>
+            <xs:enumeration value="drug response"/>
+            <xs:enumeration value="risk factor"/>
+            <xs:enumeration value="association"/>
+            <xs:enumeration value="protective"/>
+            <xs:enumeration value="other"/>
+            <xs:enumeration value="conflicting data from submitters"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="CollectionCV">
+        <xs:annotation>
+            <xs:documentation>
+                Controlled vocabulary for subject collection              
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="1000 Genomes">
+                <xs:annotation>
+                    <xs:documentation>
+                        Individual included in 1000 Genomes                
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Autism"> </xs:enumeration>
+            <xs:enumeration value="CEPH">
+                <xs:annotation>
+                    <xs:documentation>
+                        Individual included in CEPH panel                
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="HapMap">
+                <xs:annotation>
+                    <xs:documentation>
+                        Individual included in International HapMap Project               
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="HGDP">
+                <xs:annotation>
+                    <xs:documentation>
+                        Individual included in Human Genome Diversity Project                
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="NINDS">
+                <xs:annotation>
+                    <xs:documentation>
+                        Individual included in National Institute of Neurological Disorders and Stroke repository
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="OPGP">
+                <xs:annotation>
+                    <xs:documentation>
+                        Individual included in Ontario Population Genomics Platform
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="PDR">
+                <xs:annotation>
+                    <xs:documentation>
+                        Individual included in Polymorphism Discovery Resource                
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ContactRoleCV">
+        <xs:annotation>
+            <xs:documentation>
+                Controlled vocabulary for contact type    
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Submitter"/>
+            <xs:enumeration value="First author"/>
+            <xs:enumeration value="Senior author"/>
+            <xs:enumeration value="Curator"/>
+            <xs:enumeration value="Other"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ExperimentTypeCV">
+        <xs:annotation>
+            <xs:documentation>
+                Controlled vocabulary for Experiment Type    
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Discovery">
+                <xs:annotation>
+                    <xs:documentation>
+                        Experiment was used to discover structural variants               
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Validation">
+                <xs:annotation>
+                    <xs:documentation>
+                        Experiment was used to validate structural variants                
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Genotyping"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="GenomicPlacementMethodCV">
+        <xs:annotation>
+            <xs:documentation>
+                Controlled vocabulary for genomic placement methods, default is genomic placements received from submitter.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Remapped">
+                <xs:annotation>
+                    <xs:documentation>
+                        Original placement was mapped to another assembly using NCBI assembly-to-assembly remapping software. 
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Remapped ad-hoc">
+                <xs:annotation>
+                    <xs:documentation>
+                        Original placement was mapped to another assembly by ad-hoc method at NCBI.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Submitted artifact">
+                <xs:annotation>
+                    <xs:documentation>
+                        Original placement was on an unplaced contig which is an artifact of the assembly.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Submitted cytogenetic">
+                <xs:annotation>
+                    <xs:documentation>
+                        Variant location was identified by cytoband, which were placed on genome by NCBI. 
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Submitted genomic">
+                <xs:annotation>
+                    <xs:documentation>
+                        Original genomic placement provided by submitter.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Submitted HGVS">
+                <xs:annotation>
+                    <xs:documentation>
+                        Variant location was identified by HGVS nomenclature, in the hgvs_name field.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Remap failed">
+                <xs:annotation>
+                    <xs:documentation>
+                        Original placement did not successfully remap to specified assembly.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Submitted without placement on assembly">
+                <xs:annotation>
+                    <xs:documentation>
+                        Variant could not be placed on submitted assembly.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Submitted on non-INSDC assembly">
+                <xs:annotation>
+                    <xs:documentation>
+                        Submitted placement is on an assembly that is not in INSDC. Placements cannot be validated or loaded.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="LinkDbCV">
+        <xs:annotation>
+            <xs:documentation>
+                Controlled vocabulary for database Link, for an archive, phenotype, or sample resource                
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="AE"/>
+            <xs:enumeration value="BT"/>
+            <xs:enumeration value="BioProj"/>
+            <xs:enumeration value="BioSD"/>
+            <xs:enumeration value="ClinGen"/>
+            <xs:enumeration value="ClinVar"/>
+            <xs:enumeration value="CLONE"/>
+            <xs:enumeration value="CORIELL"/>
+            <xs:enumeration value="COSMIC"/>
+            <xs:enumeration value="dbGaP"/>
+            <xs:enumeration value="dbSNP"/>
+            <xs:enumeration value="dbSNP-batch"/>
+            <xs:enumeration value="dbVar"/>
+            <xs:enumeration value="DDBJ"/>
+            <xs:enumeration value="DGV"/>
+            <xs:enumeration value="DO"/>
+            <xs:enumeration value="EGA"/>
+            <xs:enumeration value="ENA"/>
+            <xs:enumeration value="GENBANK"/>
+            <xs:enumeration value="GENE"/>
+            <xs:enumeration value="GeneReviews"/>
+            <xs:enumeration value="GEO"/>
+            <xs:enumeration value="HP"/>
+            <xs:enumeration value="JAX"/>
+            <xs:enumeration value="MedGen"/>
+            <xs:enumeration value="MeSH"/>
+            <xs:enumeration value="MONDO"/>
+            <xs:enumeration value="OMIM"/>
+            <xs:enumeration value="Orphanet"/>
+            <xs:enumeration value="PROBE"/>
+            <xs:enumeration value="PubMed"/>
+            <xs:enumeration value="SNOMED"/>
+            <xs:enumeration value="SRA"/>
+            <xs:enumeration value="TRACE"/>
+            <xs:enumeration value="UMLS"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="MethodTypeCV">
+        <xs:annotation>
+            <xs:documentation>
+                Controlled vocabulary for Method Type
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="BAC aCGH"/>
+            <xs:enumeration value="Curated"/>
+            <xs:enumeration value="Digital array"/>
+            <xs:enumeration value="FISH"/>
+            <xs:enumeration value="Gene expression array"/>
+            <xs:enumeration value="Karyotyping"/>
+            <xs:enumeration value="MAPH"/>
+            <xs:enumeration value="MassSpec"/>
+            <xs:enumeration value="Merging"/>
+            <xs:enumeration value="Microsatellite genotyping"/>
+            <xs:enumeration value="MLPA"/>
+            <xs:enumeration value="Multiple complete digestion"/>
+            <xs:enumeration value="Multiple"/>
+            <xs:enumeration value="Not provided"/>
+            <xs:enumeration value="Oligo aCGH"/>
+            <xs:enumeration value="Optical mapping"/>
+            <xs:enumeration value="PCR"/>
+            <xs:enumeration value="qPCR"/>
+            <xs:enumeration value="ROMA"/>
+            <xs:enumeration value="RT-PCR"/>
+            <xs:enumeration value="Sequencing"/>
+            <xs:enumeration value="SNP array"/>
+            <xs:enumeration value="Southern"/>
+            <xs:enumeration value="Western"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="OriginCV">
+        <xs:annotation>
+            <xs:documentation>
+                Controlled vocabulary for Variant_call Origin                  
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Not tested"/>
+            <xs:enumeration value="de novo"/>
+            <xs:enumeration value="Maternal"/>
+            <xs:enumeration value="Paternal"/>
+            <xs:enumeration value="Present in both parents"/>
+            <xs:enumeration value="Tested - inconclusive"/>
+            <xs:enumeration value="Somatic"/>
+            <xs:enumeration value="Germline"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="PhenotypeLink">
+        <xs:complexContent>
+            <xs:extension base="LinkType">
+                <xs:attribute name="medgen_id" type="xs:string" use="optional"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:simpleType name="PlacementRankCV">
+        <xs:annotation>
+            <xs:documentation>
+                Controlled vocabulary for ranking placements
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="BestAvailable">
+                <xs:annotation>
+                    <xs:documentation>
+                        This is the best placement available in the assembly.
+                        (Regardless of whether it is submitted or remapped, single or multiple, first or second pass, genomic, cytogenetic, or HGVS)
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="NotBest">
+                <xs:annotation>
+                    <xs:documentation>
+                        There are better placements on the same assembly.    
+                        Indicates that this is a remapped placement that does not have the best coverage score.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Ad-hocRemapping">
+                <xs:annotation>
+                    <xs:documentation>
+                        This remmapped placement was generated using an unknown remapper algorithm, therefore of low confidence.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Artifact">
+                <xs:annotation>
+                    <xs:documentation>
+                        This placement is a submitted artifact, therefore of low confidence.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="NoPlacement">
+                <xs:annotation>
+                    <xs:documentation>
+                        There is no placement submitted or remapped on the assembly.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="PlacementsPerAssemblyCV">
+        <xs:annotation>
+            <xs:documentation>
+                Controlled vocabulary indicating if a placement is single or multiple within the same assembly.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Single">
+                <xs:annotation>
+                    <xs:documentation>
+                        This is the only placement in this assembly.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Multiple">
+                <xs:annotation>
+                    <xs:documentation>
+                        This is one of multiple placements in the same assembly.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="RemapFailureCodeCV">
+        <xs:annotation>
+            <xs:documentation>
+                Controlled vocabulary for remap failures
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Expanded"/>
+            <xs:enumeration value="LowCov"/>
+            <xs:enumeration value="NoAlign"/>
+            <xs:enumeration value="IDNotInAssembly"/>
+            <xs:enumeration value="Other"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="RecipientStatusCV">
+        <xs:annotation>
+            <xs:documentation>
+                Controlled vocabulary for placement Recipient                
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Ambiguous"/>
+            <xs:enumeration value="Known"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ReferenceTypeCV">
+        <xs:annotation>
+            <xs:documentation>
+                Controlled vocabulary for reference_type               
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Assembly"/>
+            <xs:enumeration value="Control tissue"/>
+            <xs:enumeration value="Other"/>
+            <xs:enumeration value="Sampleset"/>
+            <xs:enumeration value="Sample"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="SamplesetTypeCV">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Case">
+                <xs:annotation>
+                    <xs:documentation>
+                        Sampleset was Case-set            
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Control">
+                <xs:annotation>
+                    <xs:documentation>
+                        Sampleset was control-set               
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="SeqTypeCV">
+        <xs:annotation>
+            <xs:documentation>Controlled vocabulary for sequence type    
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="3_inner_flank">
+                <xs:annotation>
+                    <xs:documentation>
+                        last landmark affected by variant                 
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="3_outer_flank">
+                <xs:annotation>
+                    <xs:documentation>
+                        first unaffected landmark after variant                 
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="5_outer_flank">
+                <xs:annotation>
+                    <xs:documentation>
+                        last unaffected landmark before variant                 
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="5_inner_flank">
+                <xs:annotation>
+                    <xs:documentation>
+                        first landmark affected by variant                 
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="evidence_seq">
+                <xs:annotation>
+                    <xs:documentation>
+                        typically a sequence trace that shows the variant breakpoint, and which was used to make the variant call                 
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="support_seq">
+                <xs:annotation>
+                    <xs:documentation>
+                        typically the ID(s) of a probe(s) which were observed to have increased or decreased signal intensity, and so were used to call the variant                 
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="variant_seq">
+                <xs:annotation>
+                    <xs:documentation>
+                        the actual variant sequence; can either be literal sequence under 100bp, or a GENBANK accession containing the literal sequence if greater than 100bp                 
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="SexCV">
+        <xs:annotation>
+            <xs:documentation>
+                Controlled vocabulary for subject Sex                  
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Female"/>
+            <xs:enumeration value="Male"/>
+            <xs:enumeration value="Unknown"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="StrandTypeCV">
+        <xs:annotation>
+            <xs:documentation>
+                Controlled vocabulary for strand Type                 
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="+">
+                <xs:annotation>
+                    <xs:documentation>
+                        + strand             
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="-">
+                <xs:annotation>
+                    <xs:documentation>
+                        - strand              
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="not reported">
+                <xs:annotation>
+                    <xs:documentation>
+                        This value can be assigned by the converter if a value for strand is expected but was not submitted.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="StudyTypeCV">
+        <xs:annotation>
+            <xs:documentation>
+                Controlled vocabulary for Study Type                 
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Case-Control">
+                <xs:annotation>
+                    <xs:documentation>
+                        Comparison between healthy and diseased individuals.               
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Case-Set">
+                <xs:annotation>
+                    <xs:documentation>
+                        Disease-associated variation.                
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Collection">
+                <xs:annotation>
+                    <xs:documentation>
+                        A collection of variation                
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Control Set">
+                <xs:annotation>
+                    <xs:documentation>
+                        Variation in healthy population.                 
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Somatic">
+                <xs:annotation>
+                    <xs:documentation>
+                        Somatic Variation               
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Tumor vs. Matched-Normal">
+                <xs:annotation>
+                    <xs:documentation>
+                        Somatic variation detected from comparison of tumor to healthy tissue from the same individual.                 
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="SubjectAgeUnitsCV">
+        <xs:annotation>
+            <xs:documentation>
+                Controlled vocabulary for Study Type                 
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Day">
+                <xs:annotation>
+                    <xs:documentation>
+                        Subject Age in Days              
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Week">
+                <xs:annotation>
+                    <xs:documentation>
+                        Subject Age in Weeks                
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Month">
+                <xs:annotation>
+                    <xs:documentation>
+                        Subject Age in Months                 
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Year">
+                <xs:annotation>
+                    <xs:documentation>
+                        Subject Age in Years           
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="GDay">
+                <xs:annotation>
+                    <xs:documentation>
+                        Subject Gestational Age in Days                
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="GWeek">
+                <xs:annotation>
+                    <xs:documentation>
+                        Subject Gestational Age in Weeks                 
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="GMonth">
+                <xs:annotation>
+                    <xs:documentation>
+                        Subject Gestational Age in Months                
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ValidationResultCV">
+        <xs:annotation>
+            <xs:documentation>
+                Controlled vocabulary for Validation result                  
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Fail"/>
+            <xs:enumeration value="Pass"/>
+            <xs:enumeration value="Inconclusive"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="VariantCallTypeCV">
+        <xs:annotation>
+            <xs:documentation>
+                Controlled vocabulary for Variant Call
+                Type                  
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="complex substitution"/>
+            <xs:enumeration value="copy-neutral loss of heterozygosity"/>
+            <xs:enumeration value="copy number gain"/>
+            <xs:enumeration value="copy number loss"/>
+            <xs:enumeration value="copy number variation"/>
+            <xs:enumeration value="deletion"/>
+            <xs:enumeration value="mobile element deletion"/>
+            <xs:enumeration value="alu deletion"/>
+            <xs:enumeration value="line1 deletion"/>
+            <xs:enumeration value="sva deletion"/>
+            <xs:enumeration value="herv deletion"/>
+            <xs:enumeration value="duplication"/>
+            <xs:enumeration value="indel"/>
+            <xs:enumeration value="insertion"/>
+            <xs:enumeration value="interchromosomal translocation"/>
+            <xs:enumeration value="intrachromosomal translocation"/>
+            <xs:enumeration value="inversion"/>
+            <xs:enumeration value="mobile element insertion"/>
+            <xs:enumeration value="alu insertion"/>
+            <xs:enumeration value="herv insertion"/>
+            <xs:enumeration value="line1 insertion"/>
+            <xs:enumeration value="sva insertion"/>
+            <xs:enumeration value="novel sequence insertion"/>
+            <xs:enumeration value="sequence alteration"/>
+            <xs:enumeration value="short tandem repeat"/>
+            <xs:enumeration value="tandem duplication"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="VariantCallZygosityCV">
+        <xs:annotation>
+            <xs:documentation>
+                Controlled vocabulary for Variant_call Zygosity                  
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Hemizygous">
+                <xs:annotation>
+                    <xs:documentation>
+                        Hemizygous variant_call                
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Heterozygous">
+                <xs:annotation>
+                    <xs:documentation>
+                        Heterozygous variant_call               
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Homozygous">
+                <xs:annotation>
+                    <xs:documentation>
+                        Homozygous variant_call                
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="VariantRegionTypeCV">
+        <xs:annotation>
+            <xs:documentation>
+                Controlled vocabulary for Variant Region 
+                Type                  
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="complex substitution"/>
+            <xs:enumeration value="complex chromosomal rearrangement"/>
+            <xs:enumeration value="copy-neutral loss of heterozygosity"/>
+            <xs:enumeration value="copy number variation"/>
+            <xs:enumeration value="indel"/>
+            <xs:enumeration value="insertion"/>
+            <xs:enumeration value="inversion"/>
+            <xs:enumeration value="mobile element insertion"/>
+            <xs:enumeration value="mobile element deletion"/>
+            <xs:enumeration value="novel sequence insertion"/>
+            <xs:enumeration value="sequence alteration"/>
+            <xs:enumeration value="short tandem repeat"/>
+            <xs:enumeration value="tandem duplication"/>
+            <xs:enumeration value="translocation"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="LinkType">
+        <xs:attribute name="db" type="LinkDbCV" use="required">
+            <xs:annotation>
+                <xs:documentation>
+                    Database name from controlled vocabulary 
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="id" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation>
+                    Database ID
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="invalid" type="xs:boolean" use="optional">
+            <xs:annotation>
+                <xs:documentation>
+                    Indicates the link is not valid.                    
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    
+    <xs:complexType name="URLType">
+        <xs:attribute name="url" type="xs:anyURI" use="required">
+        </xs:attribute>
+        <xs:attribute name="invalid" type="xs:boolean" use="optional">
+            <xs:annotation>
+                <xs:documentation>
+                    Indicates the URL is not valid.                    
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    
+    <xs:complexType name="PlacementType">
+        <xs:sequence>
+            <xs:element name="GENOME" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Placement of the variant to a sequenced genome</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:attribute name="assembly" type="xs:string" use="required"/>
+                    <xs:attribute name="chr_name" type="xs:string" use="optional">
+                        <xs:annotation>
+                            <xs:documentation>chromosome name</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute name="contig_accession" type="xs:string" use="optional">
+                        <xs:annotation>
+                            <xs:documentation>contig accession</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute name="chr_accession" type="xs:string" use="optional">
+                        <xs:annotation>
+                            <xs:documentation>chromosome accession</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute name="outer_start" type="xs:positiveInteger" use="optional"/>
+                    <xs:attribute name="start" type="xs:positiveInteger" use="optional"/>
+                    <xs:attribute name="inner_start" type="xs:positiveInteger" use="optional"/>
+                    <xs:attribute name="stop" type="xs:positiveInteger" use="optional"/>
+                    <xs:attribute name="inner_stop" type="xs:positiveInteger" use="optional"/>
+                    <xs:attribute name="outer_stop" type="xs:positiveInteger"/>
+                    <xs:attribute name="ciposleft" type="xs:nonNegativeInteger" use="optional">
+                        <xs:annotation>
+                            <xs:documentation>The left confidence interval around start.  Use instead of outer_start when there are confidence intervals.</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute name="ciposright" type="xs:nonNegativeInteger" use="optional">
+                        <xs:annotation>
+                            <xs:documentation>The right confidence interval around start.  Use instead of inner_start when there are confidence intervals.</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute name="ciendleft" type="xs:nonNegativeInteger" use="optional">
+                        <xs:annotation>
+                            <xs:documentation>The left confidence interval around stop.  Use instead of inner_stop when there are confidence intervals.</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute name="ciendright" type="xs:nonNegativeInteger" use="optional">
+                        <xs:annotation>
+                            <xs:documentation>The right confidence interval around stop.  Use instead of outer_stop when there are confidence intervals.</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute name="remap_score" type="xs:float" use="optional"/>
+                    <xs:attribute name="strand" type="StrandTypeCV" use="optional"/>
+                    <xs:attribute name="assembly_unit" type="xs:string" use="optional">
+                        <xs:annotation>
+                            <xs:documentation>The assembly unit to which the mapped_id belongs</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute name="alignment" type="AlignmentCV" use="optional">
+                        <xs:annotation>
+                            <xs:documentation>First Pass means the remapping is based on the 'First Pass' or reciprocal best hit alignments. 'Second Pass' means the remapping is based on the non-reciprocal best hit alignments</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute name="remap_failure_code" type="RemapFailureCodeCV" use="optional"/>
+                    <xs:attribute name="placement_rank" type="PlacementRankCV" use="optional"/>
+                    <xs:attribute name="placements_per_assembly" type="PlacementsPerAssemblyCV"
+                        use="optional"/>
+                    <xs:attribute name="remap_diff_chr" use="optional" type="xs:boolean">
+                        <xs:annotation>
+                            <xs:documentation>1=remapped placement is on a different AC_ or NC_ chromosome than the source chromosome</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute name="remap_best_within_cluster" use="optional" type="xs:boolean">
+                        <xs:annotation>
+                            <xs:documentation>1=remapped placement was best-scoring placement within a cluster/overlap/subset on same chromosome and alignment (First Pass or Second Pass), and other remapped placements were dropped</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="CYTOGENETIC" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Placement of the variant to a cytogenetic band location</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:attribute name="taxonomy_id" use="required" type="xs:string">
+                        <xs:annotation>
+                            <xs:documentation>NCBI Taxonomy ID (https://www.ncbi.nlm.nih.gov/taxonomy)</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute name="cytoband" use="required" type="xs:string">
+                        <xs:annotation>
+                            <xs:documentation>eg 7p12-7p11.2</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="alt_status" type="RecipientStatusCV">
+            <xs:annotation>
+                <xs:documentation>indicate status for alternate placement</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="placement_method" type="GenomicPlacementMethodCV" use="optional"/>
+        <xs:attribute name="breakpoint_order" use="optional" type="BreakpointPairCV"/>
+    </xs:complexType>
+    <xs:complexType name="CallPlacementType">
+        <xs:annotation>
+            <xs:documentation>Variant Calls have an HGVS expression associated with a placement</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="PlacementType">
+                <xs:attribute name="hgvs_name" type="xs:string" use="optional"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="RegionPlacementType">
+        <xs:annotation>
+            <xs:documentation>Variant Regions may have variant_call_id, mutation_order, and mutation_molecule associated with a placement</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="PlacementType">
+                <xs:attribute name="variant_call_id" type="xs:string" use="optional"/>
+                <xs:attribute name="mutation_order" type="xs:positiveInteger" use="optional"/>
+                <xs:attribute name="mutation_molecule" type="xs:string" use="optional"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="ContactType">
+        <xs:attribute name="contact_role" type="ContactRoleCV" use="required"> </xs:attribute>
+        <xs:attribute name="first_name" use="optional" type="xs:string">
+            <xs:annotation>
+                <xs:documentation>
+                    The contact's first name. Must have either a first_name or a last_name.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="last_name" use="optional" type="xs:string"> </xs:attribute>
+        <xs:attribute name="contact_email" use="optional" type="xs:string">
+            <xs:annotation>
+                <xs:documentation>The email is optional in the submission because it can be obtained from myncbi_id.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="myncbi_id" type="xs:string">
+            <xs:annotation>
+                <xs:documentation>MyNCBI login system ID
+(https://www.ncbi.nlm.nih.gov/myncbi)</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="contact_phone" type="xs:string"/>
+        <xs:attribute name="affiliation_name" use="required" type="xs:string"> </xs:attribute>
+        <xs:attribute name="affiliation_address" type="xs:string"/>
+	<xs:attribute name="affiliation_url" type="xs:anyURI"/>
+	<xs:attribute name="affiliation_url_invalid" type="xs:boolean"/>
+    </xs:complexType>
+    <xs:complexType name="LibraryType">
+        <xs:complexContent>
+            <xs:extension base="LinkType">
+                <xs:attribute name="abbrev" type="xs:string" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="PhenotypeType">
+        <xs:sequence>
+            <xs:element name="DESCRIPTION" minOccurs="0" maxOccurs="1" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>optional phenotype description, although standard terms are preferred                  
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="LINK" type="PhenotypeLink"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="SeqType">
+        <xs:complexContent>
+            <xs:extension base="LinkType">
+                <xs:attribute name="sequence_type" type="SeqTypeCV" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="SUBMISSION">
+        <xs:annotation>
+            <xs:documentation>Top Level Submission Package</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="CONTACT" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="STUDY" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="SUBJECT" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="SAMPLESET" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="SAMPLE" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="EXPERIMENT" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="VARIANT_CALL" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="VARIANT_REGION" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="GENOTYPE" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="DELETED_VARIANTS" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="dbvar_schema_version" use="optional">
+                <xs:annotation>
+                    <xs:documentation>version of the XSD</xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:annotation>
+                        <xs:documentation>
+                            Versions used in submission files.
+                            Format: Major.Component.Update                 
+                            Major     = structural change in the model.
+                            Component = change such as addition of a new object
+                            Update    = minor change such as addition of CF type or update/addition/removal of a field.  
+                        </xs:documentation>
+                    </xs:annotation>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="2.0.0">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    May 18, 2010
+                                    Added SUBMISSION/version.
+                                    Added STRUCTVAR/VARIANT_SET/VARIANT/MERGED_VARIANT/id for merged variants.
+                                    Changed ANALYSIS/id, METHOD/id to positiveInteger in order to agree with exchange.
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:enumeration>
+                        <xs:enumeration value="2.1.0">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    Jun 8, 2010
+                                    Added HPO to PhenotypeType.
+                                    Replaced STRUCTVAR/VARIANT_SET/VARIANT/ALLELE/phenotype with STRUCTVAR/VARIANT_SET/VARIANT/ALLELE/PHENOTYPE.
+                                    Changed STRUCTVAR/VARIANT_SET/VARIANT/ALLELE string to STRUCTVAR/VARIANT_SET/VARIANT/ALLELE/DESCRIPTION.
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:enumeration>
+                        <xs:enumeration value="2.1.1">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    Jun 24, 2010
+                                    Added STUDY/NCBI_submission_id
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:enumeration>
+                        <xs:enumeration value="2.1.2">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    July 26, 2010
+                                    Add Curated to StudyType.
+                                    Add LSDB, MassSpec, Optical mapping to MethodTypeCV.
+                                    Added VARIANT/PLACEMENT/GENOME/placement_method, GenomicPlacementMethodCV. 
+                                    Moved STRUCTVAR/VARIANT_SET/VARIANT/ALLELE/DESCRIPTION to STRUCTVAR/VARIANT_SET/VARIANT/DESCRIPTION.
+                                    Removed STRUCTVAR/VARIANT_SET/VARIANT/notes, since DESCRIPTION will be used instead.
+                                    Added Library to SampleTypeCV, since it is in Exchange.xsd.
+                                    Added definitions to StudyTypeCV.
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:enumeration>
+                        <xs:enumeration value="2.1.3">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    August 12, 2010
+                                    Changed start, outer_start to nonNegativeInteger to allow for base 0.
+                                    Changed start, stop to optional for studies that only have outer_start, outer_stop.
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:enumeration>
+                        <xs:enumeration value="2.1.4">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    October 28, 2010
+                                    Added inner_start, inner_stop to placements.
+                                    Added Genomic to GenomicPlacementMethodCV.
+                                    Added SUBJECT/PEDIGREE/chromosome_complement.
+                                    Added Karyotype to MethodCV for validation.
+                                    Added AssemblyCV and use it in ANALYSIS/REFERENCE/assembly and PLACEMENT/GENOME/assembly.
+                                    Removed STRUCTVAR/base.
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:enumeration>
+                        <xs:enumeration value="2.1.5">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    November 18, 2010
+                                    Per STV-604, removed these from AlleleTypeCV:
+                                    Amplification, CNV, Deletion, DelIns, Duplication, Gain+Loss, LOH, Ring, Translocation.
+                                    Per STV-619, added ClinicalSignificanceCV.
+                                    Per STV-723, added ALLELE/loss_of_heterozygosity.
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:enumeration>
+                        <xs:enumeration value="2.1.6">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    December 3, 2010
+                                    Set VARIANT_SET to optional, since ISCA will submit instances to existing variants.  This also allows generation of temporary xml files with only instances.
+                                    STV-731: Add dbSNP to MethodTypeCV.
+                                    STV-732: Add "Conventional CGH" to MethodTypeCV.                                
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:enumeration>
+                        <xs:enumeration value="2.1.7">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    December 20, 2010  
+                                    STV-622: added GRCh37.p1, GRCh37.p2.                                
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:enumeration>
+                        <xs:enumeration value="2.1.8">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    January 19, 2011  
+                                    VLOAD-106: added Sscrofa9.  
+                                    STV-761: added SAMPLE/SAMPLESET/id.   
+                                    STV-709: Allow only 1 ANALYSIS/REFERENCE.                                  
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:enumeration>
+                        <xs:enumeration value="2.1.9">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    February 17, 2011  
+                                    STV-782: Removed ANALYSIS/REFERENCE/POOLED.
+                                    Allow ANALYSIS/REFERENCE/SAMPLE and SAMPLESET to be repeated. 
+                                    STV-783: Added VARIANT/ALLELE/mode_of_inheritence.                                    
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:enumeration>
+                        <xs:enumeration value="2.1.10">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    March 14, 2011  
+                                    VLOAD-100: added Btau_4.0.                                   
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:enumeration>
+                        <xs:enumeration value="2.1.11">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    April 19, 2011  
+                                    VLOAD-13: Although SUBMISSION/submission_id is required in the Exchange.xsd, STUDY/NCBI_submission_id should be optional since it is not included in FTP files.                                   
+                                    VLOAD-128, STV-797: Added STUDY/ALIASES/alias.
+                                    VLOAD-129: Made sampleset id's integer.
+                                    VLOAD-132: Replaced Everted with "Tandem duplication" in AlleleTypeCV.
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:enumeration>
+                        <xs:enumeration value="2.1.12">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    July 7, 2011  
+                                    STV-674: Changed values in GenomePlacementMethodCV.
+                                    STV-888: Added PlacementType/remap_score.
+                                    STV-731, STV-800: Removed 'Sequence alingnment', 'Read-depth analysis', 'Paired-end mapping', 'SNP genotyping analysis',
+                                            'Composite Approach', dbSNP, LSDB from MethodTypeCV.
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:enumeration>
+                        <xs:enumeration value="3.0.0">
+                            <!-- LATEST VERSION: 3.0.0 -->
+                            <xs:annotation>
+                                <xs:documentation>
+                                    August 24, 2011  
+                                    STV-950: Major updates for new submission template. 
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:enumeration>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="vload_id" use="required" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>
+                        Jira issue number for the study, i.e. VLOAD-123.           
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="study_id" use="required" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>
+                        Submitter study_id in the form of 'AuthorYear'                       
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="CONTACT" type="ContactType">
+        <xs:annotation>
+            <xs:documentation>
+                Submitter or other contact.
+            </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+
+    <xs:element name="STUDY">
+        <xs:annotation>
+            <xs:documentation>
+                Details of study         
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="DESCRIPTION" type="xs:string" maxOccurs="1" minOccurs="1"/>
+                <xs:element name="ORGANISM" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:attribute name="taxonomy_id" use="required" type="xs:positiveInteger">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    NCBI Taxonomy ID (https://www.ncbi.nlm.nih.gov/taxonomy)                                 
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="PUBLICATION" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:attribute name="pubmed_id" use="required" type="xs:positiveInteger">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    NCBI PubMed ID (https://www.ncbi.nlm.nih.gov/pubmed/)                                    
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="ALIASES" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation>This gets indexed.  Use this for alternate names, as for 1000 genomes.</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:attribute name="alias" use="required" type="xs:string"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="LINK" type="LinkType" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation>generic study links</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="bioproject_accession" use="optional" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>
+                        BioProject accession (https://www.ncbi.nlm.nih.gov/bioproject)
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="study_url" use="optional" type="xs:anyURI">
+                <xs:annotation>
+                    <xs:documentation>
+                        Submitter location of data eg PI lab                       
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+    	    <xs:attribute name="study_url_invalid" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>
+                        Indicates the study URL is not valid.                    
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="dbGaP_id" use="optional" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>
+                        dbGaP identifier                       
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="ega_id" use="optional" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>
+                        EGA identifier                       
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="study_accession" use="optional" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>
+                        dbVar / DGVa assigned accession for the study                                  
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="study_type" use="required" type="StudyTypeCV">
+                <xs:annotation>
+                    <xs:documentation>                     
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="hold_date" use="optional" type="xs:date">
+                <xs:annotation>
+                    <xs:documentation>
+                        Date of scheduled release of data                         
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="is_indirect_submission" use="optional" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Enter 1 if this study was loaded by NCBI/EBI from historical data
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="dbGaP_release_date" use="optional" type="xs:date"/>
+            <xs:attribute name="submitter_version" use="optional" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>
+                        When a study is updated and linked to an external data source (e.g. COSMIC) this attribute indicates the version/date of the external data source                         
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="last_updated_date" use="optional" type="xs:date">
+                <xs:annotation>
+                    <xs:documentation>
+                        For updating studies, the freeze date of the newly submitted data                         
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="is_curated" use="optional" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>
+                        Indicates the study is curated.                      
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="EXPERIMENT">
+        <xs:annotation>
+            <xs:documentation>
+                Details of methods used to generate raw data                                                        
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="METHOD" minOccurs="1" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>
+                            Details of method used to generate data                                                        
+                        </xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element maxOccurs="1" minOccurs="0" name="DESCRIPTION"
+                                type="xs:string">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        Free text method description                                                      
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="method_type" use="required" type="MethodTypeCV"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:choice minOccurs="0">
+                    <xs:element maxOccurs="1" minOccurs="1" name="DISCOVERY_ANALYSIS">
+                        <xs:annotation>
+                            <xs:documentation>
+								Analysis of the data provided by the method                                                   
+							</xs:documentation>
+                        </xs:annotation>
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element maxOccurs="1" minOccurs="0" name="DESCRIPTION"
+                                    type="xs:string">
+                                    <xs:annotation>
+                                        <xs:documentation>
+										Free text description of the analysis                                                   
+									</xs:documentation>
+                                    </xs:annotation>
+                                </xs:element>
+                            </xs:sequence>
+                            <xs:attribute name="analysis_type" type="AnalysisTypeCV" use="required">
+                                <xs:annotation>
+                                    <xs:documentation>
+									Analysis type, from AnalysisTypeCV                                                   
+								</xs:documentation>
+                                </xs:annotation>
+                            </xs:attribute>
+                            <xs:attribute name="reference_type" type="ReferenceTypeCV"
+                                use="required">
+                                <xs:annotation>
+                                    <xs:documentation>
+	                	                Reference Type, from ReferenceTypeCV                                                  
+	                	            </xs:documentation>
+                                </xs:annotation>
+                            </xs:attribute>
+                            <xs:attribute name="reference_value" type="xs:string" use="required">
+                                <xs:annotation>
+                                    <xs:documentation>
+	                	                Reference value                                                   
+	                	            </xs:documentation>
+                                </xs:annotation>
+                            </xs:attribute>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element maxOccurs="1" minOccurs="1" name="VALIDATION_ANALYSIS">
+                        <xs:annotation>
+                            <xs:documentation>
+								Analysis of the data provided by the method                                                   
+							</xs:documentation>
+                        </xs:annotation>
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element maxOccurs="1" minOccurs="0" name="DESCRIPTION"
+                                    type="xs:string">
+                                    <xs:annotation>
+                                        <xs:documentation>
+										Free text description of the analysis                                                   
+									</xs:documentation>
+                                    </xs:annotation>
+                                </xs:element>
+                            </xs:sequence>
+                            <xs:attribute name="analysis_type" type="AnalysisTypeCV" use="required">
+                                <xs:annotation>
+                                    <xs:documentation>
+									Analysis type, from AnalysisTypeCV                                                   
+								</xs:documentation>
+                                </xs:annotation>
+                            </xs:attribute>
+                            <xs:attribute name="reference_type" type="ReferenceTypeCV"
+                                use="optional">
+                                <xs:annotation>
+                                    <xs:documentation>
+	                	                Reference Type, from ReferenceTypeCV                                                  
+	                	            </xs:documentation>
+                                </xs:annotation>
+                            </xs:attribute>
+                            <xs:attribute name="reference_value" type="xs:string" use="optional">
+                                <xs:annotation>
+                                    <xs:documentation>
+	                	                Reference value                                                   
+	                	            </xs:documentation>
+                                </xs:annotation>
+                            </xs:attribute>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element maxOccurs="1" minOccurs="1" name="GENOTYPING_ANALYSIS">
+                        <xs:annotation>
+                            <xs:documentation>
+								Analysis of the data provided by the method                                                   
+							</xs:documentation>
+                        </xs:annotation>
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element maxOccurs="1" minOccurs="0" name="DESCRIPTION"
+                                    type="xs:string">
+                                    <xs:annotation>
+                                        <xs:documentation>
+										Free text description of the analysis                                                   
+									</xs:documentation>
+                                    </xs:annotation>
+                                </xs:element>
+                            </xs:sequence>
+                            <xs:attribute name="analysis_type" type="AnalysisTypeCV" use="required">
+                                <xs:annotation>
+                                    <xs:documentation>
+									Analysis type, from AnalysisTypeCV                                                   
+								</xs:documentation>
+                                </xs:annotation>
+                            </xs:attribute>
+                            <xs:attribute name="reference_type" type="ReferenceTypeCV"
+                                use="optional">
+                                <xs:annotation>
+                                    <xs:documentation>
+	                	                Reference Type, from ReferenceTypeCV                                                  
+	                	            </xs:documentation>
+                                </xs:annotation>
+                            </xs:attribute>
+                            <xs:attribute name="reference_value" type="xs:string" use="optional">
+                                <xs:annotation>
+                                    <xs:documentation>
+	                	                Reference value                                                   
+	                	            </xs:documentation>
+                                </xs:annotation>
+                            </xs:attribute>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:choice>
+                <xs:element name="DETECTION" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="DESCRIPTION" type="xs:string" minOccurs="0"
+                                maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation>Details of software/algorithm parameters used </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="detection_method" use="optional" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    Short description or keywords for software/algorithm(s) used eg ADM2, Birdsuite, BrkPtr, CNVFinder                      
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="PLATFORM" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="LINK" type="LinkType" minOccurs="0"
+                                maxOccurs="unbounded">
+                                <xs:annotation>
+                                    <xs:documentation>Platform links.</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="platform_name" use="optional" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    Name of  sequencing platform eg Capillary, 454, Helicos, Solexa, SOLiD or name of array platform if not in GEO or Array Express                                               
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="LINK" maxOccurs="unbounded" minOccurs="0">
+                    <xs:complexType>
+                        <xs:choice>
+                            <xs:element name="DB_ID" type="LinkType" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="URL" type="URLType" minOccurs="1" maxOccurs="1"/>
+                        </xs:choice>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="LIBRARY" type="LibraryType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="CURATION" minOccurs="0" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:attribute name="curator_name" use="required" type="xs:string"/>
+                        <xs:attribute name="curator_email" use="required" type="xs:string"/>
+                        <xs:attribute name="curated_set_name" use="optional" type="xs:string"/>
+                        <xs:attribute name="curated_set_link" use="optional" type="xs:anyURI"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="MERGED_EXPERIMENT" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation>
+                            IDs of experiments merged to make this one                                                  
+                        </xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:attribute name="merged_experiment_id" use="required"
+                            type="xs:positiveInteger"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="experiment_id" use="required" type="xs:positiveInteger">
+                <xs:annotation>
+                    <xs:documentation>
+                        id of the experiment supplied by submitter                        
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="sra_accession" use="optional" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>
+                        SRA Experiment accession (https://www.ncbi.nlm.nih.gov/books/NBK47529/#_SRA_Quick_Sub_BK_Experiment_)
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="experiment_type" use="optional" type="ExperimentTypeCV"/>
+            <xs:attribute name="site" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>For multicenter studies, the location where the experiment took place</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="experiment_resolution" use="optional" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>
+                                    Estimate of the resolution (kb)                        
+                                </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="SAMPLESET">
+        <xs:annotation>
+            <xs:documentation>
+                Details of each sampleset/population used in the study                       
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="DESCRIPTION" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="ORGANISM" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:attribute name="taxonomy_id" use="required" type="xs:positiveInteger">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    NCBI Taxonomy ID (https://www.ncbi.nlm.nih.gov/taxonomy)                                 
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="PHENOTYPE" maxOccurs="1" minOccurs="0" type="PhenotypeType"
+                    form="unqualified"/>
+            </xs:sequence>
+            <xs:attribute name="sampleset_id" use="required" type="xs:positiveInteger">
+                <xs:annotation>
+                    <xs:documentation>
+                        Sampleset ID supplied by submitter                  
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="sampleset_name" use="optional" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>
+                        Submitter defined sampleset  name                       
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="sampleset_size" use="required" type="xs:nonNegativeInteger">
+                <xs:annotation>
+                    <xs:documentation>
+                        Number of samples in sampleset                        
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="sampleset_type" type="SamplesetTypeCV" use="optional"> </xs:attribute>
+            <xs:attribute name="sampleset_sex" use="optional" type="SexCV"/>
+            <xs:attribute name="sampleset_population" use="optional" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>            
+                        Population of the sampleset                        
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="SAMPLE">
+        <xs:annotation>
+            <xs:documentation>
+                Details of each sample used in the study                
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SAMPLESET" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:attribute name="sampleset_id" type="xs:positiveInteger" use="required">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    Sample sampleset_id                           
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="LINK" maxOccurs="unbounded" minOccurs="0" type="LinkType">
+                    <xs:annotation>
+                        <xs:documentation>
+                            If sample information has been deposited to a samples database (e.g. BioSD), or is commercially available (e.g. from the Jackson Laboratory) provide the details                                       
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="sample_id" use="required" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>
+                        Sample ID supplied by submitter                        
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="sample_cell_type" use="optional" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>
+                        Cell/tissue type from which the sample was obtained                    
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="subject_id" use="required" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>
+                        Reference to subject ID supplied by submitter                        
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="sample_attribute" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>cancer, histology, toxicology,...</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="sample_cancer" use="optional" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>
+                        1 if sample was derived from cancerous cells or tissue                   
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="sample_karyotype" use="optional" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>            
+                        The sample's karyotype in ISCN notation, e.g. 47,XXY or 46,XY,t(12;16)(q13;p11)  
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="biosample_accession" use="optional" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>            
+                        Sample accession from EBI or NCBI BioSample
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="SUBJECT">
+        <xs:annotation>
+            <xs:documentation>
+                Details of each subject/individual used in the study                
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="PHENOTYPE" maxOccurs="1" minOccurs="0" type="PhenotypeType"/>
+            </xs:sequence>
+            <xs:attribute name="subject_id" use="required" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>
+                        Subject ID supplied by submitter                                
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="subject_taxonomy_id" use="required" type="xs:positiveInteger">
+                <xs:annotation>
+                    <xs:documentation>
+                        NCBI tax ID  (https://www.ncbi.nlm.nih.gov/taxonomy)                              
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="subject_maternal_id" use="optional" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>
+                        Reference to maternal Subject ID           
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="subject_paternal_id" use="optional" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>
+                        Reference to paternal Subject ID                   
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="subject_sex" use="optional" type="SexCV"/>
+            <xs:attribute name="subject_collection" use="optional" type="CollectionCV">
+                <xs:annotation>
+                    <xs:documentation>            
+                          Indicates if the subject is included in either the International HapMap Project (HapMap) or Human Genome Diversity Project (HGDP)                   
+                     </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="subject_karyotype" use="optional" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>            
+                          The subject's karyotype in ISCN notation, e.g. 47,XXY or 46,XY,t(12;16)(q13;p11)  
+                     </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="subject_population" use="optional" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>
+                        Free-form subject ethnicity as defined by submitter                                             
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="subject_age" use="optional" type="positive-decimal">
+                <xs:annotation>
+                    <xs:documentation>            
+                        The subject's age                        
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="subject_age_units" use="optional" type="SubjectAgeUnitsCV">
+                <xs:annotation>
+                    <xs:documentation>            
+                        The subject's age units                       
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="VARIANT_CALL">
+        <xs:annotation>
+            <xs:documentation>
+            Details of each variant call identified in the study        
+        </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="VALIDATION" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:attribute name="experiment_id" use="required" type="xs:positiveInteger"/>
+                        <xs:attribute name="result" use="required" type="ValidationResultCV"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="DESCRIPTION" maxOccurs="1" minOccurs="0" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Free-form description of variant</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:choice>
+                    <xs:element name="SAMPLE" maxOccurs="1" minOccurs="1">
+                        <xs:complexType>
+                            <xs:attribute name="sample_id" use="required" type="xs:string">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        References SAMPLE/sample_id.                         
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:attribute>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="SAMPLESET" maxOccurs="1" minOccurs="1">
+                        <xs:complexType>
+                            <xs:attribute name="sampleset_id" use="required"
+                                type="xs:positiveInteger">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        References SAMPLESET/sampleset_id.                         
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:attribute>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:choice>
+                <xs:element name="LINK" type="LinkType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="PHENOTYPE" maxOccurs="1" minOccurs="0" type="PhenotypeType"/>
+                <xs:element name="PLACEMENT" maxOccurs="unbounded" minOccurs="0"
+                    type="CallPlacementType"> </xs:element>
+                <xs:element name="VARIANT_SEQUENCE" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>raw sequence eg ATGTTAA/atgttaa of inserted or replacement sequence </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="SUPPORT" maxOccurs="unbounded" minOccurs="0" type="SeqType">
+                    <xs:annotation>
+                        <xs:documentation>Evidence or Support sequences</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="variant_call_id" type="xs:string" use="required">
+                <xs:annotation>
+                    <xs:documentation>
+                        Submitter id of the VARIANT_CALL             
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="variant_call_accession" use="optional" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>NCBI/EBI assigned variant call SSV accession </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="variant_call_type" type="VariantCallTypeCV" use="required"/>
+            <xs:attribute name="variant_call_type_SO_id" type="xs:string"/>
+            <xs:attribute name="clinical_significance" type="ClinicalSignificanceCV">
+                <xs:annotation>
+                    <xs:documentation>
+                        Keeping only to support ISCA studies. Other studies should NOT have clinical_significance.
+                        Studies with clinical_significance should be submitted directly to ClinVar. 
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="insertion_length" use="optional" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>If this call is an insertion of any kind, this field indicates the length of the inserted sequence, and is required (value may be approximate, e.g., "150-300"). Can also be used for a mapping-based deletion, to indicate the approximate size of the deleted sequence.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="zygosity" type="VariantCallZygosityCV"/>
+            <xs:attribute name="origin" type="OriginCV"/>
+            <xs:attribute name="copy_number" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>
+                        Needs to be a string to support values like "4+".                                               
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="reference_copy_number" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Indicates the expected copy number for this variant in the default state.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="support_count" type="xs:positiveInteger" use="optional">
+                <xs:annotation>
+                    <xs:documentation>
+                        Number of variant probes or clones                                               
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="log2_value" type="xs:float" use="optional">
+                <xs:annotation>
+                    <xs:documentation>
+                        Average log2 ratio for variant probes                                               
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="is_low_quality" type="xs:boolean" use="optional">
+                <xs:annotation>
+                    <xs:documentation>
+                        1/true indicates low-quality data, as in some variants in 1000 genomes project (used for filtering)                                              
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="experiment_id" use="required" type="xs:positiveInteger"/>
+            <xs:attribute name="allele_count" type="xs:nonNegativeInteger">
+                <xs:annotation>
+                    <xs:documentation>From 1000 Genomes VCF spec: AC : allele count in genotypes, for each ALT allele, in the same order as listed
+                        </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="allele_frequency" type="xs:float">
+                <xs:annotation>
+                    <xs:documentation>From 1000 Genomes VCF spec: AF : allele frequency for each ALT allele in the same order as listed: use this when estimated from primary 
+                        </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="allele_number" type="xs:nonNegativeInteger">
+                <xs:annotation>
+                    <xs:documentation>From 1000 Genomes VCF spec: AN : total number of alleles in called genotypes
+                        </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="repeat_count" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Use for short tandem repeat. Combine repeat motif, repeat count, and optional indication if this is the reference allele. Example: "[TG]12.5 (ref)".
+                        </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="VARIANT_REGION">
+        <xs:annotation>
+            <xs:documentation>
+                Details of each variant region identified in the study        
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="DESCRIPTION" maxOccurs="1" minOccurs="0" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Free-form description of variant</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="SUPPORTING_VARIANT_CALL" maxOccurs="unbounded" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Variant Calls that were merged into this region.</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:attribute name="variant_call_id" type="xs:string" use="required"/>
+                        <xs:attribute name="mutation_order" use="optional" type="xs:positiveInteger"/>
+                        <xs:attribute name="mutation_molecule" use="optional" type="xs:string"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="SUPPORTING_VARIANT_REGION" maxOccurs="unbounded" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Variant Regions that were merged into this region.</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:attribute name="variant_region_id" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="PLACEMENT" maxOccurs="unbounded" minOccurs="0"
+                    type="RegionPlacementType"> </xs:element>
+            </xs:sequence>
+            <xs:attribute name="variant_region_id" use="required" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The submitter defined id of the VARIANT_REGION</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="variant_region_accession" use="optional" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>NCBI/EBI assigned variant region SV accession                                    
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="assertion_method" use="required" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The NCBI/EBI assigned accession number</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="variant_region_type" type="VariantRegionTypeCV" use="required"/>
+            <xs:attribute name="variant_region_type_SO_id" type="xs:string"/>
+            <xs:attribute name="is_low_quality" type="xs:boolean" use="optional">
+                <xs:annotation>
+                    <xs:documentation>
+                        1/true indicates low-quality data, as in some variants in 1000 genomes project (used for filtering)                                              
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="repeat_motif" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Use for short tandem repeat. Repeat motif, for example: "TG".
+                        </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="repeat_counts" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Use for short tandem repeat. Sorted list of repeat counts for reference and alternates.  For example: "13.5,14.5,15.5,16.5,17.5,18.5,19.5,20.5,21.5,22.5,23.5,26.5".
+                        </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="GENOTYPE">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:choice>
+                    <xs:element name="SAMPLE" maxOccurs="1">
+                        <xs:complexType>
+                            <xs:attribute name="sample_id" use="required" type="xs:string">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        Internal sample id              
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:attribute>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="SAMPLESET" maxOccurs="1">
+                        <xs:complexType>
+                            <xs:attribute name="sampleset_id" use="required"
+                                type="xs:positiveInteger">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        Internal sampleset id              
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:attribute>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:choice>
+                <xs:element name="ALLELE" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:attribute name="reference_allele_type" use="optional" type="xs:string"/>
+                        <xs:attribute name="alternate_allele_type" use="optional" type="xs:string"/>
+                        <xs:attribute name="alternate_allele_code" use="optional" type="xs:string"/>
+                        <xs:attribute name="presence" use="optional" type="xs:string"/>
+                        <xs:attribute name="allele_copy_number" use="optional"
+                            type="xs:nonNegativeInteger"/>
+                        <xs:attribute name="inheritance" use="optional" type="xs:string"/>
+                        <xs:attribute name="ancestral" use="optional" type="xs:boolean">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    1=ancestral allele, 0=non-ancestral allele
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="variant_accession" use="required" type="xs:string"/>
+            <xs:attribute name="success" use="required" type="xs:boolean"/>
+            <xs:attribute name="submitted_genotype" use="optional" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>
+                        Submitted genotype 0|1, 0/1 etc. Where '|' is phased and '/' is unphased, and the digits refer to the alternate allele code for this genotype               
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="genotype_zygosity" use="optional" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>
+                        Submitted genotype eg heterozygous, hemizygous, haploid                 
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="absolute_copy_number" use="optional" type="xs:nonNegativeInteger"/>
+            <xs:attribute name="experiment_id" use="required" type="xs:positiveInteger"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="DELETED_VARIANTS">
+        <xs:annotation>
+            <xs:documentation>
+                List of dbVar accessions to be deleted
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:attribute name="accession" use="required" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>
+                        dbVar sv accession                        
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
