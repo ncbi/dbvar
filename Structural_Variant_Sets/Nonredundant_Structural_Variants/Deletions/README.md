@@ -3,7 +3,7 @@
 ## ****This work is subject to change due to work in progress****
 
 ## Last updated:
-05/02/18
+05/15/18
 
 ## FTP Link:
 
@@ -82,12 +82,11 @@ multiple platforms.
 
 Please see the README at
 
-https://github.com/ncbi/dbvar/Structural_Variant_Sets/Nonredundant_Structural_Variants
+https://github.com/ncbi/dbvar/tree/master/Structural_Variant_Sets/Nonredundant_Structural_Variants
 
 # Questions or feedback
 
-* Please email dbvar@ncbi.nlm.nih.gov or
-* Please create an issue on this GitHub page.
+* Please email dbvar@ncbi.nlm.nih.gov or create an issue on this GitHub page.
 
 # Thanks!
 
