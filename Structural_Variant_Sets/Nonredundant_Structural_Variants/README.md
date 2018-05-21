@@ -3,7 +3,7 @@
 ## ****This work is subject to change due to work in progress****
 
 ## Last updated:
-05/02/18
+05/21/18
 
 ## Link to FTP site:
 
@@ -17,7 +17,7 @@ NCBI's database of Human Genomic Structural Variation is dbVar.
 
 An overview of "Structural Variation" is found here:
 
-  https://www.ncbi.nlm.nih.gov/dbvar/content/overview/#datamodel
+  https://www.ncbi.nlm.nih.gov/dbvar/content/overview
 
 ## Description of data files:
 
@@ -126,60 +126,11 @@ https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertio
 
 https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications/
 
-# Example NR Records:
+# NR Records:
 
-## Records in the aggregated_deletion_loss files
-
-Records in the aggregated_deletion_loss files contain the following tab-separated fields.
+## Records in the nr files contain tab-separated fields, eg.
 
 | chr | outermost_start | outermost_stop | SV_count | variant_type | method | analysis | platform | study | SV |
-
-
-## Example record 1:
-
-chr | outermost_start | outermost_stop | ssv_count | variant_type | method | analysis | platform | study | ssv
-----|------------------|----------------|----------|--------------|--------|----------|----------|-------|---
-1 | 10001 | 1535693 | 1  | deletion | Oligo_aCGH  | Probe_signal_intensity | NA  | Boone2013  | nssv1614481
-
-### Explanation:
-
-* The non-redundant coordinates for this record in dbVar are chr1, with
-an outermost start of 10001 and outermost stop of 1535693.
-
-* The ssv_count of 1 indicates there is only one ssv with an exact match to the
-given placement.  This count does not include ssvs with a partial match.
-
-* The variant_call_type is "deletion".
-
-* The method of "Oligo_aCGH" and the analysis of "Probe_signal_intensity"
-indicate how the one variant was evaluated.
-
-* NA indicates the no platform was specified for this one deletion variant.
-
-* Boone2013 is the study name as found in dbVar.
-
-* The dbVar variant_accession is "nssv1614481".
-
-* URLs using the study name or variant_accession can be created to access the data
-in dbVar, e.g.:
-https://www.ncbi.nlm.nih.gov/dbvar/?term=Boone2013  
-https://www.ncbi.nlm.nih.gov/dbvar/?term=nssv1614481
-
-* From the latter page you may click on the "Variant Region ID" on the left to see
-the variant's region in the NCBI Variation Viewer at:
-https://www.ncbi.nlm.nih.gov/dbvar/variants/nsv933473/
-
-## Example record 2:
-
-chr | outermost_start | outermost_stop | ssv_count | variant_type | method | analysis | platform | study | ssv
-----|------------------|----------------|----------|--------------|--------|----------|----------|-------|---
-1 | 72300544 | 72346418 | 7 | copy_number_loss;deletion | Oligo_aCGH;Sequencing | Probe_signal_intensity;Read_depth | Agilent 24M aCGH;Illumina IIx | Park2010;Ju2010 | nssv1423530:nssv1425248:nssv1428032:nssv1428830:nssv1434173:nssv1439464:nssv1420391
-
-### Explanation:
-
-* This is a more complicated example deletion NR record containing multiple
-variants with multiple types, methods, and analyses from multiple studies, using
-multiple platforms.
 
 # Methods include e.g.:
 
@@ -223,11 +174,11 @@ multiple platforms.
 # README files for deletion, insertions, and duplications and gains
 
 Please see README files for deletions, insertions, and duplications and gains,
-additional details.
+for example records and additional details.
 
-* Deletions: https://github.com/ncbi/dbvar/Structural_Variant_Sets/Nonredundant_Structural_Variants/Deletions/README.md
-* Insertions: https://github.com/ncbi/dbvar/Structural_Variant_Sets/Nonredundant_Structural_Variants/Insertions/README.md
-* Duplications: coming a bit later
+* Deletions: https://github.com/ncbi/dbvar/blob/master/Structural_Variant_Sets/Nonredundant_Structural_Variants/Deletions/README.md
+* Insertions: https://github.com/ncbi/dbvar/blob/master/Structural_Variant_Sets/Nonredundant_Structural_Variants/Insertions/README.md
+* Duplications: coming soon
 
 # Brief Outline of algorithm used to generate NR-SVs.
 
@@ -249,8 +200,7 @@ The SV records are then proccessed to generate the NR records described above.
 
 # Questions or feedback
 
-* Please email dbvar@ncbi.nlm.nih.gov or
-* Please create an issue on this GitHub page.
+* Please email dbvar@ncbi.nlm.nih.gov or create an issue on this GitHub page.
 
 # Thanks!
 
