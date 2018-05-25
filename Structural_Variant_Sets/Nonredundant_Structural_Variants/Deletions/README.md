@@ -1,9 +1,9 @@
-# dbVar Non-Redundant Structural Variation Datasets for deletion variants
+# dbVar non-redundant structural variation datasets for Deletion variants
 
 ## ****This work is subject to change due to work in progress****
 
 ## Last updated:
-05/15/18
+05/25/18
 
 ## FTP Link:
 
@@ -14,8 +14,9 @@ https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletion
 The non-redundant structural variants, "nr SVs", of type "deletion" are in two
 files on the FTP site:
 
-all_nr_GRCh37_aggregated_deletion_loss.tsv.gz
-all_nr_GRCh38_aggregated_deletion_loss.tsv.gz
+&nbsp;&nbsp;&nbsp;&nbsp;__all_nr_GRCh37_aggregated_deletion_loss.tsv.gz__  
+&nbsp;&nbsp;&nbsp;&nbsp;__all_nr_GRCh38_aggregated_deletion_loss.tsv.gz__
+
 
 The variant types in the NR "aggregated deletions and losses" file are:
 
@@ -77,12 +78,6 @@ chr | outermost_start | outermost_stop | SV_count | variant_type | method | anal
 * This is a more complicated example deletion NR record containing multiple
 variants with multiple types, methods, and analyses from multiple studies, using
 multiple platforms.
-
-# Overview of all NR files
-
-Please see the README at
-
-https://github.com/ncbi/dbvar/tree/master/Structural_Variant_Sets/Nonredundant_Structural_Variants
 
 # Questions or feedback
 

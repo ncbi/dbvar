@@ -1,9 +1,9 @@
-# dbVar Non-Redundant Structural Variation Datasets for insertion variants
+# dbVar non-redundant structural variation datasets for Insertion variants
 
 ## ****This work is subject to change due to work in progress****
 
 ## Last updated:
-05/15/18
+05/25/18
 
 ## Link to FTP site:
 
@@ -14,8 +14,8 @@ https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertio
 The non-redundant structural variants, "nr SVs", of type "insertion" are in two
 files on the FTP site:
 
-all_nr_GRCh37_aggregated_insertions.tsv.gz
-all_nr_GRCh38_aggregated_insertions.tsv.gz
+&nbsp;&nbsp;&nbsp;&nbsp;__all_nr_GRCh37_aggregated_insertions.tsv.gz__  
+&nbsp;&nbsp;&nbsp;&nbsp;__all_nr_GRCh38_aggregated_insertions.tsv.gz__
 
 The variant types in the NR "aggregated insertions" file are:
 
@@ -80,12 +80,6 @@ chr | outermost_start | outermost_stop | variant_count | variant_type | method |
 * This is a more complicated example insertion NR record containing multiple
 variants with multiple types, methods, and analyses from multiple studies, using
 platforms with different names, and having different insertion_lengths.
-
-# Overview of all NR files
-
-Please see the README at
-
-https://github.com/ncbi/dbvar/tree/master/Structural_Variant_Sets/Nonredundant_Structural_Variants
 
 # Questions or feedback
 
