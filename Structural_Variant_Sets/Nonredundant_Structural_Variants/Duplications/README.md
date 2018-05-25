@@ -19,8 +19,9 @@ files on the FTP site:
 
 The variant types in the NR "aggregated duplications and gains" file are:
 
-* duplication
 * copy_number_gain
+* copy_number_variation
+* duplication
 * tandem_duplication
 
 # Questions or feedback
