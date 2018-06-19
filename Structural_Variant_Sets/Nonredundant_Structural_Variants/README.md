@@ -1,30 +1,29 @@
-# dbVar human "non-redundant structural variations" (nr SVs) data files
+# dbVar human non-redundant structural variants (nr SVs)
 
-## ****This work is subject to change due to work in progress****
+## Work in progress and subject to change
 
 ## Last updated:
 
-05/25/18
+06/19/18
 
-## Link to FTP site:
+## Link to latest nr SV file downloads:
 
-https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/
+[https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/#github)
 
 # Introduction
 
 NCBI's database of Human Genomic Structural Variation is dbVar.  
 
-  https://www.ncbi.nlm.nih.gov/dbvar
+  [https://www.ncbi.nlm.nih.gov/dbvar](https://www.ncbi.nlm.nih.gov/dbvar/#github)
 
-An overview of "Structural Variation" is found here:
+An Overview of Structural Variation can be found here:
 
-  https://www.ncbi.nlm.nih.gov/dbvar/content/overview
+ [https://www.ncbi.nlm.nih.gov/dbvar/content/overview](https://www.ncbi.nlm.nih.gov/dbvar/content/overview/#github)
 
 ## Description of data files:
 
 Sets of "non-redundant structural variations" (nr SVs) derived from dbVar are
-available via FTP as tab delimited files by assembly, GRCh37 & GRCh38, and by
-type of variant.  
+available via FTP as tab delimited files by assembly, GRCh37 & GRCh38, and type of variant.  
 
 Non-redundant refers to variant coordinates, i.e. chr, outermost start, and
 outermost stop.  Please note: the non-redundant coordinates are based strictly
@@ -113,19 +112,19 @@ FTP site.
 * all_nr_GRCh37_aggregated_deletion_loss.tsv.gz
 * all_nr_GRCh38_aggregated_deletion_loss.tsv.gz
 
-https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/
+[https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/#github)
 
 * all_nr_GRCh37_aggregated_insertions.tsv.gz
 * all_nr_GRCh38_aggregated_insertions.tsv.gz
 
-https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions/
+[https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions//#github)
 
 ## Files coming a bit later:
 
 * all_nr_GRCh37_aggregated_duplication_gain.tsv
 * all_nr_GRCh38_aggregated_duplication_gain.tsv
 
-https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications/
+[https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications//#github)
 
 # NR Records:
 
@@ -179,7 +178,8 @@ for example records and additional details.
 
 * Deletions: https://github.com/ncbi/dbvar/blob/master/Structural_Variant_Sets/Nonredundant_Structural_Variants/Deletions/README.md
 * Insertions: https://github.com/ncbi/dbvar/blob/master/Structural_Variant_Sets/Nonredundant_Structural_Variants/Insertions/README.md
-* Duplications: coming soon
+* Duplications:
+https://github.com/ncbi/dbvar/blob/master/Structural_Variant_Sets/Nonredundant_Structural_Variants/Duplications/README.md
 
 # Brief Outline of algorithm used to generate NR-SVs.
 

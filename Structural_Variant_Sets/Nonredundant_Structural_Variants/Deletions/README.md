@@ -1,13 +1,13 @@
 # dbVar non-redundant structural variation datasets for Deletion variants
 
-## ****This work is subject to change due to work in progress****
+## Work in progress – Data subject to change
 
 ## Last updated:
-05/25/18
+06/19/18
 
 ## FTP Link:
 
-https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/
+[https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/#github)
 
 # Introduction
 
@@ -25,6 +25,8 @@ The variant types in the NR "aggregated deletions and losses" file are:
 * deletion
 * line1_deletion
 * sva_deletion
+
+![none](../../../filestub.png?raw=true "Optional Title")
 
 # Records in the aggregated_deletion_loss files
 

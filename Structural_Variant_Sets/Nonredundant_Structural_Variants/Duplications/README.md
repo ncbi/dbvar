@@ -1,13 +1,13 @@
 # dbVar non-redundant structural variation datasets for Duplication variants
 
-## ****This work is subject to change due to work in progress****
+## Work in progress – Data subject to change
 
 ## Last updated:
-05/25/18
+06/19/18
 
 ## FTP Link:
 
-https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications/
+[https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications/#github)
 
 # Introduction
 

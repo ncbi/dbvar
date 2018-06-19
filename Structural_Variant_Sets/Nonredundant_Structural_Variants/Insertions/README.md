@@ -1,13 +1,13 @@
 # dbVar non-redundant structural variation datasets for Insertion variants
 
-## ****This work is subject to change due to work in progress****
+## Work in progress – Data subject to change
 
 ## Last updated:
-05/25/18
+06/19/18
 
 ## Link to FTP site:
 
-https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions/
+[https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions/#github)
 
 # Introduction
 
