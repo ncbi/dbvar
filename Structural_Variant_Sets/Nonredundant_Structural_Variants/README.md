@@ -22,12 +22,20 @@ An Overview of Structural Variation can be found here:
 
 ## Description of data files:
 
-Sets of "non-redundant structural variations" (nr SVs) derived from dbVar are
+* Sets of "non-redundant structural variations" (NR SVs) derived from dbVar are
 available via FTP as tab delimited files by assembly, GRCh37 & GRCh38, and type of variant.  
 
-Non-redundant refers to variant coordinates, i.e. chr, outermost start, and
+* Non-redundant refers to variant coordinates, i.e. chr, outermost start, and
 outermost stop.  Please note: the non-redundant coordinates are based strictly
 on exact overlap of coordinates, not on partial overlaps.  
+
+* NR files: 
+   * only include variant calls associated with germline samples (no somatic)
+   * only include BestAvailable placements with in the assembly (guarantees no duplicate placements for variant)
+   * only include placements on finished chromosomes (no NT_ or NW_ contigs)
+   * placements are 1-based in currennt .tsv files (zero-based bed files are expected soon)
+   * insertion_length is set to sequence length if insertion with sequence and no submitted insertion_length
+   * exclude insertions without submitted insertion_length or submitted sequence
 
 ## Variant types
 
