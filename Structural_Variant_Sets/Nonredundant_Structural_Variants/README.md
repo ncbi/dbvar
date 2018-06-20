@@ -4,7 +4,7 @@
 
 ## Last updated:
 
-06/19/18
+06/20/18
 
 ## Link to latest nr SV file downloads:
 
