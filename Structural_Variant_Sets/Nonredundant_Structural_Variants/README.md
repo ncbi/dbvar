@@ -4,7 +4,7 @@
 
 ## Last updated:
 
-06/20/18
+06/21/18
 
 ## Link to latest nr SV file downloads:
 
@@ -112,33 +112,41 @@ NR coordinates | GRCh37 nr files
 
 # Files
 
-The "nr SVs" will be in six ASCII text files with tab-separated values on the
+The "NR SVs" will be in ASCII text files with tab-separated values on the
 FTP site.
 
-## Files available now:
+## Deletion NR SV Files:
 
-* all_nr_GRCh37_aggregated_deletion_loss.tsv.gz
-* all_nr_GRCh38_aggregated_deletion_loss.tsv.gz
+* GRCh38.nr_deletions.tsv.gz
+* GRCh37.nr_deletions.tsv.gz
+* GRCh38.nr_deletions.acmg_genes.tsv.gz
+* GRCh37.nr_deletions.acmg_genes.tsv.gz
 
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/#github)
 
-* all_nr_GRCh37_aggregated_insertions.tsv.gz
-* all_nr_GRCh38_aggregated_insertions.tsv.gz
+## Insertion NR SV Files:
+
+* GRCh38.nr_insertions.tsv.gz
+* GRCh37.nr_insertions.tsv.gz
+* GRCh38.nr_deletions.acmg_genes.tsv.gz
+* GRCh37.nr_deletions.acmg_genes.tsv.gz
 
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions//#github)
 
-## Files coming a bit later:
+## Duplication NR SV Files:
 
-* all_nr_GRCh37_aggregated_duplication_gain.tsv
-* all_nr_GRCh38_aggregated_duplication_gain.tsv
+* GRCh38.nr_duplications.tsv.gz
+* GRCh37.nr_duplications.tsv.gz
+* GRCh38.nr_duplications.acmg_genes.tsv.gz
+* GRCh37.nr_duplications.acmg_genes.tsv.gz
 
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications//#github)
 
 # NR Records:
 
-## Records in the nr files contain tab-separated fields, eg.
+## Records in the nr files contain tab-separated fields (only insertion SVs have min and max insertion_length):
 
-| chr | outermost_start | outermost_stop | SV_count | variant_type | method | analysis | platform | study | SV |
+| chr | outermost_start | outermost_stop | SV_count | variant_type | method | analysis | platform | study | SV | clincical_assertion | clinvar_accession | min_insertion_length | max_insertion_length |
 
 # Methods include e.g.:
 
