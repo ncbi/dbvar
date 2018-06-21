@@ -29,38 +29,39 @@ available via FTP as tab delimited files by assembly, GRCh37 & GRCh38, and type 
 outermost stop.  Please note: the non-redundant coordinates are based strictly
 on exact overlap of coordinates, not on partial overlaps.  
 
-* NR files: 
-   * only include variant calls associated with germline samples (no somatic)
-   * only include BestAvailable placements with in the assembly (guarantees no duplicate placements for variant)
-   * only include placements on finished chromosomes (no NT_ or NW_ contigs)
-   * placements are 1-based in currennt .tsv files (zero-based bed files are expected soon)
-   * insertion_length is set to sequence length if insertion with sequence and no submitted insertion_length
-   * exclude insertions without submitted insertion_length or submitted sequence
+* Other features of NR files: 
+   * variant calls are from germline samples only (no somatic)
+   * placements are "BestAvailable" on the assembly (guarantees no duplicate placements for a variant)
+   * placements are on finished chromosomes only (not on NT_ or NW_ contigs)
+   * placements are 1-based in the .tsv files 
+   * placements are zero-based start and 1-based stop in .bed and .bedpe files (coming soon)
+   * insertion_length is set to sequence length if the sequence was submitted to dbVar without a specific insertion_length
+   * insertions submitted to dbVar without insertion_length or submitted sequence are not included in the NR files
 
 ## Variant types
 
 Variant types are grouped into three "aggregation types".  
 
-* aggregated deletions and losses
-* aggregated duplications and gains
-* aggregated insertions
+* deletions
+* duplications
+* insertions
 
 The variant types in each of the three "aggregation types" are:
 
-* "aggregated deletions and losses" include:
+* "deletions" include:
    * alu_deletion
    * copy_number_loss
    * deletion
    * line1_deletion
    * sva_deletion
 
-* "aggregated duplications and gains" include:
+* "duplications" include:
    * copy_number_gain
    * copy_number_variation
    * duplication
    * tandem_duplication
 
-* "aggregated insertions" include:
+* "insertions" include:
    * alu_insertion
    * insertion
    * line1_insertion
@@ -82,7 +83,7 @@ herv_deletion |   197 | 197
 line1_deletion |  82103 |  81940
 sva_deletion |  14254 | 14254
 copy_number_variation |  1164548 | 1106074
-**DUPLICATIONS and GAINS** | |
+**DUPLICATIONS** | |
 duplication |  1926155 | 1915335
 tandem_duplication |  11478 |  11446
 copy_number_gain	 | 1247923 | 1208729
@@ -98,22 +99,21 @@ sva_insertion |  1097 |  1087
 
 NR coordinates | GRCh38 nr files
 -----------|----------------------------------------------
-  2207235  | all_nr_GRCh38_aggregated_deletion_loss.tsv
-   326596  | all_nr_GRCh38_aggregated_duplication_gain.tsv
-  1101221  | all_nr_GRCh38_aggregated_insertions.tsv
+  2207235  | GRCh38.nr_deletions.tsv
+   326596  | GRCh38.nr_duplications.tsv
+  1101221  | GRCh38.nr_insertions.tsv
   3635052  | total
 
 NR coordinates | GRCh37 nr files
 -----------|----------------------------------------------
-  2219439  | all_nr_GRCh37_aggregated_deletion_loss.tsv
-   336634  | all_nr_GRCh37_aggregated_duplication_gain.tsv
-  1095615  | all_nr_GRCh37_aggregated_insertions.tsv
+  2219439  | GRCh37.nr_deletions.tsv
+   336634  | GRCh37.nr_duplications.tsv
+  1095615  | GRCh37.nr_insertions.tsv
   3651688  | total
 
 # Files
 
-The "NR SVs" will be in ASCII text files with tab-separated values on the
-FTP site.
+The "NR SVs" are in ASCII text files with tab-separated values on the FTP site.
 
 ## Deletion NR SV Files:
 
@@ -187,10 +187,10 @@ FTP site.
 * Split_read_mapping
 * de_novo_sequence_assembly
 
-# README files for deletion, insertions, and duplications and gains
+# README files for deletions, insertions, and duplications
 
-Please see README files for deletions, insertions, and duplications and gains,
-for example records and additional details.
+Please see README files for deletions, insertions, and duplications for example 
+records and additional details.
 
 * Deletions: https://github.com/ncbi/dbvar/blob/master/Structural_Variant_Sets/Nonredundant_Structural_Variants/Deletions/README.md
 * Insertions: https://github.com/ncbi/dbvar/blob/master/Structural_Variant_Sets/Nonredundant_Structural_Variants/Insertions/README.md
@@ -221,7 +221,7 @@ The SV records are then proccessed to generate the NR records described above.
 
 # Thanks!
 
-Thanks for your interest in the dbVar human "non-redundant structural variations" (nr SVs)
+Thanks for your interest in the dbVar human "non-redundant structural variations" (NR SVs)
 data files from NCBI.
 
-Please check back for updates soon.
+Please check back soon for further updates.
