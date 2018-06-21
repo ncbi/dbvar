@@ -20,7 +20,7 @@ An Overview of Structural Variation can be found here:
 
  [https://www.ncbi.nlm.nih.gov/dbvar/content/overview](https://www.ncbi.nlm.nih.gov/dbvar/content/overview/#github)
 
-## Description of data files:
+## Description of NR SV data files:
 
 * Sets of "non-redundant structural variations" (NR SVs) derived from dbVar are
 available via FTP as tab delimited files by assembly, GRCh37 & GRCh38, and type of variant.  
@@ -29,7 +29,7 @@ available via FTP as tab delimited files by assembly, GRCh37 & GRCh38, and type 
 outermost stop.  Please note: the non-redundant coordinates are based strictly
 on exact overlap of coordinates, not on partial overlaps.  
 
-* Other features of NR files: 
+* Other features of NR SV files: 
    * variant calls are from germline samples only (no somatic)
    * placements are "BestAvailable" on the assembly (guarantees no duplicate placements for a variant)
    * placements are on finished chromosomes only (not on NT_ or NW_ contigs)
@@ -37,6 +37,11 @@ on exact overlap of coordinates, not on partial overlaps.
    * placements are zero-based start and 1-based stop in .bed and .bedpe files (coming soon)
    * insertion_length is set to sequence length if the sequence was submitted to dbVar without a specific insertion_length
    * insertions submitted to dbVar without insertion_length or submitted sequence are not included in the NR files
+   
+* Other files based on NR SV files:
+   * NR SV files annotated with overlapping ACMG genes (more details soon)
+   * NR SV files in .bed format (more details soon)
+   * NR SV files in .bedpe format (more details soon)
 
 ## Variant types
 
@@ -121,6 +126,10 @@ The "NR SVs" are in ASCII text files with tab-separated values on the FTP site.
 * GRCh37.nr_deletions.tsv.gz
 * GRCh38.nr_deletions.acmg_genes.tsv.gz
 * GRCh37.nr_deletions.acmg_genes.tsv.gz
+* GRCh38.nr_deletions.bed.gz
+* GRCh38.nr_deletions.bedpe.gz
+* GRCh37.nr_deletions.bed.gz
+* GRCh37.nr_deletions.bedpe.gz
 
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/#github)
 
@@ -130,6 +139,11 @@ The "NR SVs" are in ASCII text files with tab-separated values on the FTP site.
 * GRCh37.nr_insertions.tsv.gz
 * GRCh38.nr_deletions.acmg_genes.tsv.gz
 * GRCh37.nr_deletions.acmg_genes.tsv.gz
+* GRCh38.nr_insertions.bed.gz
+* GRCh37.nr_insertions.bed.gz
+* GRCh38.nr_insertions.bedpe.gz
+* GRCh38.nr_insertions.bedpe.gz
+* GRCh37.nr_insertions.bedpe.gz
 
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions//#github)
 
@@ -139,14 +153,30 @@ The "NR SVs" are in ASCII text files with tab-separated values on the FTP site.
 * GRCh37.nr_duplications.tsv.gz
 * GRCh38.nr_duplications.acmg_genes.tsv.gz
 * GRCh37.nr_duplications.acmg_genes.tsv.gz
+* GRCh38.nr_duplications.bed.gz
+* GRCh37.nr_duplications.bed.gz
+* GRCh38.nr_duplications.bedpe.gz
+* GRCh37.nr_duplications.bedpe.gz
 
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications//#github)
 
 # NR Records:
 
-## Records in the nr files contain tab-separated fields (only insertion SVs have min and max insertion_length):
+## Records in the NR SV files contain tab-separated fields (only insertion SVs have min and max insertion_length):
 
 | chr | outermost_start | outermost_stop | SV_count | variant_type | method | analysis | platform | study | SV | clincical_assertion | clinvar_accession | min_insertion_length | max_insertion_length |
+
+## Records in the NR SV ACMG files contain tab-separated fields (only insertion SVs have min and max insertion_length):
+
+(update coming soon)
+
+## Records in the NR SV .bed files
+
+(update coming soon)
+
+## Records in the NR SV .bedpe files
+
+(update coming soon)
 
 # Methods include e.g.:
 
