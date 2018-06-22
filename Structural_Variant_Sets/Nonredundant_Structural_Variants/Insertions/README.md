@@ -3,7 +3,7 @@
 ## Work in progress – Data subject to change
 
 ## Last updated:
-06/19/18
+06/22/18
 
 ## Link to FTP site:
 
@@ -11,11 +11,17 @@
 
 # Introduction
 
-The non-redundant structural variants, "nr SVs", of type "insertion" are in two
+The non-redundant structural variants, "NR SVs", of type "insertion" are in these
 files on the FTP site:
 
-&nbsp;&nbsp;&nbsp;&nbsp;__all_nr_GRCh37_aggregated_insertions.tsv.gz__  
-&nbsp;&nbsp;&nbsp;&nbsp;__all_nr_GRCh38_aggregated_insertions.tsv.gz__
+&nbsp;&nbsp;&nbsp;&nbsp;__GRCh38.nr_insertions.tsv.gz__  
+&nbsp;&nbsp;&nbsp;&nbsp;__GRCh37.nr_insertions.tsv.gz__  
+&nbsp;&nbsp;&nbsp;&nbsp;__GRCh38.nr_insertions.acmg_genes.tsv.gz__  
+&nbsp;&nbsp;&nbsp;&nbsp;__GRCh37.nr_insertions.acmg_genes.tsv.gz__  
+&nbsp;&nbsp;&nbsp;&nbsp;__GRCh38.nr_insertions.bed.gz__  
+&nbsp;&nbsp;&nbsp;&nbsp;__GRCh37.nr_insertions.bed.gz__  
+&nbsp;&nbsp;&nbsp;&nbsp;__GRCh38.nr_insertions.bedpe.gz__  
+&nbsp;&nbsp;&nbsp;&nbsp;__GRCh37.nr_insertions.bedpe.gz__  
 
 The variant types in the NR "aggregated insertions" file are:
 
