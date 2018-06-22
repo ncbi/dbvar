@@ -28,23 +28,22 @@ The variant types in the NR "deletions" file are:
 * alu_deletion
 * copy_number_loss
 * deletion
+* herv_deletion
 * line1_deletion
 * sva_deletion
-
-![none](../../../filestub.png?raw=true "Optional Title")
 
 # Records in the aggregated_deletion_loss files
 
 Records in the aggregated_deletion_loss files contain the following tab-separated fields.
 
-| chr | outermost_start | outermost_stop | SV_count | variant_type | method | analysis | platform | study | SV |
+| chr | outermost_start | outermost_stop | variant_count | variant_type | method | analysis | platform | study | variant | clinical_assertion | clinvar_accession
 
 
 ## Example record 1:
-
-chr | outermost_start | outermost_stop | SV_count | variant_type | method | analysis | platform | study | SV
-----|------------------|----------------|----------|--------------|--------|----------|----------|-------|---
-1 | 10001 | 1535693 | 1  | deletion  | Oligo_aCGH  | Probe_signal_intensity | NA  | Boone2013  | nssv1614481
+  
+chr | outermost_start | outermost_stop | variant_count | variant_type | method | analysis | platform | study | variant | clinical_assertion | clinvar_accession  
+----|-----------------|----------------|---------------|--------------|--------|----------|----------|-------|---------|--------------------|------------------  
+X | 153293294 | 153296201 | 1 | deletion | Curated | Curated | NA | LSDB_submitted_variants | nssv7487065 | Pathogenic | SCV000222455
 
 ### Explanation:
 
@@ -56,35 +55,42 @@ given placement.  This count does not include SVs with a partial match.
 
 * The variant_call_type is "deletion".
 
-* The method of "Oligo_aCGH" and the analysis of "Probe_signal_intensity"
-indicate how the one variant was evaluated.
+* The method and the analysis indicate how the one variant was evaluated.
 
-* NA indicates the no platform was specified this one deletion variant.
+* NA indicates the no platform was submitted for this variant.
 
-* Boone2013 is the study name as found in dbVar.
+* LSDB_submitted_variants is the study name as found in dbVar.
 
-* The dbVar variant_accession is "nssv1614481".
+* The dbVar variant_accession is "nssv7487065".
 
-* URLs using the study name or variant_accession can be created to access the data
+* The clinical_significance is "Pathogenic"
+
+* The variant has an accession in ClinVar of SCV000222455
+
+* URLs using the study name accession or variant_accession can be created to access the data
 in dbVar, e.g.:
-https://www.ncbi.nlm.nih.gov/dbvar/?term=Boone2013  
-https://www.ncbi.nlm.nih.gov/dbvar/?term=nssv1614481
+https://www.ncbi.nlm.nih.gov/dbvar/studies/nstd103/  
+https://www.ncbi.nlm.nih.gov/dbvar/?term=nssv7487065
 
 * From the latter page you may click on the "Variant Region ID" on the left to see
 the variant's region in the NCBI Variation Viewer at:
-https://www.ncbi.nlm.nih.gov/dbvar/variants/nsv933473/
+https://www.ncbi.nlm.nih.gov/dbvar/variants/nsv1197457/
+
+* The SCV accession can be used to find the record in ClinVar by searching on ClinVar's home page:
+https://www.ncbi.nlm.nih.gov/clinvar/
 
 ## Example record 2:
 
-chr | outermost_start | outermost_stop | SV_count | variant_type | method | analysis | platform | study | SV
-----|------------------|----------------|----------|--------------|--------|----------|----------|-------|---
+chr | outermost_start | outermost_stop | variant_count | variant_type | method | analysis | platform | study | variant | clinical_assertion | clinvar_accession  
+----|-----------------|----------------|---------------|--------------|--------|----------|----------|-------|---------|--------------------|------------------
 1 | 72300544 | 72346418 | 7 | copy_number_loss;deletion | Oligo_aCGH;Sequencing | Probe_signal_intensity;Read_depth | Agilent 24M aCGH;Illumina IIx | Park2010;Ju2010 | nssv1423530:nssv1425248:nssv1428032:nssv1428830:nssv1434173:nssv1439464:nssv1420391
 
 ### Explanation:
 
 * This is a more complicated example deletion NR record containing multiple
 variants with multiple types, methods, and analyses from multiple studies, using
-multiple platforms.
+multiple platforms.  This record does not contain clinical_significance or a 
+ClinVar accession.
 
 # Questions or feedback
 
