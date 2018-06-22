@@ -3,7 +3,7 @@
 ## Work in progress – Data subject to change
 
 ## Last updated:
-06/19/18
+06/22/18
 
 ## FTP Link:
 
@@ -14,8 +14,14 @@
 The non-redundant structural variants, "nr SVs", of type "duplication" are in two
 files on the FTP site:
 
-&nbsp;&nbsp;&nbsp;&nbsp;__all_nr_GRCh37_aggregated_duplication_gain.tsv.gz__  
-&nbsp;&nbsp;&nbsp;&nbsp;__all_nr_GRCh38_aggregated_duplication_gain.tsv.gz__
+&nbsp;&nbsp;&nbsp;&nbsp;__GRCh38.nr_duplications.tsv.gz__  
+&nbsp;&nbsp;&nbsp;&nbsp;__GRCh37.nr_duplications.tsv.gz__  
+&nbsp;&nbsp;&nbsp;&nbsp;__GRCh38.nr_duplications.acmg_genes.tsv.gz__  
+&nbsp;&nbsp;&nbsp;&nbsp;__GRCh37.nr_duplications.acmg_genes.tsv.gz__  
+&nbsp;&nbsp;&nbsp;&nbsp;__GRCh38.nr_duplications.bed.gz__  
+&nbsp;&nbsp;&nbsp;&nbsp;__GRCh37.nr_duplications.bed.gz__  
+&nbsp;&nbsp;&nbsp;&nbsp;__GRCh38.nr_duplications.bedpe.gz__  
+&nbsp;&nbsp;&nbsp;&nbsp;__GRCh37.nr_duplications.bedpe.gz__  
 
 The variant types in the NR "aggregated duplications and gains" file are:
 
