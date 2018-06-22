@@ -4,7 +4,7 @@
 
 ## Last updated:
 
-06/21/18
+06/22/18
 
 ## Link to latest nr SV file downloads:
 
@@ -166,17 +166,34 @@ The "NR SVs" are in ASCII text files with tab-separated values on the FTP site.
 
 | chr | outermost_start | outermost_stop | SV_count | variant_type | method | analysis | platform | study | SV | clincical_assertion | clinvar_accession | min_insertion_length | max_insertion_length |
 
-## Records in the NR SV ACMG files contain tab-separated fields (only insertion SVs have min and max insertion_length):
+## Records in the NR SV ACMG files contain tab-separated fields, and a field for the ACMG gene that overlaps the variant, e.g.:
 
-(update coming soon)
+chr | outermost_start | outermost_stop | variant_count | variant_type | method | analysis | platform | min_insertion_length | max_insertion_length | study | variant | gene  
+----|-----------------|----------------|---------------|--------------|--------|----------|----------|----------------------|-------------|--------|----------|-----
+13 | 32922439 | 32922439 | 2 | alu_insertion | Sequencing | Split_read_and_paired-end_mapping;de_novo_and_local_sequence_assembly | HiSeq 2000;Illumina HiSeq 2000 | 281 | 317 | Gardner2017;Wildschutte2015 | nssv14048388:nssv4041332 | BRCA2  
 
-## Records in the NR SV .bed files
+For information on ACMG genes please see:
+https://www.ncbi.nlm.nih.gov/clinvar/docs/acmg/
 
-(update coming soon)
+## Records in the NR SV .bed files, e.g.
 
-## Records in the NR SV .bedpe files
+chr | outermost_start | outermost_stop | name  
+chr1 | 0 | 10000 | chr1_0_10000_del
 
-(update coming soon)
+* Placements in bed files are zero-based start and one-based stop
+* name is comprised of chromosome, outermost_start, outermost_stop, and type (del, dup, or ins)
+
+## Records in the NR SV .bedpe files, e.g.
+
+chrom1 | start1 | end1 | chrom2 | start2 | end2 | name | score | strand1 | strand2 | SV_count | variant_type | method | analysis | platform | study | SV | clinical_assertion | clinvar_accession 
+-------|--------|------|--------|--------|------|------|-------|---------|---------|----------|--------------|--------|----------|----------|-------|----|--------------------|------------------
+chr1 | 14873 | 7527302 | . | -1 | -1 | chr1_14873_7527302_del | . | . | . | 1 | copy_number_loss | Oligo_aCGH | Probe_signal_intensity | NA | ClinGen_Laboratory-Submitted | nssv13638713 | Pathogenic | SCV000495999
+
+* Placements in bedpe files are zero-based start and one-based stop
+* bedpe files for our purposes are designed to capture chr, start, stop, name 
+and all the additional information which appears in NR SV files by placing it in   
+the optional fields starting at field 11
+* (However, bedpe files are normally intended for disjointed genomic sequences)
 
 # Methods include e.g.:
 
