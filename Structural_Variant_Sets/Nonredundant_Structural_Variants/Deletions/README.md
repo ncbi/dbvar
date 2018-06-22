@@ -3,7 +3,7 @@
 ## Work in progress – Data subject to change
 
 ## Last updated:
-06/19/18
+06/22/18
 
 ## FTP Link:
 
@@ -11,14 +11,19 @@
 
 # Introduction
 
-The non-redundant structural variants, "nr SVs", of type "deletion" are in two
+The non-redundant structural variants, "NR SVs", of type "deletions" are in these  
 files on the FTP site:
 
-&nbsp;&nbsp;&nbsp;&nbsp;__all_nr_GRCh37_aggregated_deletion_loss.tsv.gz__  
-&nbsp;&nbsp;&nbsp;&nbsp;__all_nr_GRCh38_aggregated_deletion_loss.tsv.gz__
+&nbsp;&nbsp;&nbsp;&nbsp;__GRCh38.nr_deletions.tsv.gz__   
+&nbsp;&nbsp;&nbsp;&nbsp;__GRCh37.nr_deletions.tsv.gz__  
+&nbsp;&nbsp;&nbsp;&nbsp;__GRCh38.nr_deletions.acmg_genes.tsv.gz__  
+&nbsp;&nbsp;&nbsp;&nbsp;__GRCh37.nr_deletions.acmg_genes.tsv.gz__  
+&nbsp;&nbsp;&nbsp;&nbsp;__GRCh38.nr_deletions.bed.gz__  
+&nbsp;&nbsp;&nbsp;&nbsp;__GRCh37.nr_deletions.bed.gz__  
+&nbsp;&nbsp;&nbsp;&nbsp;__GRCh38.nr_deletions.bedpe.gz__  
+&nbsp;&nbsp;&nbsp;&nbsp;__GRCh37.nr_deletions.bedpe.gz__  
 
-
-The variant types in the NR "aggregated deletions and losses" file are:
+The variant types in the NR "deletions" file are:
 
 * alu_deletion
 * copy_number_loss
