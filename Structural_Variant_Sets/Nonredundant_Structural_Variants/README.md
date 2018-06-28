@@ -262,6 +262,10 @@ method, analysis, platform, insertion_length, SV accession and study.
 
 The SV records are then proccessed to generate the NR records described above.
 
+# Tutorials
+
+Examples of using the NR files with various tools and browsers can be found in: https://github.com/ncbi/dbvar/blob/master/Structural_Variant_Sets/Nonredundant_Structural_Variants/UserExamples.md
+
 # Questions or feedback
 
 * Please email dbvar@ncbi.nlm.nih.gov or create an issue on this GitHub page.
