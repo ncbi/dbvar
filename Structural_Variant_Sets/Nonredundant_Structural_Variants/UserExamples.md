@@ -56,9 +56,6 @@ To find genes that intersect dbVar insertions, run:
 ### Compute Intersections
  - Go to the online Galaxy server: <https://usegalaxy.org/>
  - NOTE: If the server is down select an alternate server from the displayed list.
-
-**insert image**
-
  - Select **Get Data** from the **Tools** menubar
  - Select **Upload File** from your computer under **Get Data**
  - In the **Download from web or upload from disk** window
@@ -84,7 +81,7 @@ To find genes that intersect dbVar insertions, run:
  - Click the **Eye** icon on the new intersect results file to view the data
  - The intersection results will be displayed in the center column of page
  - For example:
-**insert image**
+![Galaxy](../../images/galaxy.PNG?raw=true "Galaxy")
 
 ### Compute Intersections (BED and VCF)
  - Select **Get Data** from the **Tools** menubar
@@ -106,7 +103,7 @@ To find genes that intersect dbVar insertions, run:
  - Click the **Eye** icon on the new intersect results file to view the data
  - The intersection results will be displayed in the center column of page
  - For example:
-**insert image**
+![Galaxy VCF](../../images/galaxy_vcf.PNG?raw=true "Galaxy")
 
 
 ## UCSC Genome Browser
@@ -130,7 +127,7 @@ To find genes that intersect dbVar insertions, run:
  - Right-click on the track to change the display from **dense** to **full**
  - Zoom in or out sufficiently to see the individual variants
  - Example of display:
-**insert image**
+![UCSC Genome Browser](../../images/ucsc_browser.PNG?raw=true "UCSC Genome Browser")
 
 Add a second track of insertions:
  - Select **Custom Tracks** from the **My Data** menu in the header menu
@@ -141,7 +138,7 @@ Add a second track of insertions:
  - The new track should be displayed as "User Track" in the **Manage Custom Tracks** page
  - Select **Genome Browser**  from the header menu
  - Example of display:
-**insert image**
+![UCSC Genome Browser insertions](../../images/ucsc_browser_ins.PNG?raw=true "UCSC Genome Browser insertions")
 
 ### Compute Intersections
  - Select **Table Browser** from the **Tools** menu in the header menu.
@@ -181,13 +178,14 @@ Add a second track of insertions:
    - Select **Configure**
  - All tracks should be displayed.
    - Chromosome 1 top level:
-**insert image**
+![NCBI Sequence Browser chr1](../../images/NR_sv_chr1.PNG?raw=true "NCBI Sequence Browser chr1")
 
    - Chromosome 1 zoomed in:
-**insert image**
+![NCBI Sequence Browser zoom](../../images/NR_sv_chr1_zoom.PNG?raw=true "NCBI Sequence Browser zoomed")
 
    - Chromosome 1 showing detailed Non-redundant deletions, duplications, and insertions:
-**insert image**
+![NCBI Sequence Browser detail](../../images/NR_sv_chr1_detail.PNG?raw=true "NCBI Sequence Browser detail")
+
 
 # Installation Notes (Linux)
 ## Bedtools
