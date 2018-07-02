@@ -195,4 +195,4 @@ Add a second track of insertions:
  - Download the \*.tar.gz file
  - Go to the installation directory and run: `make`
  - Add the bin directory to your path, for example:
-   `export PATH=/panfs/pan1.be-md.ncbi.nlm.nih.gov/variation/bedtools2.27/bin/:$PATH`
+   `export PATH=/home/bedtools2.27/bin/:$PATH`
