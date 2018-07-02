@@ -6,24 +6,26 @@ The purpose of this tutorial is to demonstrate the ability to display or compute
 ## Input Files
 ### Subject Files
 NOTES:
-
+ - FTP files are located at ftp://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/
  - Genome Browsers can access the FTP files by URL.
  - Locally-installed tools will require the files to be downloaded.
  - BED files have 0-based start and 1-based stops.
  - Chromosome names contain "chr".
  - For the UCSC Genome Browser, set a track name and exclude placements on chrMT.
 
-|File Content|File format|FTP File|Post-Download instructions|
+|File Content|File format|FTP directory/file|Post-Download instructions|
 |------------|-----------|--------|--------------------------|
-|Non-redundant deletions|.bed|<ftp://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/GRCh38.nr_deletions.bed.gz> |gunzip GRCh38.nr_deletions.bed.gz; echo "track name=\"dbVar NR deletions\" description=\"non-redundant deletions from dbVar\"" > GRCh38.nr_deletions_ucsc.bed; grep -v ^chrMT GRCh38.nr_deletions.bed >> GRCh38.nr_deletions_ucsc.bed|
-|Non-redundant duplications|.bed|<ftp://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications/GRCh38.nr_duplications.bed.gz>|gunzip GRCh38.nr_duplications.bed.gz|
-|Non-redundant insertions|.bed|<ftp://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions/GRCh38.nr_insertions.bed.gz> |gunzip GRCh38.nr_insertions.bed.gz|
+|Non-redundant deletions|.bed|deletions/GRCh38.nr_deletions.bed.gz|gunzip GRCh38.nr_deletions.bed.gz; echo "track name=\"dbVar NR deletions\" description=\"non-redundant deletions from dbVar\"" > GRCh38.nr_deletions_ucsc.bed; grep -v ^chrMT GRCh38.nr_deletions.bed >> GRCh38.nr_deletions_ucsc.bed|
+|Non-redundant duplications|.bed|duplications/GRCh38.nr_duplications.bed.gz|gunzip GRCh38.nr_duplications.bed.gz|
+|Non-redundant insertions|.bed|insertions/GRCh38.nr_insertions.bed.gz|gunzip GRCh38.nr_insertions.bed.gz|
 
 
 ### Query Files
 
 Download and run instructions to generate these modified files for testing intersections using locally-installed tools, such as **bedtools:**
 
+NOTES:
+ - FTP files are located at ftp://ftp.ncbi.nlm.nih.gov
  - clinvar_chr.vcf
    - "chr" in chromosome names for consistency with the .bed files
 - genes_chr.gff
@@ -32,10 +34,10 @@ Download and run instructions to generate these modified files for testing inter
 
 **NOTE:** these types of modifications may not be necessary depending on the format of your specific input file.
 
-|File Content|File format|FTP File Location|Modified File Name|Post-Download instructions|
+|File Content|File format|FTP Directory/File|Modified File Name|Post-Download instructions|
 |------------|-----------|-----------------|------------------|--------------------------|
-|Clinical variants|.vcf|<ftp://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh38/clinvar.vcf.gz> |clinvar_chr.vcf|gunzip clinvar.vcf.gz; grep "^#" clinvar.vcf > clinvar_chr.vcf; grep -v "^#" clinvar.vcf \| sed "s/^/chr/" >> clinvar_chr.vcf|
-|Human genes|.gff|<ftp://ftp.ncbi.nlm.nih.gov/refseq/H_sapiens/H_sapiens/GFF/ref_GRCh38.p12_top_level.gff3.gz> |genes_chr.gff|gunzip ref_GRCh38.p12_top_level.gff3.gz;  grep "^#" ref_GRCh38.p12_top_level.gff3 > genes_chr.gff; cat ref_GRCh38.p12_top_level.gff3 \| awk -F'\t' '$3~/^gene$/' \| grep "^NC_" \| sed "s/NC_000001.11/chr1/g" \| sed "s/NC_000002.12/chr2/g" \| sed "s/NC_000003.12/chr3/g" \| sed "s/NC_000004.12/chr4/g" \| sed "s/NC_000005.10/chr5/g" \| sed "s/NC_000006.12/chr6/g" \| sed "s/NC_000007.14/chr7/g" \| sed "s/NC_000008.11/chr8/g" \| sed "s/NC_000009.12/chr9/g" \| sed "s/NC_000010.11/chr10/g" \| sed "s/NC_000011.10/chr11/g" \| sed "s/NC_000012.12/chr12/g" \| sed "s/NC_000013.11/chr13/g" \| sed "s/NC_000014.9/chr14/g" \| sed "s/NC_000015.10/chr15/g" \| sed "s/NC_000016.10/chr16/g" \| sed "s/NC_000017.11/chr17/g" \| sed "s/NC_000018.10/chr18/g" \| sed "s/NC_000019.10/chr19/g" \| sed "s/NC_000020.11/chr20/g" \| sed "s/NC_000021.9/chr21/g" \| sed "s/NC_000022.11/chr22/g" \| sed "s/NC_000023.11/chrX/g" \| sed "s/NC_000024.10/chrY/g" \| sed "s/NC_012920.1/chrMT/g" >> genes_chr.gff|
+|Clinical variants|.vcf|/pub/clinvar/vcf_GRCh38/clinvar.vcf.gz|clinvar_chr.vcf|gunzip clinvar.vcf.gz; grep "^#" clinvar.vcf > clinvar_chr.vcf; grep -v "^#" clinvar.vcf \| sed "s/^/chr/" >> clinvar_chr.vcf|
+|Human genes|.gff|/refseq/H_sapiens/H_sapiens/GFF/ref_GRCh38.p12_top_level.gff3.gz|genes_chr.gff|gunzip ref_GRCh38.p12_top_level.gff3.gz;  grep "^#" ref_GRCh38.p12_top_level.gff3 > genes_chr.gff; cat ref_GRCh38.p12_top_level.gff3 \| awk -F'\t' '$3~/^gene$/' \| grep "^NC_" \| sed "s/NC_000001.11/chr1/g" \| sed "s/NC_000002.12/chr2/g" \| sed "s/NC_000003.12/chr3/g" \| sed "s/NC_000004.12/chr4/g" \| sed "s/NC_000005.10/chr5/g" \| sed "s/NC_000006.12/chr6/g" \| sed "s/NC_000007.14/chr7/g" \| sed "s/NC_000008.11/chr8/g" \| sed "s/NC_000009.12/chr9/g" \| sed "s/NC_000010.11/chr10/g" \| sed "s/NC_000011.10/chr11/g" \| sed "s/NC_000012.12/chr12/g" \| sed "s/NC_000013.11/chr13/g" \| sed "s/NC_000014.9/chr14/g" \| sed "s/NC_000015.10/chr15/g" \| sed "s/NC_000016.10/chr16/g" \| sed "s/NC_000017.11/chr17/g" \| sed "s/NC_000018.10/chr18/g" \| sed "s/NC_000019.10/chr19/g" \| sed "s/NC_000020.11/chr20/g" \| sed "s/NC_000021.9/chr21/g" \| sed "s/NC_000022.11/chr22/g" \| sed "s/NC_000023.11/chrX/g" \| sed "s/NC_000024.10/chrY/g" \| sed "s/NC_012920.1/chrMT/g" >> genes_chr.gff|
 
 ## Bedtools
 ### Compute Intersections
