@@ -1,23 +1,23 @@
-# NR File Usage Examples
+# Tutorial – How to Use dbVar's NR SV Data Files
 ## Purpose
 
-The purpose of this tutorial is to demonstrate the ability to display or compute intersections with the dbVar NR files using popular tools and browsers.
+This tutorial will show you how to intersect dbVar's non-redundant (NR) files with other genomic interval files, using popular tools and browsers. By the end of the tutorial, you will be able to determine, for example, what genes are overlapped by NR Deletions throughout the human genome.
 
 ## Input Files
-### Subject Files
+### dbVar NR Files
 NOTES:
- - FTP files are located at ftp://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/
- - Genome Browsers can access the FTP files by URL.
- - Locally-installed tools will require the files to be downloaded.
- - BED files have 0-based start and 1-based stops.
- - Chromosome names contain "chr".
- - For the UCSC Genome Browser, set a track name and exclude placements on chrMT.
+ - Many genome browsers can access dbVar's NR data files directly using the URLs provided, avoiding the need to download.
+ - Some locally-installed tools may require you to download data files before use.
+ - BED files have 0-based starts and 1-based stops. (Standard non-BED dbVar files use 1-based starts.)
+ - Chromosome names contain "chr", e.g., **chrX**.
+ - Some scenarios may require you to edit data files after download, using any plain text editor. Instructions are provided (see ***Post-Download instructions*** below). For example, the UCSC Genome Browser requires BED files to include a track name and description, and the removal of any placements on chrMT (usually located at the end of a file).
+ - All **FTP directory/ file** paths in the table below should be prefixed with: ftp://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/...
 
 |File Content|File format|FTP directory/ file|Post-Download instructions|
 |------------|-----------|--------|--------------------------|
-|Non-redundant deletions|.bed|deletions/ GRCh38.nr_deletions.bed.gz|gunzip GRCh38.nr_deletions.bed.gz; echo "track name=\"dbVar NR deletions\" description=\"non-redundant deletions from dbVar\"" > GRCh38.nr_deletions_ucsc.bed; grep -v ^chrMT GRCh38.nr_deletions.bed >> GRCh38.nr_deletions_ucsc.bed|
-|Non-redundant duplications|.bed|duplications/ GRCh38.nr_duplications.bed.gz|gunzip GRCh38.nr_duplications.bed.gz|
-|Non-redundant insertions|.bed|insertions/ GRCh38.nr_insertions.bed.gz|gunzip GRCh38.nr_insertions.bed.gz|
+|non-redundant ***Deletions***|BED|...deletions/ GRCh38.nr_deletions.bed.gz|```gunzip GRCh38.nr_deletions.bed.gz; echo "track name=\"dbVar NR deletions\" description=\"non-redundant deletions from dbVar\"" > GRCh38.nr_deletions_ucsc.bed; grep -v ^chrMT GRCh38.nr_deletions.bed >> GRCh38.nr_deletions_ucsc.bed```|
+|non-redundant ***Duplications***|BED|...duplications/ GRCh38.nr_duplications.bed.gz|```gunzip GRCh38.nr_duplications.bed.gz```|
+|non-redundant ***Insertions***|BED|...insertions/ GRCh38.nr_insertions.bed.gz|```gunzip GRCh38.nr_insertions.bed.gz```|
 
 
 ### Query Files
@@ -36,28 +36,31 @@ NOTES:
 
 |File Content|File format|FTP directory/ file|Modified File Name|Post-Download instructions|
 |------------|-----------|-----------------|------------------|--------------------------|
-|Clinical variants|.vcf|/pub/clinvar/vcf_GRCh38/ clinvar.vcf.gz|clinvar_chr.vcf|gunzip clinvar.vcf.gz; grep "^#" clinvar.vcf > clinvar_chr.vcf; grep -v "^#" clinvar.vcf \| sed "s/^/chr/" >> clinvar_chr.vcf|
+|Clinical variants|.vcf|/pub/clinvar/vcf_GRCh38/ clinvar.vcf.gz|clinvar_chr.vcf|```gunzip clinvar.vcf.gz; grep "^#" clinvar.vcf > clinvar_chr.vcf; grep -v "^#" clinvar.vcf '|'' sed "s/^/chr/" >> clinvar_chr.vcf```|
 |Human genes|.gff|/refseq/H_sapiens/H_sapiens/GFF/ ref_GRCh38.p12_top_level.gff3.gz|genes_chr.gff|gunzip ref_GRCh38.p12_top_level.gff3.gz;  grep "^#" ref_GRCh38.p12_top_level.gff3 > genes_chr.gff; cat ref_GRCh38.p12_top_level.gff3 \| awk -F'\t' '$3~/^gene$/' \| grep "^NC_" \| sed "s/NC_000001.11/chr1/g" \| sed "s/NC_000002.12/chr2/g" \| sed "s/NC_000003.12/chr3/g" \| sed "s/NC_000004.12/chr4/g" \| sed "s/NC_000005.10/chr5/g" \| sed "s/NC_000006.12/chr6/g" \| sed "s/NC_000007.14/chr7/g" \| sed "s/NC_000008.11/chr8/g" \| sed "s/NC_000009.12/chr9/g" \| sed "s/NC_000010.11/chr10/g" \| sed "s/NC_000011.10/chr11/g" \| sed "s/NC_000012.12/chr12/g" \| sed "s/NC_000013.11/chr13/g" \| sed "s/NC_000014.9/chr14/g" \| sed "s/NC_000015.10/chr15/g" \| sed "s/NC_000016.10/chr16/g" \| sed "s/NC_000017.11/chr17/g" \| sed "s/NC_000018.10/chr18/g" \| sed "s/NC_000019.10/chr19/g" \| sed "s/NC_000020.11/chr20/g" \| sed "s/NC_000021.9/chr21/g" \| sed "s/NC_000022.11/chr22/g" \| sed "s/NC_000023.11/chrX/g" \| sed "s/NC_000024.10/chrY/g" \| sed "s/NC_012920.1/chrMT/g" >> genes_chr.gff|
 
-## Bedtools
+
+# Bedtools:
 ### Compute Intersections
 Refer to:
  - <http://bedtools.readthedocs.io/en/latest/content/tools/intersect.html>
  - **Installation Notes** section at end of this document.
 
 To find ClinVar variants that intersect dbVar deletions, run:
+
     `bedtools intersect -a clinvar_chr.vcf -b GRCh38.nr_deletions.bed -u > clinvar_dbvar_deletions.vcf`
 
 To find genes that intersect dbVar insertions, run:
+
     `bedtools intersect -a genes_chr.gff -b GRCh38.nr_insertions.bed -u > gene_dbvar_insertions.gff`
 
-**NOTE:**
- - Use the -u option for unique overlaps.
+*NOTE:*  The **-u** option provides a **unique** set of overlaps.
 
-## Galaxy
+
+# Galaxy:
 ### Compute Intersections
  - Go to the online Galaxy server: <https://usegalaxy.org/>
- - NOTE: If the server is down select an alternate server from the displayed list.
+  - If the server is down, select an alternate server from the displayed list.
  - Select **Get Data** from the **Tools** menubar
  - Select **Upload File** from your computer under **Get Data**
  - In the **Download from web or upload from disk** window
@@ -108,7 +111,7 @@ To find genes that intersect dbVar insertions, run:
 ![Galaxy VCF](../../images/galaxy_vcf.PNG?raw=true "Galaxy")
 
 
-## UCSC Genome Browser
+# UCSC Genome Browser:
 ### Browse
 
  - Open the **UCSC Genome Browser**: <http://genome.ucsc.edu/cgi-bin/hgGateway>
@@ -158,7 +161,7 @@ Add a second track of insertions:
  - The output is generated in a file or displayed in the browser.
 
 
-## NCBI Sequence Viewer
+# NCBI Sequence Viewer:
 ### Browse
  - Open **NCBI Sequence Viewer** for GRCh38, chromosome 1 in browser: <https://www.ncbi.nlm.nih.gov/projects/sviewer/?id=NC_000001>
  - Select **Tracks**
