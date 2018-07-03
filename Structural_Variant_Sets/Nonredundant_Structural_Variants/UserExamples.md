@@ -9,7 +9,7 @@ This tutorial demonstrates how to intersect dbVar's non-redundant (NR) files wit
  - [Galaxy](#galaxy)
  - [UCSC Genome Browser](#ucsc-genome-browser)
  - [NCBI Sequence Viewer](#ncbi-sequence-viewer)
-
+ - [Installation Notes (Linux)](#installation-notes-linux)
 
 ## Input Files
 ### dbVar NR Files
