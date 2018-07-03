@@ -19,6 +19,9 @@ NCBI's database of Human Genomic Structural Variation is dbVar.
 An Overview of Structural Variation can be found here:
 
  [https://www.ncbi.nlm.nih.gov/dbvar/content/overview](https://www.ncbi.nlm.nih.gov/dbvar/content/overview/#github)
+ 
+Tutorials:
+[https://github.com/ncbi/dbvar/blob/master/Structural_Variant_Sets/Nonredundant_Structural_Variants/UserExamples.md](https://github.com/ncbi/dbvar/blob/master/Structural_Variant_Sets/Nonredundant_Structural_Variants/UserExamples.md)
 
 ## Description of NR SV data files:
 
