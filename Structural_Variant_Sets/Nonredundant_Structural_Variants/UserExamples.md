@@ -1,7 +1,15 @@
 # Tutorial – How to Use dbVar's NR SV Data Files
 ## Purpose
 
-This tutorial will show you how to intersect dbVar's non-redundant (NR) files with other genomic interval files, using popular tools and browsers. By the end of the tutorial, you will be able to determine, for example, what genes are overlapped by NR Deletions throughout the human genome.
+This tutorial demonstrates how to intersect dbVar's non-redundant (NR) files with other genomic interval files using popular tools and browsers. By the end of the tutorial you should be able toe, for example, calculate overlaps between genes and NR Deletions throughout the human genome.
+
+## Sections
+ - [Input Files](#input-files)
+ - [Bedtools](#bedtools)
+ - [Galaxy](#galaxy)
+ - [UCSC Genome Browser](#ucsc-genome-browser)
+ - [NCBI Sequence Viewer](#ncbi-sequence-viewer)
+
 
 ## Input Files
 ### dbVar NR Files

@@ -2,15 +2,15 @@
 
 ## Work in progress and subject to change
 
-## Last updated:
+**Last updated:** 07/03/18
 
-06/22/18
 
-## Link to latest nr SV file downloads:
+
+## Latest nr SV file downloads:
 
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/#github)
 
-## Tutorials:
+## Tutorial on how to use dbVar nr SV files:
 [https://github.com/ncbi/dbvar/blob/master/Structural_Variant_Sets/Nonredundant_Structural_Variants/UserExamples.md](https://github.com/ncbi/dbvar/blob/master/Structural_Variant_Sets/Nonredundant_Structural_Variants/UserExamples.md)
 
 # Introduction
@@ -22,7 +22,7 @@ NCBI's database of Human Genomic Structural Variation is dbVar.
 An Overview of Structural Variation can be found here:
 
  [https://www.ncbi.nlm.nih.gov/dbvar/content/overview](https://www.ncbi.nlm.nih.gov/dbvar/content/overview/#github)
- 
+
 
 
 ## Description of NR SV data files:
@@ -34,15 +34,15 @@ available via FTP as tab delimited files by assembly, GRCh37 & GRCh38, and type 
 outermost stop.  Please note: the non-redundant coordinates are based strictly
 on exact overlap of coordinates, not on partial overlaps.  
 
-* Other features of NR SV files: 
+* Other features of NR SV files:
    * variant calls are from germline samples only (no somatic)
    * placements are "BestAvailable" on the assembly (guarantees no duplicate placements for a variant)
    * placements are on finished chromosomes only (not on NT_ or NW_ contigs)
-   * placements are 1-based in the .tsv files 
+   * placements are 1-based in the .tsv files
    * placements are zero-based start and 1-based stop in .bed and .bedpe files (coming soon)
    * insertion_length is set to sequence length if the sequence was submitted to dbVar without a specific insertion_length
    * insertions submitted to dbVar without insertion_length or submitted sequence are not included in the NR files
-   
+
 * Other files based on NR SV files:
    * NR SV files annotated with overlapping ACMG genes (more details soon)
    * NR SV files in .bed format (more details soon)
@@ -190,12 +190,12 @@ chr1 | 0 | 10000 | chr1_0_10000_del
 
 ## Records in the NR SV .bedpe files, e.g.
 
-chrom1 | start1 | end1 | chrom2 | start2 | end2 | name | score | strand1 | strand2 | SV_count | variant_type | method | analysis | platform | study | SV | clinical_assertion | clinvar_accession 
+chrom1 | start1 | end1 | chrom2 | start2 | end2 | name | score | strand1 | strand2 | SV_count | variant_type | method | analysis | platform | study | SV | clinical_assertion | clinvar_accession
 -------|--------|------|--------|--------|------|------|-------|---------|---------|----------|--------------|--------|----------|----------|-------|----|--------------------|------------------
 chr1 | 14873 | 7527302 | . | -1 | -1 | chr1_14873_7527302_del | . | . | . | 1 | copy_number_loss | Oligo_aCGH | Probe_signal_intensity | NA | ClinGen_Laboratory-Submitted | nssv13638713 | Pathogenic | SCV000495999
 
 * Placements in bedpe files are zero-based start and one-based stop
-* bedpe files for our purposes are designed to capture chr, start, stop, name 
+* bedpe files for our purposes are designed to capture chr, start, stop, name
 and all the additional information which appears in NR SV files by placing it in   
 the optional fields starting at field 11
 * (However, bedpe files are normally intended for disjointed genomic sequences)
@@ -241,7 +241,7 @@ the optional fields starting at field 11
 
 # README files for deletions, insertions, and duplications
 
-Please see README files for deletions, insertions, and duplications for example 
+Please see README files for deletions, insertions, and duplications for example
 records and additional details.
 
 * Deletions: https://github.com/ncbi/dbvar/blob/master/Structural_Variant_Sets/Nonredundant_Structural_Variants/Deletions/README.md
