@@ -2,7 +2,7 @@
 
 ## Work in progress and subject to change
 
-**Last updated:** 07/03/18
+**Last updated:** 07/12/18
 
 
 
@@ -173,9 +173,15 @@ The "NR SVs" are in ASCII text files with tab-separated values on the FTP site.
 
 ## Records in the NR SV ACMG files contain tab-separated fields, and a field for the ACMG gene that overlaps the variant, e.g.:
 
-chr | outermost_start | outermost_stop | variant_count | variant_type | method | analysis | platform | min_insertion_length | max_insertion_length | study | variant | gene  
-----|-----------------|----------------|---------------|--------------|--------|----------|----------|----------------------|-------------|--------|----------|-----
-13 | 32922439 | 32922439 | 2 | alu_insertion | Sequencing | Split_read_and_paired-end_mapping;de_novo_and_local_sequence_assembly | HiSeq 2000;Illumina HiSeq 2000 | 281 | 317 | Gardner2017;Wildschutte2015 | nssv14048388:nssv4041332 | BRCA2  
+chr | outermost_start | outermost_stop | variant_count | variant_type | method | analysis | platform | study | variant | clinical_significance | clinvar_accession | min_insertion_length | max_insertion_length | gene
+----|-----------------|----------------|---------------|--------------|--------|----------|----------|-------|-------------|-------------------|-------------------|----------------------|----------------------|-----
+3| 30621876 | 30621876 | 2 | alu_insertion | Merging;Sequencing | Merging;Split_read_and_paired-end_mapping | See merged experiments;HiSeq 2000 | 1000_Genomes_Consortium_Phase_3_SV_Submission;Gardner2017 | essv18243203;nssv14059593 |  |  |279 | 280 | TGFBR2
+
+### Caveats for the ACMG files:
+
+* ACMG files are provided as a "proof of principle" for a "use case" for the NR SV files.
+* ACMG files are based on region/gene overlaps, and are missing a few call/gene overlaps in the cases where the parent variant region does not include all of the variant call placement and the region does not overlap the gene or is upstream or downstream of the gene.   
+* Placements in the ACMG files do not account for confidence intervals, even though the overlaps reported in the file were determined using confidence intervals. This results in a few of the overlaps that are not supported by the placements as reported in the file.
 
 For information on ACMG genes please see:
 https://www.ncbi.nlm.nih.gov/clinvar/docs/acmg/
@@ -187,6 +193,9 @@ chr1 | 0 | 10000 | chr1_0_10000_del
 
 * Placements in bed files are zero-based start and one-based stop
 * name is comprised of chromosome, outermost_start, outermost_stop, and type (del, dup, or ins)
+* NR SV .bed files may be used with a variety of tools as shown in the tutorial:
+
+[https://github.com/ncbi/dbvar/blob/master/Structural_Variant_Sets/Nonredundant_Structural_Variants/UserExamples.md](https://github.com/ncbi/dbvar/blob/master/Structural_Variant_Sets/Nonredundant_Structural_Variants/UserExamples.md)
 
 ## Records in the NR SV .bedpe files, e.g.
 
@@ -198,7 +207,7 @@ chr1 | 14873 | 7527302 | . | -1 | -1 | chr1_14873_7527302_del | . | . | . | 1 | 
 * bedpe files for our purposes are designed to capture chr, start, stop, name
 and all the additional information which appears in NR SV files by placing it in   
 the optional fields starting at field 11
-* (However, bedpe files are normally intended for disjointed genomic sequences)
+* (However, bedpe files are normally intended for disjointed genomic sequences.)
 
 # Methods include e.g.:
 
@@ -265,7 +274,8 @@ neccessary fields required by the nr process.
 The XML is then parsed to generate SV records with coordinates, type,
 method, analysis, platform, insertion_length, SV accession and study.  
 
-The SV records are then proccessed to generate the NR records described above.
+The SV records are then processed to generate NR SV tab-separated value (tsv) files by assembly and type, as described above, e.g. 
+* GRCh38.nr_deletions.tsv.gz
 
 # Tutorials
 
