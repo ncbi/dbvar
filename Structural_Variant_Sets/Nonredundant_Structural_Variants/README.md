@@ -2,8 +2,7 @@
 
 ## Work in progress and subject to change
 
-**Last updated:** 07/12/18
-
+**Last updated:** 07/13/18
 
 
 ## Latest nr SV file downloads:
@@ -39,14 +38,14 @@ on exact overlap of coordinates, not on partial overlaps.
    * placements are "BestAvailable" on the assembly (guarantees no duplicate placements for a variant)
    * placements are on finished chromosomes only (not on NT_ or NW_ contigs)
    * placements are 1-based in the .tsv files
-   * placements are zero-based start and 1-based stop in .bed and .bedpe files (coming soon)
+   * placements are zero-based start and 1-based stop in .bed and .bedpe files
    * insertion_length is set to sequence length if the sequence was submitted to dbVar without a specific insertion_length
    * insertions submitted to dbVar without insertion_length or submitted sequence are not included in the NR files
 
 * Other files based on NR SV files:
-   * NR SV files annotated with overlapping ACMG genes (more details soon)
-   * NR SV files in .bed format (more details soon)
-   * NR SV files in .bedpe format (more details soon)
+   * NR SV files annotated with overlapping ACMG genes
+   * NR SV files in .bed format
+   * NR SV files in .bedpe format
 
 ## Variant types
 
@@ -84,7 +83,7 @@ The variant types in each of the three "aggregation types" are:
 ## Number of input SV by assembly as of Mar 9, 2018:
 
 variant type | GRCh37 | GRCh38
--------------|--------|-------
+:-----------:|:------:|:-----:
 **DELETIONS** | |
 alu_deletion |  1700117 | 1683546
 copy_number_loss  |  2409362 | 2392904
@@ -107,21 +106,14 @@ sva_insertion |  1097 |  1087
 
 ## NR Coordinates by assembly as of Mar 9, 2018:
 
-NR coordinates | GRCh38 nr files
------------|----------------------------------------------
-  2207235  | GRCh38.nr_deletions.tsv
-   326596  | GRCh38.nr_duplications.tsv
-  1101221  | GRCh38.nr_insertions.tsv
-  3635052  | total
+GRCh38 nr files | NR coordinates | GRCh37 nr files | NR coordinates |
+:---------:|:--------------------------:|:---------:|:--------------------------:
+GRCh38.nr_deletions.tsv |  2207235  | GRCh37.nr_deletions.tsv | 2219439 |
+GRCh38.nr_duplications.tsv | 326596  | GRCh37.nr_duplications.tsv | 336634  |
+GRCh38.nr_insertions.tsv | 1101221  | GRCh37.nr_insertions.tsv |  1095615  |
+total: |3635052  | total: | 3651688  |
 
-NR coordinates | GRCh37 nr files
------------|----------------------------------------------
-  2219439  | GRCh37.nr_deletions.tsv
-   336634  | GRCh37.nr_duplications.tsv
-  1095615  | GRCh37.nr_insertions.tsv
-  3651688  | total
-
-# Files
+# NR SV Files
 
 The "NR SVs" are in ASCII text files with tab-separated values on the FTP site.
 
@@ -169,13 +161,15 @@ The "NR SVs" are in ASCII text files with tab-separated values on the FTP site.
 
 ## Records in the NR SV files contain tab-separated fields (only insertion SVs have min and max insertion_length):
 
-| chr | outermost_start | outermost_stop | SV_count | variant_type | method | analysis | platform | study | SV | clincical_assertion | clinvar_accession | min_insertion_length | max_insertion_length |
+| chr | outermost_start | outermost_stop | variant_count | variant_type | method | analysis | platform | study | variant | clincical_assertion | clinvar_accession | min_insertion_length | max_insertion_length |
 
 ## Records in the NR SV ACMG files contain tab-separated fields, and a field for the ACMG gene that overlaps the variant, e.g.:
 
 chr | outermost_start | outermost_stop | variant_count | variant_type | method | analysis | platform | study | variant | clinical_significance | clinvar_accession | min_insertion_length | max_insertion_length | gene
 ----|-----------------|----------------|---------------|--------------|--------|----------|----------|-------|-------------|-------------------|-------------------|----------------------|----------------------|-----
 3| 30621876 | 30621876 | 2 | alu_insertion | Merging;Sequencing | Merging;Split_read_and_paired-end_mapping | See merged experiments;HiSeq 2000 | 1000_Genomes_Consortium_Phase_3_SV_Submission;Gardner2017 | essv18243203;nssv14059593 |  |  |279 | 280 | TGFBR2
+
+* Please note that the fields type, method, analysis, platform, variant, and study may contain multiple values, and that these values summarize all the calls found in the variant field.  The values in the variant field are dbVar call accessions.
 
 ### Caveats for the ACMG files:
 
@@ -189,6 +183,7 @@ https://www.ncbi.nlm.nih.gov/clinvar/docs/acmg/
 ## Records in the NR SV .bed files, e.g.
 
 chr | outermost_start | outermost_stop | name  
+----|-----------------|----------------|-----
 chr1 | 0 | 10000 | chr1_0_10000_del
 
 * Placements in bed files are zero-based start and one-based stop
@@ -199,54 +194,35 @@ chr1 | 0 | 10000 | chr1_0_10000_del
 
 ## Records in the NR SV .bedpe files, e.g.
 
-chrom1 | start1 | end1 | chrom2 | start2 | end2 | name | score | strand1 | strand2 | SV_count | variant_type | method | analysis | platform | study | SV | clinical_assertion | clinvar_accession
+chrom1 | start1 | end1 | chrom2 | start2 | end2 | name | score | strand1 | strand2 | variant_count | variant_type | method | analysis | platform | study | variant | clinical_assertion | clinvar_accession
 -------|--------|------|--------|--------|------|------|-------|---------|---------|----------|--------------|--------|----------|----------|-------|----|--------------------|------------------
 chr1 | 14873 | 7527302 | . | -1 | -1 | chr1_14873_7527302_del | . | . | . | 1 | copy_number_loss | Oligo_aCGH | Probe_signal_intensity | NA | ClinGen_Laboratory-Submitted | nssv13638713 | Pathogenic | SCV000495999
 
 * Placements in bedpe files are zero-based start and one-based stop
-* bedpe files for our purposes are designed to capture chr, start, stop, name
-and all the additional information which appears in NR SV files by placing it in   
-the optional fields starting at field 11
-* (However, bedpe files are normally intended for disjointed genomic sequences.)
+* bedpe files are normally used for disjointed genomic sequences
+* the NR bedpe files do not contain disjointed genomic sequences, and instead use default values for chrom2, start2 and end2 
+* the NR bedpe files use the optional fields starting at field 11 to hold: chr, outermost_start, outermost_stop, name, and all the additional fields which are in the NR SV files  
 
-# Methods include e.g.:
+# Methods and Analyses 
+## example values
 
-* BAC_aCGH
-* Curated
-* MLPA
-* Merging
-* Multiple
-* Not_provided
-* Oligo_aCGH
-* Optical_mapping
-* ROMA
-* SNP_array
-* Sequencing
-* qPCR
-* ROMA
-* SNP_array
-* Sequencing
-
-# Analyses include, e.g.:
-
-* Curated
-* Genotyping
-* Local_sequence_assembly
-* Manual_observation
-* Merging
-* Multiple
-* Not_provided
-* Optical_mapping
-* Other
-* Paired-end_mapping
-* Probe_signal_intensity
-* Read_depth
-* Read_depth_and_paired-end_mapping
-* SNP_genotyping_analysis
-* Sequence_alignment
-* Split_read_and_paired-end_mapping
-* Split_read_mapping
-* de_novo_sequence_assembly
+| Methods include, e.g. | Analyses include, e.g. |
+|:--------------------:|:--------------------:|
+| BAC_aCGH | Curated |
+| Curated | Genotyping |
+| MLPA | Local_sequence_assembly |
+| Merging | Merging |
+| Multiple | Multiple |
+| Not_provided | Not_provided |
+| Oligo_aCGH | Optical_mapping |
+| Optical_mapping | Other |
+| ROMA | Paired-end_mapping |
+| SNP_array | Probe_signal_intensity |
+| Sequencing | Read_depth |
+| qPCR | SNP_genotyping_analysis |
+| ROMA | Sequence_alignment |
+| SNP_array | Split_read_mapping |
+| Sequencing | de_novo_sequence_assembly |
 
 # README files for deletions, insertions, and duplications
 
