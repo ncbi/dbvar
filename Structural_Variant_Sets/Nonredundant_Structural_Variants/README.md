@@ -61,6 +61,7 @@ The variant types in each of the three "aggregation types" are:
    * alu_deletion
    * copy_number_loss
    * deletion
+   * herv_deletion
    * line1_deletion
    * sva_deletion
 
@@ -91,11 +92,11 @@ deletion |   13091839 | 12903950
 herv_deletion |   197 | 197
 line1_deletion |  82103 |  81940
 sva_deletion |  14254 | 14254
-copy_number_variation |  1164548 | 1106074
 **DUPLICATIONS** | |
+copy_number_gain	 | 1247923 | 1208729
+copy_number_variation |  1164548 | 1106074
 duplication |  1926155 | 1915335
 tandem_duplication |  11478 |  11446
-copy_number_gain	 | 1247923 | 1208729
 **INSERTIONS** | |
 alu_insertion |  19908 | 19764
 insertion |  1220439 | 1226610
