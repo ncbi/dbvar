@@ -39,14 +39,14 @@ on exact overlap of coordinates, not on partial overlaps.
    * placements are "BestAvailable" on the assembly (guarantees no duplicate placements for a variant)
    * placements are on finished chromosomes only (not on NT_ or NW_ contigs)
    * placements are 1-based in the .tsv files
-   * placements are zero-based start and 1-based stop in .bed and .bedpe files (coming soon)
+   * placements are zero-based start and 1-based stop in .bed and .bedpe files 
    * insertion_length is set to sequence length if the sequence was submitted to dbVar without a specific insertion_length
    * insertions submitted to dbVar without insertion_length or submitted sequence are not included in the NR files
 
 * Other files based on NR SV files:
    * NR SV files annotated with overlapping ACMG genes (more details soon)
-   * NR SV files in .bed format (more details soon)
-   * NR SV files in .bedpe format (more details soon)
+   * NR SV files in .bed format 
+   * NR SV files in .bedpe format 
 
 ## Variant types
 
