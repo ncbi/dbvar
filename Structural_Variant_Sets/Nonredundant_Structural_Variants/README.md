@@ -2,7 +2,7 @@
 
 ## Work in progress and subject to change
 
-**Last updated:** 07/13/18
+**Last updated:** 07/16/18
 
 
 ## Latest nr SV file downloads:
@@ -61,6 +61,7 @@ The variant types in each of the three "aggregation types" are:
    * alu_deletion
    * copy_number_loss
    * deletion
+   * herv_deletion
    * line1_deletion
    * sva_deletion
 
@@ -157,19 +158,32 @@ The "NR SVs" are in ASCII text files with tab-separated values on the FTP site.
 
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications//#github)
 
-# NR Records:
+# NR Records contain tab-separated fields:
 
-## Records in the NR SV files contain tab-separated fields (only insertion SVs have min and max insertion_length):
+## Please note: 
+* The fields type, method, analysis, platform, variant, study, clinical_significance, clinvar_accession, and gene may contain multiple values.  
+* Each of the values is associated with one or more calls found in the variant field.  
+* The values in the variant field are "dbVar call accessions". 
+
+## Records in the deletions or duplications NR SV files, e.g.:  
+
+| chr | outermost_start | outermost_stop | variant_count | variant_type | method | analysis | platform | study | variant | clincical_assertion | clinvar_accession |
+----|-----------------|----------------|---------------|--------------|--------|----------|----------|-------|-------------|-------------------|-------------------|
+15 | 98085101 | 101843270 | 1 | copy_number_loss | Oligo_aCGH | Probe_signal_intensity | Agilent ISCA 44K | ClinGen_Laboratory-Submitted | nssv14082018 | Pathogenic | SCV000586438
+
+## Records in the insertions NR SV files, e.g.:
 
 | chr | outermost_start | outermost_stop | variant_count | variant_type | method | analysis | platform | study | variant | clincical_assertion | clinvar_accession | min_insertion_length | max_insertion_length |
+----|-----------------|----------------|---------------|--------------|--------|----------|----------|-------|-------------|-------------------|-------------------|----------------------|----------------------
+1 | 1889055 | 1889055 | 1 | alu_insertion | Sequencing | Split_read_and_paired-end_mapping | HiSeq 2000 | Gardner2017 | nssv14051747 |  |  | 258 | 258
 
-## Records in the NR SV ACMG files contain tab-separated fields, and a field for the ACMG gene that overlaps the variant, e.g.:
+* only insertion SVs have minimum_insertion_length and maximum_insertion_length fields
+
+## Records in the NR SV ACMG files contain a field for the ACMG gene that overlaps the variant, e.g.:
 
 chr | outermost_start | outermost_stop | variant_count | variant_type | method | analysis | platform | study | variant | clinical_significance | clinvar_accession | min_insertion_length | max_insertion_length | gene
 ----|-----------------|----------------|---------------|--------------|--------|----------|----------|-------|-------------|-------------------|-------------------|----------------------|----------------------|-----
-3| 30621876 | 30621876 | 2 | alu_insertion | Merging;Sequencing | Merging;Split_read_and_paired-end_mapping | See merged experiments;HiSeq 2000 | 1000_Genomes_Consortium_Phase_3_SV_Submission;Gardner2017 | essv18243203;nssv14059593 |  |  |279 | 280 | TGFBR2
-
-* Please note that the fields type, method, analysis, platform, variant, and study may contain multiple values, and that these values summarize all the calls found in the variant field.  The values in the variant field are dbVar call accessions.
+3| 30621876 | 30621876 | 2 | alu_insertion | Merging;Sequencing | Merging;Split_read_and_paired-end_mapping | See merged experiments;HiSeq 2000 | 1000_Genomes_Consortium_Phase_3_SV_Submission;Gardner2017 | essv18243203;nssv14059593 |  |  |279 | 280 | TGFBR2 
 
 ### Caveats for the ACMG files:
 
