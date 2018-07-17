@@ -3,7 +3,7 @@
 ## Work in progress – Data subject to change
 
 ## Last updated:
-06/22/18
+07/17/18
 
 ## FTP Link:
 
@@ -23,7 +23,7 @@ files on the FTP site:
 &nbsp;&nbsp;&nbsp;&nbsp;__GRCh38.nr_deletions.bedpe.gz__  
 &nbsp;&nbsp;&nbsp;&nbsp;__GRCh37.nr_deletions.bedpe.gz__  
 
-The variant types in the NR "deletions" file are:
+The variant types in the NR "deletions" files are:
 
 * alu_deletion
 * copy_number_loss
