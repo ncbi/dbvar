@@ -32,9 +32,15 @@ The variant types in the NR "deletions" files are:
 * line1_deletion
 * sva_deletion
 
-# Records in the aggregated_deletion_loss files
+# Records in the NR SV deletions files
 
-Records in the aggregated_deletion_loss files contain the following tab-separated fields.
+## Please note:
+
+* The fields type, method, analysis, platform, variant, study, clinical_significance, clinvar_accession, and gene may contain multiple values.  
+* Each of the values is associated with one or more calls found in the variant field.
+* The values in the variant field are "dbVar call accessions".
+
+* Records in the NR ST deletions files contain the following tab-separated fields.
 
 | chr | outermost_start | outermost_stop | variant_count | variant_type | method | analysis | platform | study | variant | clinical_assertion | clinvar_accession
 
