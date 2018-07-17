@@ -14,16 +14,16 @@
 The non-redundant structural variants, "NR SVs", of type "duplication" are in
 these files on the FTP site:
 
-&nbsp;&nbsp;&nbsp;&nbsp;__GRCh38.nr_duplications.tsv.gz__
-&nbsp;&nbsp;&nbsp;&nbsp;__GRCh37.nr_duplications.tsv.gz__
-&nbsp;&nbsp;&nbsp;&nbsp;__GRCh38.nr_duplications.acmg_genes.tsv.gz__
-&nbsp;&nbsp;&nbsp;&nbsp;__GRCh37.nr_duplications.acmg_genes.tsv.gz__
-&nbsp;&nbsp;&nbsp;&nbsp;__GRCh38.nr_duplications.bed.gz__
-&nbsp;&nbsp;&nbsp;&nbsp;__GRCh37.nr_duplications.bed.gz__
-&nbsp;&nbsp;&nbsp;&nbsp;__GRCh38.nr_duplications.bedpe.gz__
-&nbsp;&nbsp;&nbsp;&nbsp;__GRCh37.nr_duplications.bedpe.gz__
+&nbsp;&nbsp;&nbsp;&nbsp;__GRCh38.nr_duplications.tsv.gz__   
+&nbsp;&nbsp;&nbsp;&nbsp;__GRCh37.nr_duplications.tsv.gz__   
+&nbsp;&nbsp;&nbsp;&nbsp;__GRCh38.nr_duplications.acmg_genes.tsv.gz__   
+&nbsp;&nbsp;&nbsp;&nbsp;__GRCh37.nr_duplications.acmg_genes.tsv.gz__   
+&nbsp;&nbsp;&nbsp;&nbsp;__GRCh38.nr_duplications.bed.gz__   
+&nbsp;&nbsp;&nbsp;&nbsp;__GRCh37.nr_duplications.bed.gz__   
+&nbsp;&nbsp;&nbsp;&nbsp;__GRCh38.nr_duplications.bedpe.gz__   
+&nbsp;&nbsp;&nbsp;&nbsp;__GRCh37.nr_duplications.bedpe.gz__   
 
-The variant types in the NR "aggregated duplications and gains" file are:
+The variant types in the NR "duplications" files are:
 
 * copy_number_gain
 * copy_number_variation
