@@ -32,9 +32,16 @@ The variant types in the NR "insertions" files are:
 * novel_sequence_insertion
 * sva_insertion
 
-# Records in the aggregated_insertions files
 
-Records in the aggregated_insertions files contain the following tab-separated fields.
+# Records in NR SV insertions files
+
+Please note:
+
+* The fields type, method, analysis, platform, variant, study, clinical_significance, clinvar_accession, and gene may contain multiple values.
+* Each of the values is associated with one or more calls found in the variant field.
+* The values in the variant field are "dbVar call accessions".
+
+* Records in the NR SV insertions files contain the following tab-separated fields.
 
 | chr | outermost_start | outermost_stop | variant_count | variant_type | method | analysis | platform | study | variant | clinical_assertion | clinvar_accession | min_insertion_length | max_insertion_length | 
 
