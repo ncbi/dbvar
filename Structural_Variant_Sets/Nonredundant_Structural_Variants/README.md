@@ -92,8 +92,9 @@ deletion | 13120032 | 13017650
 herv_deletion | 197 | 197
 line1_deletion | 82103 | 82103
 sva_deletion | 14254 | 14254
-copy_number_variation | 1164548 | 1109076
 **DUPLICATIONS** | |
+copy_number_gain | 1247971 | 1218617
+copy_number_variation | 1164548 | 1109076
 duplication | 1926815 | 1918241
 tandem_duplication | 11509 | 11459
 copy_number_gain | 1247971 | 1218617
@@ -116,7 +117,8 @@ total: | 3645790 | total: | 3660063  |
 
 # NR SV Files
 
-The "NR SVs" are in ASCII text files with tab-separated values on the FTP site.
+* The "NR SVs" are in ASCII text files with tab-separated values on the FTP site.
+* CNV analysis: users must consider both duplications and deletions files for comprehensive CNV analysis.
 
 ## Deletion NR SV Files:
 

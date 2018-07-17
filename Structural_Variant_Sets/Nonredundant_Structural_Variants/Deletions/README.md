@@ -3,7 +3,7 @@
 ## Work in progress – Data subject to change
 
 ## Last updated:
-06/22/18
+07/17/18
 
 ## FTP Link:
 
@@ -23,7 +23,7 @@ files on the FTP site:
 &nbsp;&nbsp;&nbsp;&nbsp;__GRCh38.nr_deletions.bedpe.gz__  
 &nbsp;&nbsp;&nbsp;&nbsp;__GRCh37.nr_deletions.bedpe.gz__  
 
-The variant types in the NR "deletions" file are:
+The variant types in the NR "deletions" files are:
 
 * alu_deletion
 * copy_number_loss
@@ -32,9 +32,15 @@ The variant types in the NR "deletions" file are:
 * line1_deletion
 * sva_deletion
 
-# Records in the aggregated_deletion_loss files
+# Records in the NR SV deletions files
 
-Records in the aggregated_deletion_loss files contain the following tab-separated fields.
+## Please note:
+
+* The fields type, method, analysis, platform, variant, study, clinical_significance, clinvar_accession, and gene may contain multiple values.  
+* Each of the values is associated with one or more calls found in the variant field.
+* The values in the variant field are "dbVar call accessions".
+
+* Records in the NR SV deletions files contain the following tab-separated fields.
 
 | chr | outermost_start | outermost_stop | variant_count | variant_type | method | analysis | platform | study | variant | clinical_assertion | clinvar_accession
 

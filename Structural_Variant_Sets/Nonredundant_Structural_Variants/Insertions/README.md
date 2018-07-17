@@ -3,7 +3,7 @@
 ## Work in progress – Data subject to change
 
 ## Last updated:
-06/22/18
+07/17/18
 
 ## Link to FTP site:
 
@@ -23,7 +23,7 @@ files on the FTP site:
 &nbsp;&nbsp;&nbsp;&nbsp;__GRCh38.nr_insertions.bedpe.gz__  
 &nbsp;&nbsp;&nbsp;&nbsp;__GRCh37.nr_insertions.bedpe.gz__  
 
-The variant types in the NR "aggregated insertions" file are:
+The variant types in the NR "insertions" files are:
 
 * alu_insertion
 * insertion
@@ -32,18 +32,25 @@ The variant types in the NR "aggregated insertions" file are:
 * novel_sequence_insertion
 * sva_insertion
 
-# Records in the aggregated_insertions files
 
-Records in the aggregated_insertions files contain the following tab-separated fields.
+# Records in NR SV insertions files
 
-| chr | outermost_start | outermost_stop | SV_count | variant_type | method | analysis | platform | study | SV |
+Please note:
+
+* The fields type, method, analysis, platform, variant, study, clinical_significance, clinvar_accession, and gene may contain multiple values.
+* Each of the values is associated with one or more calls found in the variant field.
+* The values in the variant field are "dbVar call accessions".
+
+* Records in the NR SV insertions files contain the following tab-separated fields.
+
+| chr | outermost_start | outermost_stop | variant_count | variant_type | method | analysis | platform | study | variant | clinical_assertion | clinvar_accession | min_insertion_length | max_insertion_length | 
 
 
 ## Example record 1:
 
-chr | outermost_start | outermost_stop | SV_count | variant_type | method | analysis | platform | min_insertion_length | max_insertion_length | study | SV
-----|-----------------|----------------|----------|--------------|--------|----------|----------|---|---|----|---
-1 | 370037 | 370038 | 1 | insertion | Sequencing | Local_sequence_assembly | NA | 94 | 94 | Fan2017 | nssv14027289
+chr | outermost_start | outermost_stop | variant_count | variant_type | method | analysis | platform | study | variant | clinical_assertion | clinvar_accession | min_insertion_length | max_insertion_length |   
+----|-----------------|----------------|---------------|--------------|--------|----------|----------|-------|---------|-----------------------------------|-------------------|----------------------|----------------------|   
+1 | 370037 | 370038 | 1 | insertion | Sequencing | Local_sequence_assembly | NA | Fan2017 | nssv14027289 | | | 94 | 94
 
 ### Explanation:
 
@@ -77,15 +84,13 @@ https://www.ncbi.nlm.nih.gov/dbvar/variants/nsv3056167/
 
 ## Example record 2:
 
-chr | outermost_start | outermost_stop | variant_count | variant_type | method | analysis | platform | min_insertion_length | max_insertion_length | study | variant
-----|------------------|----------------|----------|--------------|--------|----------|----------|-------|--|--|---
-1 | 5874241 | 5874241 | 2 | alu_insertion;insertion | Sequencing;Sequencing | Split_read_and_paired-end_mapping;de_novo_sequence_assembly | HiSeq 2000;Illumina HiSeq 2000 | 52 | 243 | Gardner2017;Besenbacher2014 | nssv14046119:essv16474703
+chr | outermost_start | outermost_stop | variant_count | variant_type | method | analysis | platform | study | variant | clinical_assertion | clinvar_accession | min_insertion_length | max_insertion_length 
+----|-----------------|----------------|---------------|--------------|--------|----------|----------|-------|---------|-----------------------------------|-------------------|----------------------|----------------------|   
+1 | 147236943 | 147236943 | 2 | insertion;line1_insertion | Sequencing | Sequence_alignment;Split_read_and_paired-end_mapping | Sanger Sequencing;HiSeq 2000 | Levy2007;Gardner2017 | essv4283099;nssv14075648 |  |  | 10 | 6014
 
 ### Explanation:
 
-* This is a more complicated example insertion NR record containing multiple
-variants with multiple types, methods, and analyses from multiple studies, using
-platforms with different names, and having different insertion_lengths.
+* This is a more complicated example insertion NR record containing multiple variants with multiple variant_types, methods, analyses, studies, platforms, and insertion_lengths.
 
 # Questions or feedback
 
