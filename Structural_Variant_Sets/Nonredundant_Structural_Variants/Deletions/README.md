@@ -40,7 +40,7 @@ The variant types in the NR "deletions" files are:
 * Each of the values is associated with one or more calls found in the variant field.
 * The values in the variant field are "dbVar call accessions".
 
-* Records in the NR ST deletions files contain the following tab-separated fields.
+* Records in the NR SV deletions files contain the following tab-separated fields.
 
 | chr | outermost_start | outermost_stop | variant_count | variant_type | method | analysis | platform | study | variant | clinical_assertion | clinvar_accession
 
