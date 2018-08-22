@@ -2,7 +2,7 @@
 
 ## Work in progress and subject to change
 
-**Last updated:** 07/16/18
+**Last updated:** 08/22/18
 
 
 ## Latest nr SV file downloads:
@@ -162,39 +162,57 @@ total: | 3645790 | total: | 3660063  |
 
 # NR Records contain tab-separated fields:
 
-## Please note: 
+
+Column | NR_SV TSV File | BED File | BEDPE File |
+-----|:---------|:---|:------
+|1|chr|chr|chr|
+|2|outermost_start (1-based)|outermost_start (0-based)|outermost_start (0-based)|
+|3|outermost_stop (1-based)|outermost_stop (1-based)|outermost_stop (1-based)|
+|4|variant_count|NR_SV_id|.  |
+|5|variant_type| |-1  |
+|6|method| |-1  |
+|7|analysis| |NR_SV_id|
+|8|platform| |,   |
+|9|study| |.   |
+|10|variant| |.   |
+|11|clinical_assertion| |variant_count|
+|12|clinvar_accession| |variant_type|
+|13|bin_size| |method|
+|14|min_insertion_length*| |analysis|
+|15|max_insertion_length*| |platform|
+|16| | |study|
+|17| | |variant|
+|18| | |clinical_assertion|
+|19| | |clinvar_accession|
+|20| | |bin_size|
+|21| | |min_insertion_length|
+|22| | |max_insertion_length|
+
+Please note:
+ * \* = NR_SV TSV fields 14 and 15 are in nr_insertion.tsv files only
+ * NR_SV_id = chr_outermost_start_outermost_stop_type where type is del, dup, or ins
+ * In all cases, bedpe columns 4 through 6, and 8 through 10, are populated with default values per the bedpe specification
+ * The bed and bedpe specifications are found here: {{[https://bedtools.readthedocs.io/en/latest/content/general-usage.html]}}
+
+
+## Some fields may have multiple values: 
 * The fields type, method, analysis, platform, variant, study, clinical_significance, clinvar_accession, and gene may contain multiple values.  
 * Each of the values is associated with one or more calls found in the variant field.  
 * The values in the variant field are "dbVar call accessions". 
 
 ## Records in the deletions or duplications NR SV files, e.g.:  
 
-| chr | outermost_start | outermost_stop | variant_count | variant_type | method | analysis | platform | study | variant | clincical_assertion | clinvar_accession |
-----|-----------------|----------------|---------------|--------------|--------|----------|----------|-------|-------------|-------------------|-------------------|
+| chr | outermost_start | outermost_stop | variant_count | variant_type | method | analysis | platform | study | variant | clincical_assertion | clinvar_accession | bin_size | 
+----|-----------------|----------------|---------------|--------------|--------|----------|----------|-------|-------------|-------------------|-------------------|---------|
 15 | 98085101 | 101843270 | 1 | copy_number_loss | Oligo_aCGH | Probe_signal_intensity | Agilent ISCA 44K | ClinGen_Laboratory-Submitted | nssv14082018 | Pathogenic | SCV000586438
 
 ## Records in the insertions NR SV files, e.g.:
 
-| chr | outermost_start | outermost_stop | variant_count | variant_type | method | analysis | platform | study | variant | clincical_assertion | clinvar_accession | min_insertion_length | max_insertion_length |
-----|-----------------|----------------|---------------|--------------|--------|----------|----------|-------|-------------|-------------------|-------------------|----------------------|----------------------
+| chr | outermost_start | outermost_stop | variant_count | variant_type | method | analysis | platform | study | variant | clincical_assertion | clinvar_accession | bin_size | min_insertion_length | max_insertion_length |
+----|-----------------|----------------|---------------|--------------|--------|----------|----------|-------|-------------|-------------------|---------|-------|----------|----------------------|
 1 | 1889055 | 1889055 | 1 | alu_insertion | Sequencing | Split_read_and_paired-end_mapping | HiSeq 2000 | Gardner2017 | nssv14051747 |  |  | 258 | 258
 
 * only insertion SVs have minimum_insertion_length and maximum_insertion_length fields
-
-## Records in the NR SV ACMG files contain a field for the ACMG gene that overlaps the variant, e.g.:
-
-chr | outermost_start | outermost_stop | variant_count | variant_type | method | analysis | platform | study | variant | clinical_significance | clinvar_accession | min_insertion_length | max_insertion_length | gene
-----|-----------------|----------------|---------------|--------------|--------|----------|----------|-------|-------------|-------------------|-------------------|----------------------|----------------------|-----
-3| 30621876 | 30621876 | 2 | alu_insertion | Merging;Sequencing | Merging;Split_read_and_paired-end_mapping | See merged experiments;HiSeq 2000 | 1000_Genomes_Consortium_Phase_3_SV_Submission;Gardner2017 | essv18243203;nssv14059593 |  |  |279 | 280 | TGFBR2 
-
-### Caveats for the ACMG files:
-
-* ACMG files are provided as a "proof of principle" for a "use case" for the NR SV files.
-* ACMG files are based on region/gene overlaps, and are missing a few call/gene overlaps in the cases where the parent variant region does not include all of the variant call placement and the region does not overlap the gene or is upstream or downstream of the gene.   
-* Placements in the ACMG files do not account for confidence intervals, even though the overlaps reported in the file were determined using confidence intervals. This results in a few of the overlaps that are not supported by the placements as reported in the file.
-
-For information on ACMG genes please see:
-https://www.ncbi.nlm.nih.gov/clinvar/docs/acmg/
 
 ## Records in the NR SV .bed files, e.g.
 
@@ -218,6 +236,21 @@ chr1 | 14873 | 7527302 | . | -1 | -1 | chr1_14873_7527302_del | . | . | . | 1 | 
 * bedpe files are normally used for disjointed genomic sequences
 * the NR bedpe files do not contain disjointed genomic sequences, and instead use default values for chrom2, start2 and end2 
 * the NR bedpe files use the optional fields starting at field 11 to hold: chr, outermost_start, outermost_stop, name, and all the additional fields which are in the NR SV files  
+
+## Records in the NR SV ACMG files contain a field for the ACMG gene that overlaps the variant, e.g.:
+
+chr | outermost_start | outermost_stop | variant_count | variant_type | method | analysis | platform | study | variant | clinical_significance | clinvar_accession | min_insertion_length | max_insertion_length | gene
+----|-----------------|----------------|---------------|--------------|--------|----------|----------|-------|-------------|-------------------|-------------------|----------------------|----------------------|-----
+3| 30621876 | 30621876 | 2 | alu_insertion | Merging;Sequencing | Merging;Split_read_and_paired-end_mapping | See merged experiments;HiSeq 2000 | 1000_Genomes_Consortium_Phase_3_SV_Submission;Gardner2017 | essv18243203;nssv14059593 |  |  |279 | 280 | TGFBR2 
+
+### Caveats for the ACMG files:
+
+* ACMG files are provided as a "proof of principle" for a "use case" for the NR SV files.
+* ACMG files are based on region/gene overlaps, and are missing a few call/gene overlaps in the cases where the parent variant region does not include all of the variant call placement and the region does not overlap the gene or is upstream or downstream of the gene.   
+* Placements in the ACMG files do not account for confidence intervals, even though the overlaps reported in the file were determined using confidence intervals. This results in a few of the overlaps that are not supported by the placements as reported in the file.
+
+For information on ACMG genes please see:
+https://www.ncbi.nlm.nih.gov/clinvar/docs/acmg/
 
 # Methods and Analyses 
 ## example values
