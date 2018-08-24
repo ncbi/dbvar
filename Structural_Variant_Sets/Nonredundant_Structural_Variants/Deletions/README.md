@@ -3,7 +3,7 @@
 ## Work in progress – Data subject to change
 
 ## Last updated:
-07/17/18
+08/24/18
 
 ## FTP Link:
 
@@ -42,15 +42,15 @@ The variant types in the NR "deletions" files are:
 
 * Records in the NR SV deletions files contain the following tab-separated fields.
 
-| chr | outermost_start | outermost_stop | variant_count | variant_type | method | analysis | platform | study | variant | clinical_assertion | clinvar_accession
+| chr | outermost_start | outermost_stop | variant_count | variant_type | method | analysis | platform | study | variant | clinical_assertion | clinvar_accession | bin_size
 
 
 ## Example record 1:
   
-chr | outermost_start | outermost_stop | variant_count | variant_type | method | analysis | platform | study | variant | clinical_assertion | clinvar_accession  
-----|-----------------|----------------|---------------|--------------|--------|----------|----------|-------|---------|--------------------|------------------  
-X | 153293294 | 153296201 | 1 | deletion | Curated | Curated | NA | LSDB_submitted_variants | nssv7487065 | Pathogenic | SCV000222455
-
+chr | outermost_start | outermost_stop | variant_count | variant_type | method | analysis | platform | study | variant | clinical_assertion | clinvar_accession | bin_size  
+----|-----------------|----------------|---------------|--------------|--------|----------|----------|-------|---------|--------------------|------------------|------
+X | 153293294 | 153296201 | 1 | deletion | Curated | Curated | NA | LSDB_submitted_variants | nssv7487065 | Pathogenic | SCV000222455 | medium
+ 
 ### Explanation:
 
 * The non-redundant coordinates for this record in dbVar are chr1, with
@@ -73,6 +73,8 @@ given placement.  This count does not include SVs with a partial match.
 
 * The variant has an accession in ClinVar of SCV000222455
 
+* bin_size = small (length < 50 bp), medium (< 1000000), large (>= 1000000). Length = outermost_stop - outermost_start + 1.
+
 * URLs using the study name accession or variant_accession can be created to access the data
 in dbVar, e.g.:
 https://www.ncbi.nlm.nih.gov/dbvar/studies/nstd103/  
@@ -87,9 +89,9 @@ https://www.ncbi.nlm.nih.gov/clinvar/
 
 ## Example record 2:
 
-chr | outermost_start | outermost_stop | variant_count | variant_type | method | analysis | platform | study | variant | clinical_assertion | clinvar_accession  
-----|-----------------|----------------|---------------|--------------|--------|----------|----------|-------|---------|--------------------|------------------
-1 | 72300544 | 72346418 | 7 | copy_number_loss;deletion | Oligo_aCGH;Sequencing | Probe_signal_intensity;Read_depth | Agilent 24M aCGH;Illumina IIx | Park2010;Ju2010 | nssv1423530:nssv1425248:nssv1428032:nssv1428830:nssv1434173:nssv1439464:nssv1420391
+chr | outermost_start | outermost_stop | variant_count | variant_type | method | analysis | platform | study | variant | clinical_assertion | clinvar_accession | bin_size  
+----|-----------------|----------------|---------------|--------------|--------|----------|----------|-------|---------|--------------------|------------------|----- 
+1 | 72300544 | 72346418 | 7 | copy_number_loss;deletion | Oligo_aCGH;Sequencing | Probe_signal_intensity;Read_depth | Agilent 24M aCGH;Illumina IIx | Park2010;Ju2010 | nssv1423530:nssv1425248:nssv1428032:nssv1428830:nssv1434173:nssv1439464:nssv1420391 |   |   | medium
 
 ### Explanation:
 

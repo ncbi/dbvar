@@ -3,7 +3,7 @@
 ## Work in progress -- Data subject to change
 
 ## Last updated:
-07/17/18
+08/24/18
 
 ## FTP Link:
 
@@ -45,9 +45,9 @@ The variant types in the NR "duplications" files are:
 
 ## Example record 1:
 
-chr | outermost_start | outermost_stop | variant_count | variant_type | method | analysis | platform | study | variant | clinical_assertion | clinvar_accession
-----|-----------------|----------------|---------------|--------------|--------|----------|----------|-------|---------|--------------------|------------------
-15 | 90243115 | 90477618 | 1 | copy_number_gain | Oligo_aCGH | Probe_signal_intensity | NA | ClinGen_Laboratory-Submitted | nssv13652018 | Uncertain significance | SCV000495160
+chr | outermost_start | outermost_stop | variant_count | variant_type | method | analysis | platform | study | variant | clinical_assertion | clinvar_accession | bin_size
+----|-----------------|----------------|---------------|--------------|--------|----------|----------|-------|---------|--------------------|------------------|------
+15 | 90243115 | 90477618 | 1 | copy_number_gain | Oligo_aCGH | Probe_signal_intensity | NA | ClinGen_Laboratory-Submitted | nssv13652018 | Uncertain significance | SCV000495160 | medium
 
 ### Explanation:
 
@@ -71,6 +71,8 @@ the given placement.  This count does not include SVs with a partial match.
 
 * The variant has an accession in ClinVar of SCV000495160
 
+* bin_size = small (length < 50 bp), medium (<1000000), large (>= 1000000). Length = outermost_stop - outermost_start + 1.
+
 * URLs using the study name accession or variant_accession can be created to access the data
 in dbVar, e.g.:
 https://www.ncbi.nlm.nih.gov/dbvar/?term=ClinGen_Laboratory-Submitted
@@ -85,9 +87,9 @@ https://www.ncbi.nlm.nih.gov/clinvar/
 
 ## Example record 2:
 
-chr | outermost_start | outermost_stop | variant_count | variant_type | method | analysis | platform | study | variant | clinical_assertion | clinvar_accession
-----|-----------------|----------------|---------------|--------------|--------|----------|----------|-------|---------|--------------------|------------------
-8 | 75857739 | 75858539 | 2 | duplication;tandem_duplication | Sequencing | Split_read_and_paired-end_mapping;Read_depth_and_paired-end_mapping | Illumina HiSeq X Ten;Illumina HiSeq 2000 | Wong2016;Alsmadi2014 | essv26064592;nssv3988418 |  | 
+chr | outermost_start | outermost_stop | variant_count | variant_type | method | analysis | platform | study | variant | clinical_assertion | clinvar_accession | bin_size 
+----|-----------------|----------------|---------------|--------------|--------|----------|----------|-------|---------|--------------------|------------------|-----
+8 | 75857739 | 75858539 | 2 | duplication;tandem_duplication | Sequencing | Split_read_and_paired-end_mapping;Read_depth_and_paired-end_mapping | Illumina HiSeq X Ten;Illumina HiSeq 2000 | Wong2016;Alsmadi2014 | essv26064592;nssv3988418 |  |  | medium
 
 ### Explanation:
 
