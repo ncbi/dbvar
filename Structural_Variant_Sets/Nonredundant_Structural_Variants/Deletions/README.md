@@ -73,6 +73,8 @@ given placement.  This count does not include SVs with a partial match.
 
 * The variant has an accession in ClinVar of SCV000222455
 
+* bin_size = small (length < 50 bp), medium (< 1000000), large (>= 1000000). Length = outermost_stop - outermost_start + 1.
+
 * URLs using the study name accession or variant_accession can be created to access the data
 in dbVar, e.g.:
 https://www.ncbi.nlm.nih.gov/dbvar/studies/nstd103/  
