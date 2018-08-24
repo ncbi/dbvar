@@ -3,7 +3,7 @@
 ## Work in progress – Data subject to change
 
 ## Last updated:
-07/17/18
+08/24/18
 
 ## Link to FTP site:
 
@@ -48,9 +48,9 @@ Please note:
 
 ## Example record 1:
 
-chr | outermost_start | outermost_stop | variant_count | variant_type | method | analysis | platform | study | variant | clinical_assertion | clinvar_accession | min_insertion_length | max_insertion_length |   
-----|-----------------|----------------|---------------|--------------|--------|----------|----------|-------|---------|-----------------------------------|-------------------|----------------------|----------------------|   
-1 | 370037 | 370038 | 1 | insertion | Sequencing | Local_sequence_assembly | NA | Fan2017 | nssv14027289 | | | 94 | 94
+chr | outermost_start | outermost_stop | variant_count | variant_type | method | analysis | platform | study | variant | clinical_assertion | clinvar_accession | bin_size | min_insertion_length | max_insertion_length |   
+----|-----------------|----------------|---------------|--------------|--------|----------|----------|-------|---------|-----------------------------------|-------------|------|----------------------|----------------------|   
+1 | 370037 | 370038 | 1 | insertion | Sequencing | Local_sequence_assembly | NA | Fan2017 | nssv14027289 | | | small | 94 | 94
 
 ### Explanation:
 
@@ -73,6 +73,12 @@ indicate how the variant was evaluated.
 
 * The dbVar variant_accession is "nssv14027289".
 
+The clinical_assertion is not provided for this variant.
+
+There is no clinvar_accession for this variant
+
+bin_size = small (length < 50 bp), medium (< 1000000), large (>= 1000000), where length = outermost_stop - outermost_start + 1.
+
 * URLs using the study name or variant_accession can be created to access the data
 in dbVar, e.g.:
 https://www.ncbi.nlm.nih.gov/dbvar/?term=Fan2017  
@@ -84,9 +90,9 @@ https://www.ncbi.nlm.nih.gov/dbvar/variants/nsv3056167/
 
 ## Example record 2:
 
-chr | outermost_start | outermost_stop | variant_count | variant_type | method | analysis | platform | study | variant | clinical_assertion | clinvar_accession | min_insertion_length | max_insertion_length 
-----|-----------------|----------------|---------------|--------------|--------|----------|----------|-------|---------|-----------------------------------|-------------------|----------------------|----------------------|   
-1 | 147236943 | 147236943 | 2 | insertion;line1_insertion | Sequencing | Sequence_alignment;Split_read_and_paired-end_mapping | Sanger Sequencing;HiSeq 2000 | Levy2007;Gardner2017 | essv4283099;nssv14075648 |  |  | 10 | 6014
+chr | outermost_start | outermost_stop | variant_count | variant_type | method | analysis | platform | study | variant | clinical_assertion | clinvar_accession | bin_size | min_insertion_length | max_insertion_length 
+----|-----------------|----------------|---------------|--------------|--------|----------|----------|-------|---------|-----------------------------------|-----------|--------|----------------------|----------------------|   
+1 | 147236943 | 147236943 | 2 | insertion;line1_insertion | Sequencing | Sequence_alignment;Split_read_and_paired-end_mapping | Sanger Sequencing;HiSeq 2000 | Levy2007;Gardner2017 | essv4283099;nssv14075648 |  |  | small | 10 | 6014
 
 ### Explanation:
 
