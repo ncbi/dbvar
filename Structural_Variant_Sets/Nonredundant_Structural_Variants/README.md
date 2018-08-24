@@ -180,7 +180,7 @@ Please note:
  * NR_SV_id = chr_outermost_start_outermost_stop_type where type is del, dup, or ins
  * bin_size = small (length < 50 bp), medium (< 1000000), large (>= 1000000).  Length = outermost_stop - outermost_start + 1. 
  * In all cases, bedpe columns 4 through 6, and 8 through 10, are populated with default values per the bedpe specification
- * The bed and bedpe specifications are found here: {{[https://bedtools.readthedocs.io/en/latest/content/general-usage.html]}}
+ * The bed and bedpe specifications are found here: https://bedtools.readthedocs.io/en/latest/content/general-usage.html
 
 
 ## Some fields may have multiple values: 
