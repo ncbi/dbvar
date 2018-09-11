@@ -18,8 +18,8 @@ Note that dbVar NR data are provided on both GRCh37 and GRCh38, and in three for
 <!-- TOC depthFrom:3 depthTo:3 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [Obtain human clinically-relevant CNVs on GRCh37 or GRCh38](#obtain-human-clinically-relevant-cnvs-on-grch37-or-grch38)
-- [Researcher or Submitter screening file against NR](#researcher-or-submitter-screening-file-against-nr)
-- [Researcher or Submitter screening file against annotation datasets](#researcher-or-submitter-screening-file-against-annotation-datasets)
+- [Researcher or submitter screening file against NR](#researcher-or-submitter-screening-file-against-nr)
+- [Researcher or submitter screening file against annotation datasets](#researcher-or-submitter-screening-file-against-annotation-datasets)
 
 <!-- /TOC -->
 
@@ -144,7 +144,7 @@ An SCV accession obtained from the bedpe files, e.g. SCV000045941, can be used t
 
 ----------
 
-### Researcher or Submitter screening file against NR
+### Researcher or submitter screening file against NR
 This case may be helpful if you would like to know if candidate structural variants compare to existing variants in dbVar.
 #### 1. Format your file or candidate structural variants as either gff, bed, or bedpe
 For example:
@@ -227,7 +227,7 @@ grep chr2_165850456_165864123_copy_number_loss_7 variant_calls_X_nr_deletions.gf
 
 ----------
 
-### Researcher or Submitter screening file against annotation datasets
+### Researcher or submitter screening file against annotation datasets
 This case may be helpful if you would like to know if candidate structural variants overlap other NCBI annotation resources.
 
 #### 1. Format your file or candidate structural variants as either gff, bed, or bedpe. For example:
