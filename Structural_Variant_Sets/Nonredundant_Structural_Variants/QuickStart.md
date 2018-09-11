@@ -14,6 +14,19 @@ Note that dbVar NR data are provided on both GRCh37 and GRCh38, and in three for
 
 ----------
 
+## Use Cases:
+
+
+
+<!-- TOC depthFrom:3 depthTo:3 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+- [Obtain Human clinically-relevant CNVs on GRCh37 or GRCh38](#obtain-human-clinically-relevant-cnvs-on-grch37-or-grch38)
+- [Researcher or Submitter screening file against NR](#researcher-or-submitter-screening-file-against-nr)
+- [Researcher or Submitter screening file against annotation datasets](#researcher-or-submitter-screening-file-against-annotation-datasets)
+
+<!-- /TOC -->
+
+----------
 
 ### Obtain Human clinically-relevant CNVs on GRCh37 or GRCh38
 
@@ -81,9 +94,9 @@ NR SV records with pathogenic clinical_signicance:
 |Total NR SVs with one or more Pathogenic CNV(s):|3987|
 
 
-### Steps:
+#### Steps:
 
-#### 1. Get an overview of dbVar NR SV files.  Please note in particular the sections:
+##### 1. Get an overview of dbVar NR SV files.  Please note in particular the sections:
 * Introduction
 * Variant Types
 * NR SV Files
@@ -92,28 +105,28 @@ NR SV records with pathogenic clinical_signicance:
 * README files for deletions, insertions, and duplications
 
 [https://github.com/ncbi/dbvar/tree/master/Structural_Variant_Sets/Nonredundant_Structural_Variants](https://github.com/ncbi/dbvar/tree/master/Structural_Variant_Sets/Nonredundant_Structural_Variants)
-#### 2. Go to ftp site for deletions:
+##### 2. Go to ftp site for deletions:
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/)
 
-#### 3. Download deletions bedpe file:
+##### 3. Download deletions bedpe file:
 ###### GRCh37.nr_deletions.bedpe.gz
-#### 4. Get human clinically-relevant copy_number_loss records from deletions bedpe file in Linux/UNIX environment:
+##### 4. Get human clinically-relevant copy_number_loss records from deletions bedpe file in Linux/UNIX environment:
 ```markdown
 zcat GRCh37.nr_deletions.bedpe.gz | grep SCV > GRCh37.copy_number_loss.with_SCV.bedpe
 ```
-#### 5. Go to ftp site for duplications:
+##### 5. Go to ftp site for duplications:
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications/)
-#### 6. Download duplications bedpe file:
+##### 6. Download duplications bedpe file:
 ###### GRCh37.nr_duplications.bedpe.gz
 
-#### 7. Get human clinically-relevant copy_number_gain records from deletions bedpe file in Linux/UNIX environment:
+##### 7. Get human clinically-relevant copy_number_gain records from deletions bedpe file in Linux/UNIX environment:
 ```markdown
 zcat GRCh37.nr_duplications.bedpe.gz | grep SCV > GRCh37.copy_number_gain.with_SCV.bedpe
 ```
-#### 8. To further process downloaded files, see "Tutorial - How to Use dbVar's NR SV Data Files":
+##### 8. To further process downloaded files, see "Tutorial - How to Use dbVar's NR SV Data Files":
 [https://github.com/ncbi/dbvar/blob/master/Structural_Variant_Sets/Nonredundant_Structural_Variants/UserExamples.md](https://github.com/ncbi/dbvar/blob/master/Structural_Variant_Sets/Nonredundant_Structural_Variants/UserExamples.md)
 
-#### 9.  Using dbVar and ClinVar accessions from the bedpe files to access dbVar and ClinVar
+##### 9.  Using dbVar and ClinVar accessions from the bedpe files to access dbVar and ClinVar
 
 ##### dbVar:
 
@@ -121,7 +134,7 @@ URLs using the dbVar accessions obtained in the bedpe files can be created to ac
 
 [https://www.ncbi.nlm.nih.gov/dbvar/?term=nssv13649440](https://www.ncbi.nlm.nih.gov/dbvar/?term=nssv13649440)
 
-From the latter page you may click on the "Variant Region ID" on the left to see the variant's region in the NCBI Variation Viewer at: 
+From the latter page you may click on the "Variant Region ID" on the left to see the variant's region in the NCBI Variation Viewer at:
 
 [https://www.ncbi.nlm.nih.gov/dbvar/variants/nsv533950/](https://www.ncbi.nlm.nih.gov/dbvar/variants/nsv533950/)
 
@@ -157,9 +170,9 @@ NOTE: the .bedpe files have the most information about the variants, however, yo
 
 For example, bedpe files on GRCh37:
 
-[ftp://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/GRCh37.nr_deletions.bedpe.gz](ftp://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/GRCh37.nr_deletions.bedpe.gz) 
+[ftp://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/GRCh37.nr_deletions.bedpe.gz](ftp://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/GRCh37.nr_deletions.bedpe.gz)
 
-[ftp://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications/GRCh37.nr_duplications.bedpe.gz](ftp://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications/GRCh37.nr_duplications.bedpe.gz) 
+[ftp://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications/GRCh37.nr_duplications.bedpe.gz](ftp://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications/GRCh37.nr_duplications.bedpe.gz)
 
 [ftp://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions/GRCh37.nr_insertions.bedpe.gz](ftp://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions/GRCh37.nr_insertions.bedpe.gz)
 
@@ -211,7 +224,7 @@ bedtools intersect -a variant_calls.gff -b GRCh37.nr_deletions.bedpe -u -r -f 1 
 more variant_calls_X_nr_deletions.unique.100pct.gff
 chr2    dbVar   copy_number_loss        165850456       165864123       .       +       .       ID=chr2_165850456_165864123_copy_number_loss_7
 
-grep chr2_165850456_165864123_copy_number_loss_7 variant_calls_X_nr_deletions.gff 
+grep chr2_165850456_165864123_copy_number_loss_7 variant_calls_X_nr_deletions.gff
 ```
 
 
@@ -245,40 +258,40 @@ Dosage Sensitivity (more information here: [https://www.ncbi.nlm.nih.gov/dbvar/s
 Combine files and translate the NCBI accessions to chromosome names
 ```markdown
 gunzip ref_GRCh37.p13_top_level.gff3.gz all.annot.gff3.gz nstd45.GRCh37.variant_region.gvf.gz
-cat ref_GRCh37.p13_top_level.gff3 all.annot.gff3 nstd45.GRCh37.variant_region.gvf | 
-grep -v "###" |  grep "^NC_" | sed "s/NC_000001.10/chr1/g" | sed "s/NC_000002.11/chr2/g" | sed "s/NC_000003.11/chr3/g" | 
-sed "s/NC_000004.11/chr4/g" | sed "s/NC_000005.9/chr5/g" | sed "s/NC_000006.11/chr6/g" | sed "s/NC_000007.13/chr7/g" | 
-sed "s/NC_000008.10/chr8/g" | sed "s/NC_000009.11/chr9/g" | sed "s/NC_000010.10/chr10/g" | sed "s/NC_000011.9/chr11/g" | 
-sed "s/NC_000012.11/chr12/g" | sed "s/NC_000013.10/chr13/g" | sed "s/NC_000014.8/chr14/g" | sed "s/NC_000015.9/chr15/g" | 
-sed "s/NC_000016.9/chr16/g" | sed "s/NC_000017.10/chr17/g" | sed "s/NC_000018.9/chr18/g" | sed "s/NC_000019.9/chr19/g" | 
-sed "s/NC_000020.10/chr20/g" | sed "s/NC_000021.8/chr21/g" | sed "s/NC_000022.10/chr22/g" | sed "s/NC_000023.10/chrX/g" | 
+cat ref_GRCh37.p13_top_level.gff3 all.annot.gff3 nstd45.GRCh37.variant_region.gvf |
+grep -v "###" |  grep "^NC_" | sed "s/NC_000001.10/chr1/g" | sed "s/NC_000002.11/chr2/g" | sed "s/NC_000003.11/chr3/g" |
+sed "s/NC_000004.11/chr4/g" | sed "s/NC_000005.9/chr5/g" | sed "s/NC_000006.11/chr6/g" | sed "s/NC_000007.13/chr7/g" |
+sed "s/NC_000008.10/chr8/g" | sed "s/NC_000009.11/chr9/g" | sed "s/NC_000010.10/chr10/g" | sed "s/NC_000011.9/chr11/g" |
+sed "s/NC_000012.11/chr12/g" | sed "s/NC_000013.10/chr13/g" | sed "s/NC_000014.8/chr14/g" | sed "s/NC_000015.9/chr15/g" |
+sed "s/NC_000016.9/chr16/g" | sed "s/NC_000017.10/chr17/g" | sed "s/NC_000018.9/chr18/g" | sed "s/NC_000019.9/chr19/g" |
+sed "s/NC_000020.10/chr20/g" | sed "s/NC_000021.8/chr21/g" | sed "s/NC_000022.10/chr22/g" | sed "s/NC_000023.10/chrX/g" |
 sed "s/NC_000024.9/chrY/g" | sed "s/NC_012920.1/chrMT/g" | sort > annotations_37.gff
 ```
 
 GRCh38:
 Download the following:
 
-RefSeq annotations file, which include genes, exons, and regulatory regions: [ftp://ftp.ncbi.nlm.nih.gov/refseq/H_sapiens/H_sapiens/GFF/ref_GRCh38.p12_top_level.gff3.gz](ftp://ftp.ncbi.nlm.nih.gov/refseq/H_sapiens/H_sapiens/GFF/ref_GRCh38.p12_top_level.gff3.gz) 
+RefSeq annotations file, which include genes, exons, and regulatory regions: [ftp://ftp.ncbi.nlm.nih.gov/refseq/H_sapiens/H_sapiens/GFF/ref_GRCh38.p12_top_level.gff3.gz](ftp://ftp.ncbi.nlm.nih.gov/refseq/H_sapiens/H_sapiens/GFF/ref_GRCh38.p12_top_level.gff3.gz)
 
 Assembly anomalies (more information here: [https://www.ncbi.nlm.nih.gov/genome/tools/remap/docs/alignments](https://www.ncbi.nlm.nih.gov/genome/tools/remap/docs/alignments)): [ftp://ftp.ncbi.nlm.nih.gov/pub/remap/Homo_sapiens/current/GCF_000001405.25_GRCh37.p13/GCF_000001405.38_GRCh38.p12/GCF_000001405.25-GCF_000001405.38.gff](ftp://ftp.ncbi.nlm.nih.gov/pub/remap/Homo_sapiens/current/GCF_000001405.25_GRCh37.p13/GCF_000001405.38_GRCh38.p12/GCF_000001405.25-GCF_000001405.38.gff)
 
-Paralogous alignments: [ftp://ftp.ncbi.nlm.nih.gov/pub/murphyte/PSV/GRCh38.p2_AR107/GRCh38.p2_all.align.gff3.gz](ftp://ftp.ncbi.nlm.nih.gov/pub/murphyte/PSV/GRCh38.p2_AR107/GRCh38.p2_all.align.gff3.gz) 
+Paralogous alignments: [ftp://ftp.ncbi.nlm.nih.gov/pub/murphyte/PSV/GRCh38.p2_AR107/GRCh38.p2_all.align.gff3.gz](ftp://ftp.ncbi.nlm.nih.gov/pub/murphyte/PSV/GRCh38.p2_AR107/GRCh38.p2_all.align.gff3.gz)
 
 Dosage Sensitivity (more information here: [https://www.ncbi.nlm.nih.gov/dbvar/studies/nstd45/](https://www.ncbi.nlm.nih.gov/dbvar/studies/nstd45/)): [ftp://ftp.ncbi.nlm.nih.gov/pub/dbVar/data/Homo_sapiens/by_study/gvf/nstd45.GRCh38.variant_region.gvf.gz](ftp://ftp.ncbi.nlm.nih.gov/pub/dbVar/data/Homo_sapiens/by_study/gvf/nstd45.GRCh38.variant_region.gvf.gz)
 
 Combine files and translate the NCBI accessions to chromosome names
 ```markdown
 gunzip ref_GRCh38.p12_top_level.gff3.gz GRCh38.p2_all.align.gff3.gz nstd45.GRCh38.variant_region.gvf.gz
-cat GCF_000001405.25-GCF_000001405.38.gff ref_GRCh38.p12_top_level.gff3  GRCh38.p2_all.align.gff3 nstd45.GRCh38.variant_region.gvf | 
-grep -v "###" |  grep "^NC_" | sed "s/NC_000001.11/chr1/g" | sed "s/NC_000002.12/chr2/g" | sed "s/NC_000003.12/chr3/g" | 
-sed "s/NC_000004.12/chr4/g" | sed "s/NC_000005.10/chr5/g" | sed "s/NC_000006.12/chr6/g" | sed "s/NC_000007.14/chr7/g" | 
-sed "s/NC_000008.11/chr8/g" | sed "s/NC_000009.12/chr9/g" | sed "s/NC_000010.11/chr10/g" | sed "s/NC_000011.10/chr11/g" | 
-sed "s/NC_000012.12/chr12/g" | sed "s/NC_000013.11/chr13/g" | sed "s/NC_000014.9/chr14/g" | sed "s/NC_000015.10/chr15/g" | 
-sed "s/NC_000016.10/chr16/g" | sed "s/NC_000017.11/chr17/g" | sed "s/NC_000018.10/chr18/g" | sed "s/NC_000019.10/chr19/g" | 
-sed "s/NC_000020.11/chr20/g" | sed "s/NC_000021.9/chr21/g" | sed "s/NC_000022.11/chr22/g" | sed "s/NC_000023.11/chrX/g" | 
+cat GCF_000001405.25-GCF_000001405.38.gff ref_GRCh38.p12_top_level.gff3  GRCh38.p2_all.align.gff3 nstd45.GRCh38.variant_region.gvf |
+grep -v "###" |  grep "^NC_" | sed "s/NC_000001.11/chr1/g" | sed "s/NC_000002.12/chr2/g" | sed "s/NC_000003.12/chr3/g" |
+sed "s/NC_000004.12/chr4/g" | sed "s/NC_000005.10/chr5/g" | sed "s/NC_000006.12/chr6/g" | sed "s/NC_000007.14/chr7/g" |
+sed "s/NC_000008.11/chr8/g" | sed "s/NC_000009.12/chr9/g" | sed "s/NC_000010.11/chr10/g" | sed "s/NC_000011.10/chr11/g" |
+sed "s/NC_000012.12/chr12/g" | sed "s/NC_000013.11/chr13/g" | sed "s/NC_000014.9/chr14/g" | sed "s/NC_000015.10/chr15/g" |
+sed "s/NC_000016.10/chr16/g" | sed "s/NC_000017.11/chr17/g" | sed "s/NC_000018.10/chr18/g" | sed "s/NC_000019.10/chr19/g" |
+sed "s/NC_000020.11/chr20/g" | sed "s/NC_000021.9/chr21/g" | sed "s/NC_000022.11/chr22/g" | sed "s/NC_000023.11/chrX/g" |
 sed "s/NC_000024.10/chrY/g" | sed "s/NC_012920.1/chrMT/g" | sort > annotations_38.gff
 ```
- 
+
 #### 3. Run bedtools
 This shows how you could identify the overlaps between your candidate structural variants and the downloaded annotation files.
 These examples identify overlaps with at least 75% reciprocal overlap, and the output files will contain columns from both the variant and annotation files.
@@ -300,8 +313,8 @@ Examine the result file. The GFF files used for annotation will contain a rich s
 ```markdown
 cut -f 18 variant_calls.gff_X_annotations_38.gff.min75 | more
 ID=rna15957;Parent=gene5140;Dbxref=GeneID:105373346,Genbank:XR_002959474.1;Name=XR_002959474.1;gbkey=
-ncRNA;gene=LOC105373346;model_evidence=Supporting evidence includes similarity to: 5 ESTs%2C 20 long 
-SRA reads%2C and 99%25 coverage of the annotated genomic feature by RNAseq alignments%2C including 4 
+ncRNA;gene=LOC105373346;model_evidence=Supporting evidence includes similarity to: 5 ESTs%2C 20 long
+SRA reads%2C and 99%25 coverage of the annotated genomic feature by RNAseq alignments%2C including 4
 samples with support for all annotated introns;product=uncharacterized LOC105373346%2C transcript var
 iant X25;transcript_id=XR_002959474.1
 ```
@@ -309,5 +322,3 @@ iant X25;transcript_id=XR_002959474.1
 NOTE: For intersections between GFF and GFF files, col 19 will contain the number of overlapping bases.
 
 ----------
-
-
