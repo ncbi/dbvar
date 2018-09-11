@@ -1,6 +1,6 @@
 # Quick Start
 ## A brief guide to using dbVar non-redundant structural variant data and annotations
-**Updated** September 5, 2018
+**Updated** September 11, 2018
 
 
 ----------
@@ -28,7 +28,7 @@ Note that dbVar NR data are provided on both GRCh37 and GRCh38, and in three for
 
 ----------
 
-### Obtain Humin clinically-relevant CNVs on GRCh37 or GRCh38
+### Obtain Human clinically-relevant CNVs on GRCh37 or GRCh38
 
 #### Objective:
 * Find dbVar NR SV records with clinically-relevant CNVs
