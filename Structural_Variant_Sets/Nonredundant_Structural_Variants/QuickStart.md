@@ -15,12 +15,9 @@ Note that dbVar NR data are provided on both GRCh37 and GRCh38, and in three for
 ----------
 
 ## Use Cases:
-
-
-
 <!-- TOC depthFrom:3 depthTo:3 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-- [Obtain Human clinically-relevant CNVs on GRCh37 or GRCh38](#obtain-human-clinically-relevant-cnvs-on-grch37-or-grch38)
+- [Obtain human clinically-relevant CNVs on GRCh37 or GRCh38](#obtain-human-clinically-relevant-cnvs-on-grch37-or-grch38)
 - [Researcher or Submitter screening file against NR](#researcher-or-submitter-screening-file-against-nr)
 - [Researcher or Submitter screening file against annotation datasets](#researcher-or-submitter-screening-file-against-annotation-datasets)
 
@@ -28,7 +25,7 @@ Note that dbVar NR data are provided on both GRCh37 and GRCh38, and in three for
 
 ----------
 
-### Obtain Human clinically-relevant CNVs on GRCh37 or GRCh38
+### Obtain human clinically-relevant CNVs on GRCh37 or GRCh38
 
 #### Objective:
 * Find dbVar NR SV records with clinically-relevant CNVs
