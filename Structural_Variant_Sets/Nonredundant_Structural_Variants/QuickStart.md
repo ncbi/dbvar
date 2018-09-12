@@ -1,15 +1,23 @@
 # Quick Start
-## A brief guide to using dbVar non-redundant structural variant data and annotations
-**Updated** September 5, 2018
+## A guide to using dbVar non-redundant structural variant (NR-SV) data and annotations
+**Updated** September 12, 2018
 
 
 ----------
 
 
 
-***Use Cases*** below illustrate some of the ways in which users can make the most of dbVar NR SV data and associated annotations. Please send any questions or feedback to dbvar-dev@ncbi.nlm.nih.gov.
+The ***Use Cases*** below illustrate some of the ways dbVar NR SV data and associated annotations can be used. Please send feedback and any questions to dbvar-dev@ncbi.nlm.nih.gov.
 
-Note that dbVar NR data are provided on both GRCh37 and GRCh38, and in three formats – TSV, BED, and BEDPE. Please choose the file(s) best suited your application. For example, BED files are easy to compute on, but lack clinical assertions and other metadata that may be useful to your analysis.
+dbVar NR data are provided in GRCh37 and GRCh38 coordinates in TSV, BED, and BEDPE formats. Please choose the file(s) best suited your application. For example, BED files are easy to compute on but are lightweight and lack metadata such as clinical assertions that may be useful to your analysis.
+
+**NOTE:** Clinical assertions contained in NR-SV datasets are not diagnostic and should be interpreted with caution. For more information please visit [ClinVar's Clinical Significance](https://www.ncbi.nlm.nih.gov/clinvar/docs/clinsig/) informational page.
+
+#### Disclaimer
+
+The information on this website is not intended for direct diagnostic use or medical decision-making without review by a genetics professional. Individuals should not change their health behavior solely on the basis of information contained on this website. NIH does not independently verify the submitted information. If you have questions about the information contained on this website, please see a health care professional. More information about [NCBI's disclaimer policy](https://www.ncbi.nlm.nih.gov/About/disclaimer.html) is available.
+
+
 
 
 ----------
