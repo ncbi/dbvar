@@ -2,8 +2,9 @@
 
 
 ## A guide to using dbVar non-redundant structural variant (NR-SV) data and annotations
+
 **Updated** September 12, 2018
-=======
+
 
 ----------
 
@@ -13,7 +14,7 @@ The ***Use Cases*** below illustrate some of the ways dbVar NR SV data and assoc
 
 dbVar NR data are provided in GRCh37 and GRCh38 coordinates in TSV, BED, and BEDPE formats. Please choose the file(s) best suited your application. For example, BED files are easy to compute on but are lightweight and lack metadata such as clinical assertions that may be useful to your analysis.
 
-**NOTE:** Clinical assertions contained in NR-SV datasets are not diagnostic and should be interpreted with caution. For more information please visit [ClinVar's Clinical Significance](https://www.ncbi.nlm.nih.gov/clinvar/docs/clinsig/) informational page.
+**NOTE:** At the present time not all clinical SV in ClinVar have yet been ported to dbVar. In addition, clinical assertions contained in NR-SV datasets are not diagnostic and should be interpreted with caution. For more information please visit [ClinVar's Clinical Significance](https://www.ncbi.nlm.nih.gov/clinvar/docs/clinsig/) informational page.
 
 #### Disclaimer
 
