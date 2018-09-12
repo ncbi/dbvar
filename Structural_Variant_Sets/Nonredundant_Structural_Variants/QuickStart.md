@@ -27,15 +27,15 @@ The information on this website is not intended for direct diagnostic use or med
 ## Use Cases:
 <!-- TOC depthFrom:3 depthTo:3 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-- [Obtain human clinically-relevant CNVs on GRCh37 or GRCh38](#obtain-human-clinically-relevant-cnvs-on-grch37-or-grch38)
-- [Researcher or submitter screening file against NR](#researcher-or-submitter-screening-file-against-nr)
-- [Researcher or submitter screening file against annotation datasets](#researcher-or-submitter-screening-file-against-annotation-datasets)
+- [Obtain human clinically-relevant CNVs](#obtain-human-clinically-relevant-cnvs)
+- [Find overlaps between NR-SV and candidate structural variants](#find-overlaps-between-nr-sv-and-candidate-structural-variants)
+- [Find overlaps between NR SVs and annotation datasets](#find-overlaps-between-nr-svs-and-annotation-datasets)
 
 <!-- /TOC -->
 
 ----------
 
-### Obtain human clinically-relevant CNVs on GRCh37 or GRCh38
+### Obtain human clinically-relevant CNVs
 
 #### Objective:
 * Find dbVar NR SV records with clinically-relevant CNVs
@@ -101,7 +101,6 @@ NR SV records with pathogenic clinical_signicance:
 |Total NR SVs with one or more Pathogenic CNV(s):|3987|
 
 
-#### Steps:
 
 ##### 1. Get an overview of dbVar NR SV files.  Please note in particular the sections:
 * Introduction
@@ -154,7 +153,7 @@ An SCV accession obtained from the bedpe files, e.g. SCV000045941, can be used t
 
 ----------
 
-### Researcher or submitter screening file against NR
+### Find overlaps between NR-SV and candidate structural variants
 This case may be helpful if you would like to know if candidate structural variants compare to existing variants in dbVar.
 #### 1. Format your file or candidate structural variants as either gff, bed, or bedpe
 For example:
@@ -207,19 +206,19 @@ bedtools intersect -a variant_calls.gff -b GRCh37.nr_insertions.bedpe -wo -r -f 
 
 For example, identify unique copy_number_loss variants with >75% reciprocal overlap with NR deletions:
 ```markdown
-cut -f 9 variant_calls_X_nr_deletions.gff|sort -u|grep loss|wc -l
+cut -f 9 variant_calls_X_nr_deletions.gff | sort -u | grep loss | wc -l
 675
 ```
 
 Identify unique copy_number_gain variants with >75% reciprocal overlap with NR deletions:
 ```markdown
-cut -f 9 variant_calls_X_nr_duplications.gff|grep gain|sort -u|wc -l
+cut -f 9 variant_calls_X_nr_duplications.gff | grep gain | sort -u | wc -l
 558
 ```
 
 Identify any variants with >75% reciprocal overlap to an NR variant with clinical significance of Pathogenic:
 ```markdown
-grep SCV variant_calls_X_nr_*.gff|grep Pathogenic
+grep SCV variant_calls_X_nr_*.gff | grep Pathogenic
 chr16    dbVar   copy_number_loss        14945195    16363239 .       +       .       ID=chr16_14945195_16363239_copy_number_loss_1   chr16   14809981     16477578        .       -1      -1      chr16_14809981_16477578_del     .       .       .   copy_number_loss Oligo_aCGH      Probe_signal_intensity  NA      ClinGen_Laboratory-Submitted nssv585211;nssv3396567  Pathogenic      SCV000175002    large   .       .       1418045
 ```
 Using the -wo option to bedtools intersect returns the full set of columns from the NR bedpe file. You can use these columns to filter the results based on other criteria, such as method, platform, or study name. Refer to [https://github.com/ncbi/dbvar/tree/master/Structural_Variant_Sets/Nonredundant_Structural_Variants](https://github.com/ncbi/dbvar/tree/master/Structural_Variant_Sets/Nonredundant_Structural_Variants) for the list of columns included in the files.
@@ -237,7 +236,7 @@ grep chr2_165850456_165864123_copy_number_loss_7 variant_calls_X_nr_deletions.gf
 
 ----------
 
-### Researcher or submitter screening file against annotation datasets
+### Find overlaps between NR SVs and annotation datasets
 This case may be helpful if you would like to know if candidate structural variants overlap other NCBI annotation resources.
 
 #### 1. Format your file or candidate structural variants as either gff, bed, or bedpe. For example:
