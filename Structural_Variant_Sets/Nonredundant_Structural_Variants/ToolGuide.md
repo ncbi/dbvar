@@ -3,7 +3,7 @@
 
 This tutorial demonstrates how to intersect dbVar's non-redundant (NR) files with other genomic interval files using popular tools and browsers. By the end of the tutorial you should be able toe, for example, calculate overlaps between genes and NR Deletions throughout the human genome.
 
-## Sections
+## Tools
  - [Input Files](#input-files)
  - [Bedtools](#bedtools)
  - [Galaxy](#galaxy)
