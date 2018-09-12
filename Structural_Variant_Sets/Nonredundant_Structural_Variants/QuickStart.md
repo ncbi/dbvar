@@ -1,12 +1,9 @@
 # Quick Start
-<<<<<<< HEAD
+
+
 ## A guide to using dbVar non-redundant structural variant (NR-SV) data and annotations
 **Updated** September 12, 2018
 =======
-## A brief guide to using dbVar non-redundant structural variant data and annotations
-**Updated** September 11, 2018
->>>>>>> e0ed4a002be7845defdece533fed74b263d6d041
-
 
 ----------
 
