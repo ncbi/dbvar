@@ -38,12 +38,9 @@ The information on this website is not intended for direct diagnostic use or med
 
 ### Obtain human clinically-relevant CNVs
 
-#### Objective:
-* Find dbVar NR SV records with clinically-relevant CNVs
+#### Objectives:
 * Group NR SV records with clinically-relevant CNVs by assembly and by type
-
-#### Why:
-* To obtain clinically-relevant NR SVs in bedpe format so they may be used for further investigation, e.g.
+* To obtain clinically-relevant NR SVs in bedpe format so they may be used for further investigation, e.g., to:
   * determine genome locations where pathogenic copy number loss variants are found in dbVar
   * determine overlaps between these these variants and a candidate set of variants
 
@@ -51,12 +48,8 @@ The information on this website is not intended for direct diagnostic use or med
 Using the process described in this use case the following results were obtained on Aug 20, 2018:
 
 Two files of NR SVs, each NR SV containing at least one clinically relevant CNV,
-were generated for assembly GRCh37, one for copy_number_loss, and one for copy_number_gain:
+were generated for assembly GRCh37, one for copy_number_loss, and one for copy_number_gain.
 
-```markdown
--rw-rw-r-- 1 garnerjr hgrg 2.4M Aug 20 17:57 GRCh37.copy_number_loss.with_SCV.bedpe
--rw-rw-r-- 1 garnerjr hgrg 2.8M Aug 20 18:05 GRCh37.copy_number_gain.with_SCV.bedpe
-```
 
 | NR SV file | Records with clinical_significance |
 |:--------------------------------------:|:----------------------------------:|
@@ -67,39 +60,13 @@ were generated for assembly GRCh37, one for copy_number_loss, and one for copy_n
 As an example of further processing of the output files, here is a table showing counts of
 NR SV records with pathogenic clinical_signicance:
 
-##### GRCh37.copy_number_gain.with_SCV.bedpe:
 
-| clinical_significance	| NR SV file records with Pathogenic CNV |
-|:---------------------:|:---------------------:|
-|Likely pathogenic;Pathogenic|2|
-|Likely pathogenic;Pathogenic;Likely benign|1|
-|Pathogenic|1974|
-|Pathogenic;Likely pathogenic|4|
-|Pathogenic;Uncertain significance|20|
-|Pathogenic;Uncertain significance;Likely pathogenic|1|
-|Uncertain significance;Benign;Pathogenic;Likely benign|1|
-|Uncertain significance;Likely pathogenic;Pathogenic|1|
-|Uncertain significance;Pathogenic|14|
-|Total NR SVs with one or more Pathogenic CNV(s):|2018|
-
-
-##### GRCh37.copy_number_loss.with_SCV.bedpe:
-
-| clinical_significance | NR SV file records with Pathogenic CNV |
-|:---------------------:|:---------------------:|
-|Benign;Pathogenic|1|
-|Likely pathogenic;Pathogenic|3|
-|Pathogenic|3939|
-|Pathogenic;Benign|2|
-|Pathogenic;Likely benign|4|
-|Pathogenic;Likely pathogenic|4|
-|Pathogenic;Likely pathogenic;Uncertain significance;Likely benign|1|
-|Pathogenic;Uncertain significance|22|
-|Pathogenic;Uncertain significance;Likely benign|4|
-|Uncertain significance;Likely pathogenic;Pathogenic|1|
-|Uncertain significance;Pathogenic|5|
-|Uncertain significance;Pathogenic;Likely pathogenic|1|
-|Total NR SVs with one or more Pathogenic CNV(s):|3987|
+| Count | GRCh37 gains | GRCh37 losses |
+|:---------------------:|:---------------------:|:---------------------:|
+|records with Pathogenic only|1974|3939|
+|records with Pathogenic and another clinical_significance|44|48|
+|records with one or more Pathogenic|2018|3987|
+| **Total records with clinical significance** | **13016** | **10872** |
 
 
 
