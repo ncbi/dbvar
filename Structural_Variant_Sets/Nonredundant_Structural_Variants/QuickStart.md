@@ -70,41 +70,28 @@ NR SV records with pathogenic clinical_signicance:
 
 
 
-##### 1. Get an overview of dbVar NR SV files.  Please note in particular the sections:
-* Introduction
-* Variant Types
-* NR SV Files
-* NR Records contain tab-separated fields
-* Records in the NR SV .bedpe files
-* README files for deletions, insertions, and duplications
-
-[https://github.com/ncbi/dbvar/tree/master/Structural_Variant_Sets/Nonredundant_Structural_Variants](https://github.com/ncbi/dbvar/tree/master/Structural_Variant_Sets/Nonredundant_Structural_Variants)
-##### 2. Go to ftp site for deletions:
+##### 1. Go to ftp site for deletions:
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/)
 
-##### 3. Download deletions bedpe file:
+##### 2. Download deletions bedpe file:
 ###### GRCh37.nr_deletions.bedpe.gz
-##### 4. Get human clinically-relevant copy_number_loss records from deletions bedpe file in Linux/UNIX environment:
+##### 3. Get human clinically-relevant copy_number_loss records from deletions bedpe file:
 ```markdown
 zcat GRCh37.nr_deletions.bedpe.gz | grep SCV > GRCh37.copy_number_loss.with_SCV.bedpe
 ```
-##### 5. Go to ftp site for duplications:
+##### 4. Go to ftp site for duplications:
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications/)
-##### 6. Download duplications bedpe file:
+##### 5. Download duplications bedpe file:
 ###### GRCh37.nr_duplications.bedpe.gz
 
-##### 7. Get human clinically-relevant copy_number_gain records from deletions bedpe file in Linux/UNIX environment:
+##### 6. Get human clinically-relevant copy_number_gain records from deletions bedpe file:
 ```markdown
 zcat GRCh37.nr_duplications.bedpe.gz | grep SCV > GRCh37.copy_number_gain.with_SCV.bedpe
 ```
-##### 8. To further process downloaded files, see "Tutorial - How to Use dbVar's NR SV Data Files":
-[https://github.com/ncbi/dbvar/blob/master/Structural_Variant_Sets/Nonredundant_Structural_Variants/UserExamples.md](https://github.com/ncbi/dbvar/blob/master/Structural_Variant_Sets/Nonredundant_Structural_Variants/UserExamples.md)
 
-##### 9.  Using dbVar and ClinVar accessions from the bedpe files to access dbVar and ClinVar
+##### 7. Link to dbVar web pages for additional variant details
 
-##### dbVar:
-
-URLs using the dbVar accessions obtained in the bedpe files can be created to access the data in dbVar, e.g.:
+Create URLs for dbVar variant pages using the nssv accessions in the bedpe files. For example:
 
 [https://www.ncbi.nlm.nih.gov/dbvar/?term=nssv13649440](https://www.ncbi.nlm.nih.gov/dbvar/?term=nssv13649440)
 
@@ -112,9 +99,9 @@ From the latter page you may click on the "Variant Region ID" on the left to see
 
 [https://www.ncbi.nlm.nih.gov/dbvar/variants/nsv533950/](https://www.ncbi.nlm.nih.gov/dbvar/variants/nsv533950/)
 
-##### ClinVar:
+##### 8. Link to ClinVar web pages for additional clinical details
 
-An SCV accession obtained from the bedpe files, e.g. SCV000045941, can be used to find the record in ClinVar by searching for the SCV on ClinVar's home page:
+Use an SCV accession obtained from the bedpe files, e.g. SCV000045941, to find the corresponding record in ClinVar by searching for the SCV on ClinVar's home page:
 
 [https://www.ncbi.nlm.nih.gov/clinvar/](https://www.ncbi.nlm.nih.gov/clinvar/)
 
