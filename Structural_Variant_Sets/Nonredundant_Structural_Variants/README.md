@@ -214,7 +214,8 @@ chr1 | 0 | 10000 | chr1_0_10000_del
 * name is comprised of chromosome, outermost_start, outermost_stop, and type (del, dup, or ins)
 * NR SV .bed files may be used with a variety of tools as shown in the tutorial:
 
-[https://github.com/ncbi/dbvar/blob/master/Structural_Variant_Sets/Nonredundant_Structural_Variants/UserExamples.md](https://github.com/ncbi/dbvar/blob/master/Structural_Variant_Sets/Nonredundant_Structural_Variants/UserExamples.md)
+https://github.com/ncbi/dbvar/blob/master/Structural_Variant_Sets/Nonredundant_Structural_Variants/ToolGuide.md
+
 
 ## Records in the NR SV .bedpe files, e.g.
 
@@ -296,7 +297,7 @@ The SV records are then processed to generate NR SV tab-separated value (tsv) fi
 
 # Tutorials
 
-Examples of using the NR files with various tools and browsers can be found in: https://github.com/ncbi/dbvar/blob/master/Structural_Variant_Sets/Nonredundant_Structural_Variants/UserExamples.md
+Examples of using the NR files with various tools and browsers can be found in: https://github.com/ncbi/dbvar/blob/master/Structural_Variant_Sets/Nonredundant_Structural_Variants/ToolGuide.md
 
 # Questions or feedback
 
