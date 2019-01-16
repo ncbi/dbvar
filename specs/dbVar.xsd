@@ -335,14 +335,26 @@
             </xs:documentation>
         </xs:annotation>
         <xs:restriction base="xs:string">
-            <xs:enumeration value="Not tested"/>
+            <xs:enumeration value="biparental"/>
             <xs:enumeration value="de novo"/>
+            <xs:enumeration value="germline"/>
+            <xs:enumeration value="Germline"/>
+            <xs:enumeration value="inherited"/>
+            <xs:enumeration value="maternal"/>
             <xs:enumeration value="Maternal"/>
+            <xs:enumeration value="not applicable"/>
+            <xs:enumeration value="not provided"/>
+            <xs:enumeration value="not-reported"/>
+            <xs:enumeration value="Not tested"/>
+            <xs:enumeration value="paternal"/>
             <xs:enumeration value="Paternal"/>
             <xs:enumeration value="Present in both parents"/>
-            <xs:enumeration value="Tested - inconclusive"/>
+            <xs:enumeration value="somatic"/>
             <xs:enumeration value="Somatic"/>
-            <xs:enumeration value="Germline"/>
+            <xs:enumeration value="tested-inconclusive"/>
+            <xs:enumeration value="Tested - inconclusive"/>
+            <xs:enumeration value="uniparental"/>
+            <xs:enumeration value="unknown"/>
         </xs:restriction>
     </xs:simpleType>
     <xs:complexType name="PhenotypeLink">
