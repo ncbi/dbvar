@@ -58,30 +58,6 @@
             <xs:enumeration value="To"/>
         </xs:restriction>
     </xs:simpleType>
-    <xs:simpleType name="ClinicalSignificanceCV">
-        <xs:annotation>
-            <xs:documentation>
-                Controlled vocabulary for clinical_significance: Keeping only to support ISCA studies. Other studies should NOT have clinical_significance.
-                Studies with clinical_significance should be submitted directly to ClinVar.    
-            </xs:documentation>
-        </xs:annotation>
-        <xs:restriction base="xs:string">
-            <xs:enumeration value="Affects"/>
-            <xs:enumeration value="Benign"/>
-            <xs:enumeration value="Likely benign"/>
-            <xs:enumeration value="Likely pathogenic"/>
-            <xs:enumeration value="Pathogenic"/>
-            <xs:enumeration value="Uncertain significance"/>
-            <xs:enumeration value="not provided"/>
-            <xs:enumeration value="confers sensitivity"/>
-            <xs:enumeration value="drug response"/>
-            <xs:enumeration value="risk factor"/>
-            <xs:enumeration value="association"/>
-            <xs:enumeration value="protective"/>
-            <xs:enumeration value="other"/>
-            <xs:enumeration value="conflicting data from submitters"/>
-        </xs:restriction>
-    </xs:simpleType>
     <xs:simpleType name="CollectionCV">
         <xs:annotation>
             <xs:documentation>
@@ -1892,11 +1868,17 @@
             </xs:attribute>
             <xs:attribute name="variant_call_type" type="VariantCallTypeCV" use="required"/>
             <xs:attribute name="variant_call_type_SO_id" type="xs:string"/>
-            <xs:attribute name="clinical_significance" type="ClinicalSignificanceCV">
+            <xs:attribute name="clinical_source" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Source of Clinical Significance: ClinVar, Submitter, ClinGen Dosage Sensitivity Map</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="clinical_significance" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>
-                        Keeping only to support ISCA studies. Other studies should NOT have clinical_significance.
                         Studies with clinical_significance should be submitted directly to ClinVar. 
+                        There are still some legacy studies with clinical_significance, including ClinGen.
+                        Changed from ClinicalSignificanceCV to string to allow types from ClinVar aggregated at the region level.
                     </xs:documentation>
                 </xs:annotation>
             </xs:attribute>
