@@ -265,7 +265,6 @@
             <xs:enumeration value="Orphanet"/>
             <xs:enumeration value="PROBE"/>
             <xs:enumeration value="PubMed"/>
-            <xs:enumeration value="SNOMED"/>
             <xs:enumeration value="SRA"/>
             <xs:enumeration value="TRACE"/>
             <xs:enumeration value="UMLS"/>
@@ -325,6 +324,7 @@
             <xs:enumeration value="paternal"/>
             <xs:enumeration value="Paternal"/>
             <xs:enumeration value="Present in both parents"/>
+            <xs:enumeration value="see ClinVar for details"/>
             <xs:enumeration value="somatic"/>
             <xs:enumeration value="Somatic"/>
             <xs:enumeration value="tested-inconclusive"/>
