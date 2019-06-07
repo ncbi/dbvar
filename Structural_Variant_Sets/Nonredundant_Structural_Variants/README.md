@@ -2,7 +2,7 @@
 
 ## Work in progress and subject to change
 
-**Last updated:** 08/24/18
+**Last updated:** 06/07/19
 
 
 ## Latest nr SV file downloads:
@@ -81,26 +81,10 @@ The variant types in each of the three "aggregation types" are:
 
 # Summary Statistics
 
-## Number of input SV by assembly as of Jul 11, 2018:
+## Number of nr SV by type and assembly:
 
-variant type | GRCh37 | GRCh38 | variant type | GRCh37 | GRCh38 | variant type | GRCh37 | GRCh38 |
-:-----------|:------|:-----|:-----------|:------|:-----|:-----------|:------|:-----|
-**DELETIONS** | |  |**DUPLICATIONS** | |  |**INSERTIONS** | |
-alu_deletion | 1700117 | 1687974 | copy_number_gain | 1247971 | 1218617 | alu_insertion | 2266165 | 2259587
-copy_number_loss | 2409624 | 2401043 | copy_number_variation | 1164548 | 1109076 | insertion | 1232562 | 1238680
-deletion | 13120032 | 13017650 | duplication | 1926815 | 1918241 | line1_insertion | 325100 | 324990 
-herv_deletion | 197 | 197 | tandem_duplication | 11509 | 11459 | mobile_element_insertion | 89461 | 89446
-line1_deletion | 82103 | 82103 |  |  |  | novel_sequence_insertion | 4071 | 4046
-sva_deletion | 14254 | 14254 |  |  |  | sva_insertion | 127901 | 127847
+[https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt//#github)
 
-## NR Coordinates by assembly as of Jul 11, 2018:
-
-GRCh38 nr files | NR coordinates | GRCh37 nr files | NR coordinates |
-:---------:|:--------------------------:|:---------:|:--------------------------:
-GRCh38.nr_deletions.tsv | 2210892  | GRCh37.nr_deletions.tsv | 2221656 |
-GRCh38.nr_duplications.tsv | 327774  | GRCh37.nr_duplications.tsv | 336949  |
-GRCh38.nr_insertions.tsv | 1107124 | GRCh37.nr_insertions.tsv | 1101458 |  
-total: | 3645790 | total: | 3660063  | 
 
 # NR SV Files
 
