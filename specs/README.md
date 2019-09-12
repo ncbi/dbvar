@@ -6,4 +6,4 @@
     .
     +-- README.md
     +-- dbVar.xsd                             # dbVar database schema
-    +-- dbVarSubmissionTemplate_v3.4.xlsx     # dbVar Submission Template (Excel)    
+    +-- dbVarSubmissionTemplate_v3.5.xlsx     # dbVar Submission Template (Excel)    
