@@ -706,7 +706,7 @@
             <xs:enumeration value="sva deletion"/>
             <xs:enumeration value="herv deletion"/>
             <xs:enumeration value="duplication"/>
-            <xs:enumeration value="indel"/>
+            <xs:enumeration value="delins"/>
             <xs:enumeration value="insertion"/>
             <xs:enumeration value="interchromosomal translocation"/>
             <xs:enumeration value="intrachromosomal translocation"/>
@@ -764,7 +764,7 @@
             <xs:enumeration value="complex chromosomal rearrangement"/>
             <xs:enumeration value="copy-neutral loss of heterozygosity"/>
             <xs:enumeration value="copy number variation"/>
-            <xs:enumeration value="indel"/>
+            <xs:enumeration value="delins"/>
             <xs:enumeration value="insertion"/>
             <xs:enumeration value="inversion"/>
             <xs:enumeration value="mobile element insertion"/>
@@ -1287,7 +1287,7 @@
             <xs:attribute name="study_accession" use="optional" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>
-                        dbVar / DGVa assigned accession for the study                                  
+                        DDBJ/EBI/NCBI assigned accession for the study                                  
                     </xs:documentation>
                 </xs:annotation>
             </xs:attribute>
@@ -1536,6 +1536,11 @@
                 </xs:element>
                 <xs:element name="LIBRARY" type="LibraryType" minOccurs="0" maxOccurs="unbounded"/>
                 <xs:element name="CURATION" minOccurs="0" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>
+                            Details of curation by DDBJ/EBI/NCBI, if this has occurred
+		        </xs:documentation>
+                    </xs:annotation>
                     <xs:complexType>
                         <xs:attribute name="curator_name" use="required" type="xs:string"/>
                         <xs:attribute name="curator_email" use="required" type="xs:string"/>
@@ -1711,7 +1716,7 @@
             <xs:attribute name="biosample_accession" use="optional" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>            
-                        Sample accession from EBI or NCBI BioSample
+                        Sample accession from DDBJ/EBI/NCBI BioSample
                     </xs:documentation>
                 </xs:annotation>
             </xs:attribute>
@@ -1863,7 +1868,7 @@
             </xs:attribute>
             <xs:attribute name="variant_call_accession" use="optional" type="xs:string">
                 <xs:annotation>
-                    <xs:documentation>NCBI/EBI assigned variant call SSV accession </xs:documentation>
+                    <xs:documentation>DDBJ/EBI/NCBI assigned accession of the variant call</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="variant_call_type" type="VariantCallTypeCV" use="required"/>
@@ -1992,13 +1997,13 @@
             </xs:attribute>
             <xs:attribute name="variant_region_accession" use="optional" type="xs:string">
                 <xs:annotation>
-                    <xs:documentation>NCBI/EBI assigned variant region SV accession                                    
+                    <xs:documentation>DDBJ/EBI/NCBI assigned accession of the variant region
                     </xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="assertion_method" use="required" type="xs:string">
                 <xs:annotation>
-                    <xs:documentation>The NCBI/EBI assigned accession number</xs:documentation>
+                    <xs:documentation>The assertion method used to assert the variant region</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="variant_region_type" type="VariantRegionTypeCV" use="required"/>
