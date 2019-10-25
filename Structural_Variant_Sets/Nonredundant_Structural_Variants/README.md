@@ -10,8 +10,8 @@ Files are avilable for download at:
 
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/#github)
 
-* The data are in ASCII text files with tab-separated values on the FTP site.
-* CNV analysis: users must consider both duplications and deletions files for comprehensive CNV analysis.
+* Data are in tab-delimited ASCII text files in bed, bedpe, and tsv formats
+* CNV analysis: users must consider both duplications and deletions files for comprehensive CNV analysis
 
 ## Summary Statistics – Number of NR SV by type and assembly:
 
@@ -21,7 +21,7 @@ Files are avilable for download at:
 
 
 
-## Deletion NR SV Files:
+## Deletions:
 
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions//#github)
 
@@ -59,7 +59,7 @@ Files are avilable for download at:
 
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/#github)
 
-## Insertion NR SV Files:
+## Insertions:
 
 * GRCh38.nr_insertions.tsv.gz
 * GRCh37.nr_insertions.tsv.gz
@@ -72,7 +72,7 @@ Files are avilable for download at:
 * GRCh37.nr_insertions.bedpe.gz
 
 
-## Duplication NR SV Files:
+## Duplications:
 
 * GRCh38.nr_duplications.tsv.gz
 * GRCh37.nr_duplications.tsv.gz
