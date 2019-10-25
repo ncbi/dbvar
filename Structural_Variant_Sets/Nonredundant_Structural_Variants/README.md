@@ -23,7 +23,7 @@ Files are avilable for download at:
 
 ## Deletions:
 
-[https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions//#github)
+[https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/#github)
 
 
 ### All:
@@ -57,9 +57,9 @@ Files are avilable for download at:
 
 
 
-[https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/#github)
 
 ## Insertions:
+[https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions//#github)
 
 * GRCh38.nr_insertions.tsv.gz
 * GRCh37.nr_insertions.tsv.gz
@@ -73,6 +73,7 @@ Files are avilable for download at:
 
 
 ## Duplications:
+[https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications//#github)
 
 * GRCh38.nr_duplications.tsv.gz
 * GRCh37.nr_duplications.tsv.gz
@@ -83,7 +84,6 @@ Files are avilable for download at:
 * GRCh38.nr_duplications.bedpe.gz
 * GRCh37.nr_duplications.bedpe.gz
 
-[https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications//#github)
 
 ## Description of NR SV data files:
 
