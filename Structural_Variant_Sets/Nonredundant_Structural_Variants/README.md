@@ -24,24 +24,31 @@ Files are avilable for download at:
 
 ## Deletion NR SV Files:
 
+
+### All:
 | GRCh37 | GRCh38 |
 | --------------- | ------------- |
-| **All:** |
-|   GRCh37.nr_deletions.bed.gz | GRCh38.nr_deletions.bed.gz |
+| GRCh37.nr_deletions.bed.gz | GRCh38.nr_deletions.bed.gz |
 | GRCh37.nr_deletions.bedpe.gz | GRCh38.nr_deletions.bedpe.gz |
 | GRCh37.nr_deletions.tsv.gz | GRCh38.nr_deletions.tsv.gz |
 | GRCh37.nr_deletions.acmg_genes.tsv.gz | GRCh38.nr_deletions.acmg_genes.tsv.gz |
-| **Common:** |
+### Common:
+| GRCh37 | GRCh38 |
+| --------------- | ------------- |
 | GRCh37.nr_deletions.common.bed.gz | GRCh38.nr_deletions.common.bed.gz |
 | GRCh37.nr_deletions.common.bedpe.gz | GRCh38.nr_deletions.common.bedpe.gz |
 | GRCh37.nr_deletions.common.tsv.gz | GRCh38.nr_deletions.common.tsv.gz |
 | GRCh37.nr_deletions.common.acmg_genes.tsv.gz | GRCh38.nr_deletions.common.acmg_genes.tsv.gz |
-| **Pathogenic:** |
+### Pathogenic:
+| GRCh37 | GRCh38 |
+| --------------- | ------------- |
 | GRCh37.nr_deletions.pathogenic.bed.gz | GRCh38.nr_deletions.pathogenic.bed.gz |
 | GRCh37.nr_deletions.pathogenic.bedpe.gz | GRCh38.nr_deletions.pathogenic.bedpe.gz |
 | GRCh37.nr_deletions.pathogenic.tsv.gz | GRCh38.nr_deletions.pathogenic.tsv.gz |
 | GRCh37.nr_deletions.pathogenic.acmg_genes.tsv.gz | GRCh38.nr_deletions.pathogenic.acmg_genes.tsv.gz |
-| **Somatic:** |
+### Somatic:
+| GRCh37 | GRCh38 |
+| --------------- | ------------- |
 | GRCh37.nr_deletions.somatic.bed.gz | GRCh38.nr_deletions.somatic.bed.gz |
 | GRCh37.nr_deletions.somatic.bedpe.gz | GRCh38.nr_deletions.somatic.bedpe.gz |
 | GRCh37.nr_deletions.somatic.tsv.gz | GRCh38.nr_deletions.somatic.tsv.gz |
