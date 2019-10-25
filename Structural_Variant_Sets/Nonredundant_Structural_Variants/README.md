@@ -1,28 +1,63 @@
-# dbVar human non-redundant structural variants (nr SVs)
+# dbVar Human Nonredundant Structural Variants (NR SVs)
 
-## Work in progress and subject to change
+## Work in progress – data may be subject to frequent changes
 
-**Last updated:** 06/07/19
+**Documentation Last Updated:** 10/25/2019
 
+# Data
 
-## Latest nr SV file downloads:
+## Summary Statistics – Number of nr SV by type and assembly:
+
+[https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt#github)
+
+## NR SV Files:
 
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/#github)
 
-## Tutorial on how to use dbVar nr SV files:
-[https://github.com/ncbi/dbvar/blob/master/Structural_Variant_Sets/Nonredundant_Structural_Variants/ToolGuide.md](https://github.com/ncbi/dbvar/blob/master/Structural_Variant_Sets/Nonredundant_Structural_Variants/ToolGuide.md)
+# NR SV Files
 
-# Introduction
+* The "NR SVs" are in ASCII text files with tab-separated values on the FTP site.
+* CNV analysis: users must consider both duplications and deletions files for comprehensive CNV analysis.
 
-NCBI's database of Human Genomic Structural Variation is dbVar.  
+## Deletion NR SV Files:
 
-  [https://www.ncbi.nlm.nih.gov/dbvar](https://www.ncbi.nlm.nih.gov/dbvar/#github)
+* GRCh38.nr_deletions.tsv.gz
+* GRCh37.nr_deletions.tsv.gz
+* GRCh38.nr_deletions.acmg_genes.tsv.gz
+* GRCh37.nr_deletions.acmg_genes.tsv.gz
+* GRCh38.nr_deletions.bed.gz
+* GRCh38.nr_deletions.bedpe.gz
+* GRCh37.nr_deletions.bed.gz
+* GRCh37.nr_deletions.bedpe.gz
 
-An Overview of Structural Variation can be found here:
+[https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/#github)
 
- [https://www.ncbi.nlm.nih.gov/dbvar/content/overview](https://www.ncbi.nlm.nih.gov/dbvar/content/overview/#github)
+## Insertion NR SV Files:
 
+* GRCh38.nr_insertions.tsv.gz
+* GRCh37.nr_insertions.tsv.gz
+* GRCh38.nr_deletions.acmg_genes.tsv.gz
+* GRCh37.nr_deletions.acmg_genes.tsv.gz
+* GRCh38.nr_insertions.bed.gz
+* GRCh37.nr_insertions.bed.gz
+* GRCh38.nr_insertions.bedpe.gz
+* GRCh38.nr_insertions.bedpe.gz
+* GRCh37.nr_insertions.bedpe.gz
 
+[https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions//#github)
+
+## Duplication NR SV Files:
+
+* GRCh38.nr_duplications.tsv.gz
+* GRCh37.nr_duplications.tsv.gz
+* GRCh38.nr_duplications.acmg_genes.tsv.gz
+* GRCh37.nr_duplications.acmg_genes.tsv.gz
+* GRCh38.nr_duplications.bed.gz
+* GRCh37.nr_duplications.bed.gz
+* GRCh38.nr_duplications.bedpe.gz
+* GRCh37.nr_duplications.bedpe.gz
+
+[https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications//#github)
 
 ## Description of NR SV data files:
 
@@ -79,60 +114,9 @@ The variant types in each of the three "aggregation types" are:
    * novel_sequence_insertion
    * sva_insertion
 
-# Summary Statistics
-
-## Number of nr SV by type and assembly:
-
-[https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt#github)
 
 
-# NR SV Files
-
-* The "NR SVs" are in ASCII text files with tab-separated values on the FTP site.
-* CNV analysis: users must consider both duplications and deletions files for comprehensive CNV analysis.
-
-## Deletion NR SV Files:
-
-* GRCh38.nr_deletions.tsv.gz
-* GRCh37.nr_deletions.tsv.gz
-* GRCh38.nr_deletions.acmg_genes.tsv.gz
-* GRCh37.nr_deletions.acmg_genes.tsv.gz
-* GRCh38.nr_deletions.bed.gz
-* GRCh38.nr_deletions.bedpe.gz
-* GRCh37.nr_deletions.bed.gz
-* GRCh37.nr_deletions.bedpe.gz
-
-[https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/#github)
-
-## Insertion NR SV Files:
-
-* GRCh38.nr_insertions.tsv.gz
-* GRCh37.nr_insertions.tsv.gz
-* GRCh38.nr_deletions.acmg_genes.tsv.gz
-* GRCh37.nr_deletions.acmg_genes.tsv.gz
-* GRCh38.nr_insertions.bed.gz
-* GRCh37.nr_insertions.bed.gz
-* GRCh38.nr_insertions.bedpe.gz
-* GRCh38.nr_insertions.bedpe.gz
-* GRCh37.nr_insertions.bedpe.gz
-
-[https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions//#github)
-
-## Duplication NR SV Files:
-
-* GRCh38.nr_duplications.tsv.gz
-* GRCh37.nr_duplications.tsv.gz
-* GRCh38.nr_duplications.acmg_genes.tsv.gz
-* GRCh37.nr_duplications.acmg_genes.tsv.gz
-* GRCh38.nr_duplications.bed.gz
-* GRCh37.nr_duplications.bed.gz
-* GRCh38.nr_duplications.bedpe.gz
-* GRCh37.nr_duplications.bedpe.gz
-
-[https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications//#github)
-
-# Fields in NR Records are tab-separated:
-
+## File format:
 
 Column | NR SV TSV File | BED File | BEDPE File |
 -----|:---------|:---|:------
