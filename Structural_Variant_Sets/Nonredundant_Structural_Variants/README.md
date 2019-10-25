@@ -304,12 +304,11 @@ data files from NCBI.
 
 Please check back soon for further updates.
 
-
 ## Counts for October 20, 2019
 
 
 ### Deletions:
-| **Redundant:** |
+#### Redundant:
 | | GRCh37 | GRCh38 |
 | - | ----- | ----- |
 | alu_deletion | 1,732,106 | 1,720,422 |
@@ -320,34 +319,38 @@ Please check back soon for further updates.
 | sva_deletion | 16,943 | 16,951 |
 | Total Deletions | 17,939,001 | 17,809,964 |
 
-| **Non-Redundant:** |
+#### Non-Redundant:
+| | GRCh37 | GRCh38 |
+| - | ----- | ----- |
 | All-NR-Deletions | 2,565,798 | 2,553,342 |
 | Common-NR-Deletions | 256,543 | 255,992 |
 | Pathogenic-NR-Deletions | 11,296 | 11,105 |
 | Somatic-NR-Deletions | 23,360 | 23,319 |
 
-| | GRCh37 | GRCh38 |
-| - | ----- | ----- |
+
 
 ### Duplications:
-| **Redundant:** |
+#### Redundant:
+| | GRCh37 | GRCh38 |
+| - | ----- | ----- |
 | copy_number_gain | 1,334,046 | 1,304,135 |
 | copy_number_variation | 1,176,289 | 1,136,659 |
 | duplication | 2,024,437 | 2,002,034 |
 | tandem_duplication | 11,510 | 11,490 |
 | Total Duplications | 4,546,282 | 4,454,318 |
 
-| **Non-Redundant:** |
+#### Non-Redundant:
+| | GRCh37 | GRCh38 |
+| - | ----- | ----- |
 | All-NR-Duplications | 428,103 | 417,693 |
 | Common-NR-Duplications | 68,992 | 68,447 |
 | Pathogenic-NR-Duplications | 4,337 | 4,206 |
 | Somatic-NR-Duplications | 15,103 | 15,077 |
 
+### Insertions:
+#### Redundant:
 | | GRCh37 | GRCh38 |
 | - | ----- | ----- |
-
-### Insertions:
-| **Redundant:** |
 | alu_insertion | 2,361,274 | 2,356,644 |
 | herv_insertion | 473 | 475 |
 | insertion | 1,537,652 | 1,548,184 |
@@ -356,10 +359,11 @@ Please check back soon for further updates.
 | novel_sequence_insertion | 4,073 | 4,070 |
 | sva_insertion | 139,394 | 139,356 |
 | Total Insertions | 4,473,105 | 4,478,906 |
-|  |
-| **Non-Redundant:** |
+
+#### Non-Redundant:
+| | GRCh37 | GRCh38 |
+| - | ----- | ----- |
 | All-NR-Insertions | 1,322,707 | 1,327,375 |
 | Common-NR-Insertions | 138,871 | 138,737 |
 | Pathogenic-NR-Insertions | 71 | 71 |
 | Somatic-NR-Insertions | 0 | 0 |
-
