@@ -305,10 +305,10 @@ data files from NCBI.
 Please check back soon for further updates.
 
 
-| Counts for October 20, 2019 |
+## Counts for October 20, 2019
 
 
-| **Deletions:** |
+### Deletions:
 | **Redundant:** |
 | | GRCh37 | GRCh38 |
 | - | ----- | ----- |
@@ -329,7 +329,7 @@ Please check back soon for further updates.
 | | GRCh37 | GRCh38 |
 | - | ----- | ----- |
 
-| **Duplications:** |
+### Duplications:
 | **Redundant:** |
 | copy_number_gain | 1,334,046 | 1,304,135 |
 | copy_number_variation | 1,176,289 | 1,136,659 |
@@ -346,7 +346,7 @@ Please check back soon for further updates.
 | | GRCh37 | GRCh38 |
 | - | ----- | ----- |
 
-| **Insertions:** |
+### Insertions:
 | **Redundant:** |
 | alu_insertion | 2,361,274 | 2,356,644 |
 | herv_insertion | 473 | 475 |
