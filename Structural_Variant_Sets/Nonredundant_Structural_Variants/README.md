@@ -11,25 +11,63 @@ Files are avilable for download at:
 
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/#github)
 
-## Summary Statistics – Number of nr SV by type and assembly:
+* The data are in ASCII text files with tab-separated values on the FTP site.
+* CNV analysis: users must consider both duplications and deletions files for comprehensive CNV analysis.
+
+## Summary Statistics – Number of NR SV by type and assembly:
 
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt#github)
 
 
 
-* The "NR SVs" are in ASCII text files with tab-separated values on the FTP site.
-* CNV analysis: users must consider both duplications and deletions files for comprehensive CNV analysis.
+
 
 ## Deletion NR SV Files:
 
-* GRCh38.nr_deletions.tsv.gz
-* GRCh37.nr_deletions.tsv.gz
-* GRCh38.nr_deletions.acmg_genes.tsv.gz
-* GRCh37.nr_deletions.acmg_genes.tsv.gz
-* GRCh38.nr_deletions.bed.gz
-* GRCh38.nr_deletions.bedpe.gz
 * GRCh37.nr_deletions.bed.gz
 * GRCh37.nr_deletions.bedpe.gz
+* GRCh37.nr_deletions.tsv.gz
+
+* GRCh37.nr_deletions.common.bed.gz
+* GRCh37.nr_deletions.common.bedpe.gz
+* GRCh37.nr_deletions.common.tsv.gz
+
+* GRCh37.nr_deletions.pathogenic.bed.gz
+* GRCh37.nr_deletions.pathogenic.bedpe.gz
+* GRCh37.nr_deletions.pathogenic.tsv.gz
+
+* GRCh37.nr_deletions.somatic.bed.gz
+* GRCh37.nr_deletions.somatic.bedpe.gz
+* GRCh37.nr_deletions.somatic.tsv.gz
+
+* GRCh37.nr_deletions.acmg_genes.tsv.gz
+* GRCh37.nr_deletions.common.acmg_genes.tsv.gz
+* GRCh37.nr_deletions.pathogenic.acmg_genes.tsv.gz
+* GRCh37.nr_deletions.somatic.acmg_genes.tsv.gz
+
+
+* GRCh38.nr_deletions.bed.gz
+* GRCh38.nr_deletions.bedpe.gz
+* GRCh38.nr_deletions.tsv.gz
+
+* GRCh38.nr_deletions.common.bed.gz
+* GRCh38.nr_deletions.common.bedpe.gz
+* GRCh38.nr_deletions.common.tsv.gz
+
+* GRCh38.nr_deletions.pathogenic.bed.gz
+* GRCh38.nr_deletions.pathogenic.bedpe.gz
+* GRCh38.nr_deletions.pathogenic.tsv.gz
+
+* GRCh38.nr_deletions.somatic.bed.gz
+* GRCh38.nr_deletions.somatic.bedpe.gz
+* GRCh38.nr_deletions.somatic.tsv.gz
+
+* GRCh38.nr_deletions.acmg_genes.tsv.gz
+* GRCh38.nr_deletions.common.acmg_genes.tsv.gz
+* GRCh38.nr_deletions.pathogenic.acmg_genes.tsv.gz
+* GRCh38.nr_deletions.somatic.acmg_genes.tsv.gz
+
+
 
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/#github)
 
