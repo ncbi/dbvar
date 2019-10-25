@@ -1,6 +1,5 @@
 # dbVar Human Nonredundant Structural Variants (NR SVs)
-
-## Work in progress – data may be subject to frequent changes
+## Work in progress – data subject to frequent change
 
 **Documentation Last Updated:** 10/25/2019
 
