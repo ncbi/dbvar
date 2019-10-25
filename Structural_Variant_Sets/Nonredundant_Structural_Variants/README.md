@@ -27,7 +27,7 @@ Files are avilable for download at:
 | GRCh37 | GRCh38 |
 | --------------- | ------------- |
 | **All** |
-| GRCh37.nr_deletions.bed.gz | GRCh38.nr_deletions.bed.gz |
+|   GRCh37.nr_deletions.bed.gz | GRCh38.nr_deletions.bed.gz |
 | GRCh37.nr_deletions.bedpe.gz | GRCh38.nr_deletions.bedpe.gz |
 | GRCh37.nr_deletions.tsv.gz | GRCh38.nr_deletions.tsv.gz |
 | GRCh37.nr_deletions.acmg_genes.tsv.gz | GRCh38.nr_deletions.acmg_genes.tsv.gz |
