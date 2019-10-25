@@ -4,17 +4,14 @@
 
 **Documentation Last Updated:** 10/25/2019
 
-# Data
-
 ## Summary Statistics – Number of nr SV by type and assembly:
 
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt#github)
 
-## NR SV Files:
-
-[https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/#github)
-
 # NR SV Files
+
+Files are avilable for download at:
+[https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/#github)
 
 * The "NR SVs" are in ASCII text files with tab-separated values on the FTP site.
 * CNV analysis: users must consider both duplications and deletions files for comprehensive CNV analysis.
