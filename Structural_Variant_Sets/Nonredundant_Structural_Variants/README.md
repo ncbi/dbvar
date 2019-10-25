@@ -24,6 +24,8 @@ Files are avilable for download at:
 
 ## Deletion NR SV Files:
 
+[https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions//#github)
+
 
 ### All:
 | GRCh37 | GRCh38 |
@@ -70,7 +72,6 @@ Files are avilable for download at:
 * GRCh38.nr_insertions.bedpe.gz
 * GRCh37.nr_insertions.bedpe.gz
 
-[https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions//#github)
 
 ## Duplication NR SV Files:
 
