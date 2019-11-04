@@ -1,8 +1,12 @@
+<!--
+
 FTP Directory: <a href="ftp://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant">nonredundant</a><br />
 Last modified: Oct 22, 2019<br />
 File types: bed, bedpe, tsv<br />
 <h3>
 Deletions</h3>
+
+-->
 
 <table>
 <tbody>
