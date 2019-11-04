@@ -3,6 +3,7 @@ Last modified: Oct 22, 2019<br />
 File types: bed, bedpe, tsv<br />
 <h3>
 Deletions</h3>
+
 <table>
 <tbody>
 <tr>
@@ -91,3 +92,4 @@ Insertions</h3>
 </tr>
 </tbody>
 </table>
+
