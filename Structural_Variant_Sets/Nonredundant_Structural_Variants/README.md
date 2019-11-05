@@ -4,7 +4,8 @@
 **Documentation Last Updated:** 10/25/2019
 
 
-
+<a href="/nr_stats_tables/ftp_manifest-table4.20191104.inc.md" />
+<a href="https://github.com/ncbi/dbvar/blob/add-nr-stats-table-to-readme/nr_stats_tables/ftp_manifest-table4.20191104.inc.md" />
 
 
 # NR SV Files
