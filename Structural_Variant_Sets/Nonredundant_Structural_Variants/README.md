@@ -1,5 +1,4 @@
 # dbVar Human Nonredundant Structural Variants (NR SVs)
-## Work in progress – data subject to change
 
 
 <a href="/nr_stats_tables/ftp_manifest-table4.20191104.inc.md" />
@@ -8,6 +7,7 @@
 
 
 ## Data Summary
+### Work in progress – data subject to change
 
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt#github)
 
