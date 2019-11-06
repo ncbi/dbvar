@@ -7,7 +7,7 @@
 
 
 ## Data Summary
-### Work in progress – data subject to change
+### (work in progress – data subject to change)
 
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt#github)
 
