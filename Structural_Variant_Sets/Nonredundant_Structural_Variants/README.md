@@ -1,8 +1,6 @@
 # dbVar Human Nonredundant Structural Variants (NR SVs)
 ## Work in progress – data subject to change
 
-**Documentation Last Updated:** 11/06/2019
-
 
 <a href="/nr_stats_tables/ftp_manifest-table4.20191104.inc.md" />
 <a href="https://github.com/ncbi/dbvar/blob/add-nr-stats-table-to-readme/nr_stats_tables/ftp_manifest-table4.20191104.inc.md" />
