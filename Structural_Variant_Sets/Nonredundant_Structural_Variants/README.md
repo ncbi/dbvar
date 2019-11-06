@@ -106,8 +106,7 @@ Insertions</h3>
 
 ## Data Files
 
-* Data are in tab-delimited ASCII text files in bed, bedpe, and tsv formats
-* CNV analysis: users must consider both duplications and deletions files for comprehensive CNV analysis
+Data are in tab-delimited ASCII text files in bed, bedpe, and tsv formats. If analyzing CNVs, please remember to download both duplications and deletions, as they are in separate files.
 
 
 ### Deletions:
