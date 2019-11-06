@@ -11,6 +11,11 @@
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt#github)
 
 (work in progress – data subject to change)
+All files are available in **bed**, **bedpe**, and **tsv** formats.
+[https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/#github)
+[https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions//#github)
+### Duplications:
+[https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications//#github)
 
 As of Oct 22, 2019:<br />
 <h3>
@@ -104,43 +109,6 @@ Insertions</h3>
 </tbody>
 </table>
 
-## Data Files
-
-All files are available in **bed**, **bedpe**, and **tsv** formats.
-
-### Deletions:
-
-[https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/#github)
-
-| | GRCh37 | GRCh38 |
-| ------ | --------------- | ------------- |
-| **All** | GRCh37.nr_deletions | GRCh38.nr_deletions |
-| **Common** | GRCh37.nr_deletions.common | GRCh38.nr_deletions.common |
-| **Pathogenic** | GRCh37.nr_deletions.pathogenic | GRCh38.nr_deletions.pathogenic |
-| **Somatic** | GRCh37.nr_deletions.somatic | GRCh38.nr_deletions.somatic |
-
-
-
-### Insertions:
-[https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions//#github)
-
-| | GRCh37 | GRCh38 |
-| ------ | --------------- | ------------- |
-| **All** | GRCh37.nr_insertions | GRCh38.nr_insertions |
-| **Common** | GRCh37.nr_insertions.common | GRCh38.nr_insertions.common |
-| **Pathogenic** | GRCh37.nr_insertions.pathogenic | GRCh38.nr_insertions.pathogenic |
-| **Somatic** | GRCh37.nr_insertions.somatic | GRCh38.nr_insertions.somatic |
-
-
-### Duplications:
-[https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications//#github)
-
-| | GRCh37 | GRCh38 |
-| ------ | --------------- | ------------- |
-| **All** | GRCh37.nr_duplications | GRCh38.nr_duplications |
-| **Common** | GRCh37.nr_duplications.common | GRCh38.nr_duplications.common |
-| **Pathogenic** | GRCh37.nr_duplications.pathogenic | GRCh38.nr_duplications.pathogenic |
-| **Somatic** | GRCh37.nr_duplications.somatic | GRCh38.nr_duplications.somatic |
 
 
 ## Description of NR SV data files:
