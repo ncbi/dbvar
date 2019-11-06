@@ -12,7 +12,7 @@
 
 (work in progress – data subject to change)
 
-Last modified: Oct 22, 2019<br />
+As of Oct 22, 2019:<br />
 <h3>
 Deletions</h3>
 <table>
@@ -106,7 +106,7 @@ Insertions</h3>
 
 ## Data Files
 
-Data are in tab-delimited ASCII text files in bed, bedpe, and tsv formats. If analyzing CNVs, please remember to download both duplications and deletions, as they are in separate files.
+Data are in tab-delimited ASCII text files in **bed**, **bedpe**, and **tsv** formats. If analyzing CNVs, please remember to download both duplications and deletions, as they are in separate files.
 
 
 ### Deletions:
