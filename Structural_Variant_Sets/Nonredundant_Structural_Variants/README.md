@@ -7,19 +7,17 @@
 
 
 
-## Summary Statistics – Number of NR SV by type and assembly:
+## Data Summary
 
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt#github)
 
-FTP Directory: <a href="ftp://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant">nonredundant</a><br />
 Last modified: Oct 22, 2019<br />
-File types: bed, bedpe, tsv<br />
 <h3>
 Deletions</h3>
 <table>
 <tbody>
 <tr>
-<th>Type and FTP Directory</th>
+<th>Type</th>
 <th>GRCh37</th>
 <th>GRCh38</th>
 <tr>
@@ -49,7 +47,7 @@ Duplications</h3>
 <table>
 <tbody>
 <tr>
-<th>Type and FTP Directory</th>
+<th>Type</th>
 <th>GRCh37</th>
 <th>GRCh38</th>
 <tr>
@@ -79,7 +77,7 @@ Insertions</h3>
 <table>
 <tbody>
 <tr>
-<th>Type and FTP Directory</th>
+<th>Type</th>
 <th>GRCh37</th>
 <th>GRCh38</th>
 <tr>
