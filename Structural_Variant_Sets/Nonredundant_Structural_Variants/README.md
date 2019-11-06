@@ -18,7 +18,8 @@ All files are available in **bed**, **bedpe**, and **tsv** formats:
 
 
 
-As of Oct 22, 2019:<br />
+### As of Oct 22, 2019:<br />
+
 See also [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt#github)
 
 <h3>
