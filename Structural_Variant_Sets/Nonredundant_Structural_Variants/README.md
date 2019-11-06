@@ -135,6 +135,8 @@ All files are available in **bed**, **bedpe**, and **tsv** formats.
 ## Duplications:
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications//#github)
 
+| | GRCh37 | GRCh38 |
+| ------ | --------------- | ------------- |
 | **All** | GRCh37.nr_duplications | GRCh38.nr_duplications |
 | **Common** | GRCh37.nr_duplications.common | GRCh38.nr_duplications.common |
 | **Pathogenic** | GRCh37.nr_duplications.pathogenic | GRCh38.nr_duplications.pathogenic |
