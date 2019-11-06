@@ -9,6 +9,7 @@
 ## Data Summary
 
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt#github)
+
 (work in progress – data subject to change)
 
 Last modified: Oct 22, 2019<br />
