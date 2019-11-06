@@ -104,39 +104,39 @@ Insertions</h3>
 </tbody>
 </table>
 
-# NR SV Files
+## Data Files
 
 * Data are in tab-delimited ASCII text files in bed, bedpe, and tsv formats
 * CNV analysis: users must consider both duplications and deletions files for comprehensive CNV analysis
 
 
-## Deletions:
+### Deletions:
 
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/#github)
 
 
-### All:
+#### All:
 | GRCh37 | GRCh38 |
 | --------------- | ------------- |
 | GRCh37.nr_deletions.bed.gz | GRCh38.nr_deletions.bed.gz |
 | GRCh37.nr_deletions.bedpe.gz | GRCh38.nr_deletions.bedpe.gz |
 | GRCh37.nr_deletions.tsv.gz | GRCh38.nr_deletions.tsv.gz |
 | GRCh37.nr_deletions.acmg_genes.tsv.gz | GRCh38.nr_deletions.acmg_genes.tsv.gz |
-### Common:
+#### Common:
 | GRCh37 | GRCh38 |
 | --------------- | ------------- |
 | GRCh37.nr_deletions.common.bed.gz | GRCh38.nr_deletions.common.bed.gz |
 | GRCh37.nr_deletions.common.bedpe.gz | GRCh38.nr_deletions.common.bedpe.gz |
 | GRCh37.nr_deletions.common.tsv.gz | GRCh38.nr_deletions.common.tsv.gz |
 | GRCh37.nr_deletions.common.acmg_genes.tsv.gz | GRCh38.nr_deletions.common.acmg_genes.tsv.gz |
-### Pathogenic:
+#### Pathogenic:
 | GRCh37 | GRCh38 |
 | --------------- | ------------- |
 | GRCh37.nr_deletions.pathogenic.bed.gz | GRCh38.nr_deletions.pathogenic.bed.gz |
 | GRCh37.nr_deletions.pathogenic.bedpe.gz | GRCh38.nr_deletions.pathogenic.bedpe.gz |
 | GRCh37.nr_deletions.pathogenic.tsv.gz | GRCh38.nr_deletions.pathogenic.tsv.gz |
 | GRCh37.nr_deletions.pathogenic.acmg_genes.tsv.gz | GRCh38.nr_deletions.pathogenic.acmg_genes.tsv.gz |
-### Somatic:
+#### Somatic:
 | GRCh37 | GRCh38 |
 | --------------- | ------------- |
 | GRCh37.nr_deletions.somatic.bed.gz | GRCh38.nr_deletions.somatic.bed.gz |
@@ -147,7 +147,7 @@ Insertions</h3>
 
 
 
-## Insertions:
+### Insertions:
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions//#github)
 
 * GRCh38.nr_insertions.tsv.gz
