@@ -132,7 +132,7 @@ All files are available in **bed**, **bedpe**, and **tsv** formats.
 | **Somatic** | GRCh37.nr_insertions.somatic | GRCh38.nr_insertions.somatic |
 
 
-## Duplications:
+### Duplications:
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications//#github)
 
 | | GRCh37 | GRCh38 |
