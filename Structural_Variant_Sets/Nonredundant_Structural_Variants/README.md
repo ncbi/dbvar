@@ -105,10 +105,6 @@ Insertions</h3>
 
 # NR SV Files
 
-Files are avilable for download at:
-
-[https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/#github)
-
 * Data are in tab-delimited ASCII text files in bed, bedpe, and tsv formats
 * CNV analysis: users must consider both duplications and deletions files for comprehensive CNV analysis
 
