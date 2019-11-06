@@ -1,12 +1,111 @@
 # dbVar Human Nonredundant Structural Variants (NR SVs)
-## Work in progress – data subject to frequent change
+## Work in progress – data subject to change
 
-**Documentation Last Updated:** 10/25/2019
+**Documentation Last Updated:** 11/06/2019
 
 
 <a href="/nr_stats_tables/ftp_manifest-table4.20191104.inc.md" />
 <a href="https://github.com/ncbi/dbvar/blob/add-nr-stats-table-to-readme/nr_stats_tables/ftp_manifest-table4.20191104.inc.md" />
 
+
+
+## Summary Statistics – Number of NR SV by type and assembly:
+
+[https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt#github)
+
+FTP Directory: <a href="ftp://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant">nonredundant</a><br />
+Last modified: Oct 22, 2019<br />
+File types: bed, bedpe, tsv<br />
+<h3>
+Deletions</h3>
+<table>
+<tbody>
+<tr>
+<th>Type and FTP Directory</th>
+<th>GRCh37</th>
+<th>GRCh38</th>
+<tr>
+<td>All</td>
+<td>2,565,798</td>
+<td>2,553,342</td>
+</tr>
+<tr>
+<td>Common</td>
+<td>256,543</td>
+<td>255,992</td>
+</tr>
+<tr>
+<td>Pathogenic</td>
+<td>11,296</td>
+<td>11,105</td>
+</tr>
+<tr>
+<td>Somatic</td>
+<td>23,360</td>
+<td>23,319</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Duplications</h3>
+<table>
+<tbody>
+<tr>
+<th>Type and FTP Directory</th>
+<th>GRCh37</th>
+<th>GRCh38</th>
+<tr>
+<td>All</td>
+<td>428,103</td>
+<td>417,693</td>
+</tr>
+<tr>
+<td>Common</td>
+<td>68,992</td>
+<td>68,447</td>
+</tr>
+<tr>
+<td>Pathogenic</td>
+<td>4,337</td>
+<td>4,206</td>
+</tr>
+<tr>
+<td>Somatic</td>
+<td>15,103</td>
+<td>15,077</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Insertions</h3>
+<table>
+<tbody>
+<tr>
+<th>Type and FTP Directory</th>
+<th>GRCh37</th>
+<th>GRCh38</th>
+<tr>
+<td>All</td>
+<td>1,322,707</td>
+<td>1,327,375</td>
+</tr>
+<tr>
+<td>Common</td>
+<td>138,871</td>
+<td>138,737</td>
+</tr>
+<tr>
+<td>Pathogenic</td>
+<td>71</td>
+<td>71</td>
+</tr>
+<tr>
+<td>Somatic</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
 
 # NR SV Files
 
@@ -16,13 +115,6 @@ Files are avilable for download at:
 
 * Data are in tab-delimited ASCII text files in bed, bedpe, and tsv formats
 * CNV analysis: users must consider both duplications and deletions files for comprehensive CNV analysis
-
-## Summary Statistics – Number of NR SV by type and assembly:
-
-[https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt#github)
-
-
-
 
 
 ## Deletions:
