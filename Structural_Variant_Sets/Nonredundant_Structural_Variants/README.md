@@ -1,5 +1,6 @@
 # dbVar Human Nonredundant Structural Variants (NR SVs)
 
+#### Work in progress - data subject to change
 
 <a href="/nr_stats_tables/ftp_manifest-table4.20191104.inc.md" />
 <a href="https://github.com/ncbi/dbvar/blob/add-nr-stats-table-to-readme/nr_stats_tables/ftp_manifest-table4.20191104.inc.md" />
@@ -8,13 +9,15 @@
 
 ## Data Summary
 
-[https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt#github)
 
-(work in progress – data subject to change)
-All files are available in **bed**, **bedpe**, and **tsv** formats.
+All files are available in **bed**, **bedpe**, and **tsv** formats:
+
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/#github)
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions//#github)
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications//#github)
+
+[https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt#github)
+
 
 As of Oct 22, 2019:<br />
 <h3>
