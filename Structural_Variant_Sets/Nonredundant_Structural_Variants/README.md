@@ -106,71 +106,39 @@ Insertions</h3>
 
 ## Data Files
 
-Data are in tab-delimited ASCII text files in **bed**, **bedpe**, and **tsv** formats. If analyzing CNVs, please remember to download both duplications and deletions, as they are in separate files.
-
+All files are available in **bed**, **bedpe**, and **tsv** formats.
 
 ### Deletions:
 
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/#github)
 
-
-#### All:
-| GRCh37 | GRCh38 |
-| --------------- | ------------- |
-| GRCh37.nr_deletions.bed.gz | GRCh38.nr_deletions.bed.gz |
-| GRCh37.nr_deletions.bedpe.gz | GRCh38.nr_deletions.bedpe.gz |
-| GRCh37.nr_deletions.tsv.gz | GRCh38.nr_deletions.tsv.gz |
-| GRCh37.nr_deletions.acmg_genes.tsv.gz | GRCh38.nr_deletions.acmg_genes.tsv.gz |
-#### Common:
-| GRCh37 | GRCh38 |
-| --------------- | ------------- |
-| GRCh37.nr_deletions.common.bed.gz | GRCh38.nr_deletions.common.bed.gz |
-| GRCh37.nr_deletions.common.bedpe.gz | GRCh38.nr_deletions.common.bedpe.gz |
-| GRCh37.nr_deletions.common.tsv.gz | GRCh38.nr_deletions.common.tsv.gz |
-| GRCh37.nr_deletions.common.acmg_genes.tsv.gz | GRCh38.nr_deletions.common.acmg_genes.tsv.gz |
-#### Pathogenic:
-| GRCh37 | GRCh38 |
-| --------------- | ------------- |
-| GRCh37.nr_deletions.pathogenic.bed.gz | GRCh38.nr_deletions.pathogenic.bed.gz |
-| GRCh37.nr_deletions.pathogenic.bedpe.gz | GRCh38.nr_deletions.pathogenic.bedpe.gz |
-| GRCh37.nr_deletions.pathogenic.tsv.gz | GRCh38.nr_deletions.pathogenic.tsv.gz |
-| GRCh37.nr_deletions.pathogenic.acmg_genes.tsv.gz | GRCh38.nr_deletions.pathogenic.acmg_genes.tsv.gz |
-#### Somatic:
-| GRCh37 | GRCh38 |
-| --------------- | ------------- |
-| GRCh37.nr_deletions.somatic.bed.gz | GRCh38.nr_deletions.somatic.bed.gz |
-| GRCh37.nr_deletions.somatic.bedpe.gz | GRCh38.nr_deletions.somatic.bedpe.gz |
-| GRCh37.nr_deletions.somatic.tsv.gz | GRCh38.nr_deletions.somatic.tsv.gz |
-| GRCh37.nr_deletions.somatic.acmg_genes.tsv.gz | GRCh38.nr_deletions.somatic.acmg_genes.tsv.gz |
-
+| | GRCh37 | GRCh38 |
+| ------ | --------------- | ------------- |
+| **All** | GRCh37.nr_deletions | GRCh38.nr_deletions |
+| **Common** | GRCh37.nr_deletions.common | GRCh38.nr_deletions.common |
+| **Pathogenic** | GRCh37.nr_deletions.pathogenic | GRCh38.nr_deletions.pathogenic |
+| **Somatic** | GRCh37.nr_deletions.somatic | GRCh38.nr_deletions.somatic |
 
 
 
 ### Insertions:
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions//#github)
 
-* GRCh38.nr_insertions.tsv.gz
-* GRCh37.nr_insertions.tsv.gz
-* GRCh38.nr_deletions.acmg_genes.tsv.gz
-* GRCh37.nr_deletions.acmg_genes.tsv.gz
-* GRCh38.nr_insertions.bed.gz
-* GRCh37.nr_insertions.bed.gz
-* GRCh38.nr_insertions.bedpe.gz
-* GRCh38.nr_insertions.bedpe.gz
-* GRCh37.nr_insertions.bedpe.gz
+| | GRCh37 | GRCh38 |
+| ------ | --------------- | ------------- |
+| **All** | GRCh37.nr_insertions | GRCh38.nr_insertions |
+| **Common** | GRCh37.nr_insertions.common | GRCh38.nr_insertions.common |
+| **Pathogenic** | GRCh37.nr_insertions.pathogenic | GRCh38.nr_insertions.pathogenic |
+| **Somatic** | GRCh37.nr_insertions.somatic | GRCh38.nr_insertions.somatic |
 
 
 ## Duplications:
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications//#github)
 
-* GRCh38.nr_duplications.tsv.gz
-* GRCh37.nr_duplications.tsv.gz
-* GRCh38.nr_duplications.acmg_genes.tsv.gz
-* GRCh37.nr_duplications.acmg_genes.tsv.gz
-* GRCh38.nr_duplications.bed.gz
-* GRCh37.nr_duplications.bed.gz
-* GRCh38.nr_duplications.bedpe.gz
-* GRCh37.nr_duplications.bedpe.gz
+| **All** | GRCh37.nr_duplications | GRCh38.nr_duplications |
+| **Common** | GRCh37.nr_duplications.common | GRCh38.nr_duplications.common |
+| **Pathogenic** | GRCh37.nr_duplications.pathogenic | GRCh38.nr_duplications.pathogenic |
+| **Somatic** | GRCh37.nr_duplications.somatic | GRCh38.nr_duplications.somatic |
 
 
 ## Description of NR SV data files:
