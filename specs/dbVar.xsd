@@ -252,12 +252,14 @@
             <xs:enumeration value="DO"/>
             <xs:enumeration value="EGA"/>
             <xs:enumeration value="ENA"/>
+            <xs:enumeration value="GEA"/>
             <xs:enumeration value="GENBANK"/>
             <xs:enumeration value="GENE"/>
             <xs:enumeration value="GeneReviews"/>
             <xs:enumeration value="GEO"/>
             <xs:enumeration value="HP"/>
             <xs:enumeration value="JAX"/>
+            <xs:enumeration value="JGA"/>
             <xs:enumeration value="MedGen"/>
             <xs:enumeration value="MeSH"/>
             <xs:enumeration value="MONDO"/>
