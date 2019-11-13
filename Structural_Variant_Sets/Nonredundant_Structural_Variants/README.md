@@ -1,88 +1,118 @@
 # dbVar Human Nonredundant Structural Variants (NR SVs)
-## Work in progress – data subject to frequent change
 
-**Documentation Last Updated:** 10/25/2019
+#### Work in progress - data subject to change
 
-
-# NR SV Files
-
-Files are avilable for download at:
-
-[https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/#github)
-
-* Data are in tab-delimited ASCII text files in bed, bedpe, and tsv formats
-* CNV analysis: users must consider both duplications and deletions files for comprehensive CNV analysis
-
-## Summary Statistics – Number of NR SV by type and assembly:
-
-[https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt#github)
+<a href="/nr_stats_tables/ftp_manifest-table4.20191104.inc.md" />
+<a href="https://github.com/ncbi/dbvar/blob/add-nr-stats-table-to-readme/nr_stats_tables/ftp_manifest-table4.20191104.inc.md" />
 
 
 
+## Data Summary
 
 
-## Deletions:
+All files are available in **bed**, **bedpe**, and **tsv** formats:
 
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/#github)
-
-
-### All:
-| GRCh37 | GRCh38 |
-| --------------- | ------------- |
-| GRCh37.nr_deletions.bed.gz | GRCh38.nr_deletions.bed.gz |
-| GRCh37.nr_deletions.bedpe.gz | GRCh38.nr_deletions.bedpe.gz |
-| GRCh37.nr_deletions.tsv.gz | GRCh38.nr_deletions.tsv.gz |
-| GRCh37.nr_deletions.acmg_genes.tsv.gz | GRCh38.nr_deletions.acmg_genes.tsv.gz |
-### Common:
-| GRCh37 | GRCh38 |
-| --------------- | ------------- |
-| GRCh37.nr_deletions.common.bed.gz | GRCh38.nr_deletions.common.bed.gz |
-| GRCh37.nr_deletions.common.bedpe.gz | GRCh38.nr_deletions.common.bedpe.gz |
-| GRCh37.nr_deletions.common.tsv.gz | GRCh38.nr_deletions.common.tsv.gz |
-| GRCh37.nr_deletions.common.acmg_genes.tsv.gz | GRCh38.nr_deletions.common.acmg_genes.tsv.gz |
-### Pathogenic:
-| GRCh37 | GRCh38 |
-| --------------- | ------------- |
-| GRCh37.nr_deletions.pathogenic.bed.gz | GRCh38.nr_deletions.pathogenic.bed.gz |
-| GRCh37.nr_deletions.pathogenic.bedpe.gz | GRCh38.nr_deletions.pathogenic.bedpe.gz |
-| GRCh37.nr_deletions.pathogenic.tsv.gz | GRCh38.nr_deletions.pathogenic.tsv.gz |
-| GRCh37.nr_deletions.pathogenic.acmg_genes.tsv.gz | GRCh38.nr_deletions.pathogenic.acmg_genes.tsv.gz |
-### Somatic:
-| GRCh37 | GRCh38 |
-| --------------- | ------------- |
-| GRCh37.nr_deletions.somatic.bed.gz | GRCh38.nr_deletions.somatic.bed.gz |
-| GRCh37.nr_deletions.somatic.bedpe.gz | GRCh38.nr_deletions.somatic.bedpe.gz |
-| GRCh37.nr_deletions.somatic.tsv.gz | GRCh38.nr_deletions.somatic.tsv.gz |
-| GRCh37.nr_deletions.somatic.acmg_genes.tsv.gz | GRCh38.nr_deletions.somatic.acmg_genes.tsv.gz |
-
-
-
-
-## Insertions:
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions//#github)
-
-* GRCh38.nr_insertions.tsv.gz
-* GRCh37.nr_insertions.tsv.gz
-* GRCh38.nr_deletions.acmg_genes.tsv.gz
-* GRCh37.nr_deletions.acmg_genes.tsv.gz
-* GRCh38.nr_insertions.bed.gz
-* GRCh37.nr_insertions.bed.gz
-* GRCh38.nr_insertions.bedpe.gz
-* GRCh38.nr_insertions.bedpe.gz
-* GRCh37.nr_insertions.bedpe.gz
-
-
-## Duplications:
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications//#github)
 
-* GRCh38.nr_duplications.tsv.gz
-* GRCh37.nr_duplications.tsv.gz
-* GRCh38.nr_duplications.acmg_genes.tsv.gz
-* GRCh37.nr_duplications.acmg_genes.tsv.gz
-* GRCh38.nr_duplications.bed.gz
-* GRCh37.nr_duplications.bed.gz
-* GRCh38.nr_duplications.bedpe.gz
-* GRCh37.nr_duplications.bedpe.gz
+
+
+### As of Oct 22, 2019:<br />
+
+See also [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt#github)
+
+<h3>
+Deletions</h3>
+<table>
+<tbody>
+<tr>
+<th>Type</th>
+<th>GRCh37</th>
+<th>GRCh38</th>
+<tr>
+<td>All</td>
+<td>2,565,798</td>
+<td>2,553,342</td>
+</tr>
+<tr>
+<td>Common</td>
+<td>256,543</td>
+<td>255,992</td>
+</tr>
+<tr>
+<td>Pathogenic</td>
+<td>11,296</td>
+<td>11,105</td>
+</tr>
+<tr>
+<td>Somatic</td>
+<td>23,360</td>
+<td>23,319</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Duplications</h3>
+<table>
+<tbody>
+<tr>
+<th>Type</th>
+<th>GRCh37</th>
+<th>GRCh38</th>
+<tr>
+<td>All</td>
+<td>428,103</td>
+<td>417,693</td>
+</tr>
+<tr>
+<td>Common</td>
+<td>68,992</td>
+<td>68,447</td>
+</tr>
+<tr>
+<td>Pathogenic</td>
+<td>4,337</td>
+<td>4,206</td>
+</tr>
+<tr>
+<td>Somatic</td>
+<td>15,103</td>
+<td>15,077</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Insertions</h3>
+<table>
+<tbody>
+<tr>
+<th>Type</th>
+<th>GRCh37</th>
+<th>GRCh38</th>
+<tr>
+<td>All</td>
+<td>1,322,707</td>
+<td>1,327,375</td>
+</tr>
+<tr>
+<td>Common</td>
+<td>138,871</td>
+<td>138,737</td>
+</tr>
+<tr>
+<td>Pathogenic</td>
+<td>71</td>
+<td>71</td>
+</tr>
+<tr>
+<td>Somatic</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+
 
 
 ## Description of NR SV data files:
@@ -303,67 +333,3 @@ Thanks for your interest in the dbVar human "non-redundant structural variations
 data files from NCBI.
 
 Please check back soon for further updates.
-
-## Counts for October 20, 2019
-
-
-### Deletions:
-#### Redundant:
-| | GRCh37 | GRCh38 |
-| - | ----- | ----- |
-| alu_deletion | 1,732,106 | 1,720,422 |
-| copy_number_loss | 2,545,688 | 2,513,755 |
-| deletion | 13,554,708 | 13,469,111 |
-| herv_deletion | 726 | 744 |
-| line1_deletion | 88,830 | 88,981 |
-| sva_deletion | 16,943 | 16,951 |
-| Total Deletions | 17,939,001 | 17,809,964 |
-
-#### Non-Redundant:
-| | GRCh37 | GRCh38 |
-| - | ----- | ----- |
-| All-NR-Deletions | 2,565,798 | 2,553,342 |
-| Common-NR-Deletions | 256,543 | 255,992 |
-| Pathogenic-NR-Deletions | 11,296 | 11,105 |
-| Somatic-NR-Deletions | 23,360 | 23,319 |
-
-
-
-### Duplications:
-#### Redundant:
-| | GRCh37 | GRCh38 |
-| - | ----- | ----- |
-| copy_number_gain | 1,334,046 | 1,304,135 |
-| copy_number_variation | 1,176,289 | 1,136,659 |
-| duplication | 2,024,437 | 2,002,034 |
-| tandem_duplication | 11,510 | 11,490 |
-| Total Duplications | 4,546,282 | 4,454,318 |
-
-#### Non-Redundant:
-| | GRCh37 | GRCh38 |
-| - | ----- | ----- |
-| All-NR-Duplications | 428,103 | 417,693 |
-| Common-NR-Duplications | 68,992 | 68,447 |
-| Pathogenic-NR-Duplications | 4,337 | 4,206 |
-| Somatic-NR-Duplications | 15,103 | 15,077 |
-
-### Insertions:
-#### Redundant:
-| | GRCh37 | GRCh38 |
-| - | ----- | ----- |
-| alu_insertion | 2,361,274 | 2,356,644 |
-| herv_insertion | 473 | 475 |
-| insertion | 1,537,652 | 1,548,184 |
-| line1_insertion | 337,777 | 337,701 |
-| mobile_element_insertion | 92,462 | 92,476 |
-| novel_sequence_insertion | 4,073 | 4,070 |
-| sva_insertion | 139,394 | 139,356 |
-| Total Insertions | 4,473,105 | 4,478,906 |
-
-#### Non-Redundant:
-| | GRCh37 | GRCh38 |
-| - | ----- | ----- |
-| All-NR-Insertions | 1,322,707 | 1,327,375 |
-| Common-NR-Insertions | 138,871 | 138,737 |
-| Pathogenic-NR-Insertions | 71 | 71 |
-| Somatic-NR-Insertions | 0 | 0 |
