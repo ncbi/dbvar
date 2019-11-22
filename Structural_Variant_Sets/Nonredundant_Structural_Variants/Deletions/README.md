@@ -1,27 +1,61 @@
-# dbVar non-redundant structural variation datasets for Deletion variants
+# dbVar Human Nonredundant Structural Variants – Deletions
 
-## Work in progress – Data subject to change
+### Work in progress - data subject to change
 
-## Last updated:
-08/24/18
+## Documentation updated:
+11/22/2019
 
-## FTP Link:
+## Data Summary
+
+<h3>
+Deletions</h3>
+<table>
+<tbody>
+<tr>
+<th>Type</th>
+<th>GRCh37</th>
+<th>GRCh38</th>
+<tr>
+<td>alu_deletion</td>
+<td>1,732,106</td>
+<td>1,720,422</td>
+</tr>
+<tr>
+<td>copy_number_loss</td>
+<td>2,545,688</td>
+<td>2,513,755</td>
+</tr>
+<tr>
+<td>deletion</td>
+<td>13,554,708</td>
+<td>13,469,111</td>
+</tr>
+<tr>
+<td>herv_deletion</td>
+<td>726</td>
+<td>744</td>
+</tr>
+<tr>
+<td>line1_deletion</td>
+<td>88,830</td>
+<td>88,981</td>
+</tr>
+<tr>
+<td>sva_deletion</td>
+<td>16,943</td>
+<td>16,951</td>
+</tr>
+<tr>
+<td>Total Deletions</td>
+<td>17,939,001</td>
+<td>17,809,964</td>
+</tr>
+</tbody>
+</table>
+
+All files are available in **bed**, **bedpe**, and **tsv** formats:
 
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/#github)
-
-# Introduction
-
-The non-redundant structural variants, "NR SVs", of type "deletions" are in these  
-files on the FTP site:
-
-&nbsp;&nbsp;&nbsp;&nbsp;__GRCh38.nr_deletions.tsv.gz__   
-&nbsp;&nbsp;&nbsp;&nbsp;__GRCh37.nr_deletions.tsv.gz__  
-&nbsp;&nbsp;&nbsp;&nbsp;__GRCh38.nr_deletions.acmg_genes.tsv.gz__  
-&nbsp;&nbsp;&nbsp;&nbsp;__GRCh37.nr_deletions.acmg_genes.tsv.gz__  
-&nbsp;&nbsp;&nbsp;&nbsp;__GRCh38.nr_deletions.bed.gz__  
-&nbsp;&nbsp;&nbsp;&nbsp;__GRCh37.nr_deletions.bed.gz__  
-&nbsp;&nbsp;&nbsp;&nbsp;__GRCh38.nr_deletions.bedpe.gz__  
-&nbsp;&nbsp;&nbsp;&nbsp;__GRCh37.nr_deletions.bedpe.gz__  
 
 The variant types in the NR "deletions" files are:
 
@@ -32,9 +66,9 @@ The variant types in the NR "deletions" files are:
 * line1_deletion
 * sva_deletion
 
-# Records in the NR SV deletions files
+## Records in the NR SV deletions files
 
-## Please note:
+### Please note:
 
 * The fields type, method, analysis, platform, variant, study, clinical_significance, clinvar_accession, and gene may contain multiple values.  
 * Each of the values is associated with one or more calls found in the variant field.
