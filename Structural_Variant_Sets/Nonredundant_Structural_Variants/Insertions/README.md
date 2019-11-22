@@ -6,6 +6,7 @@ Documentation updated:  11/22/2019
 
 ## Data Summary
 
+<h3>
 Insertions</h3>
 <table>
 <tbody>
@@ -14,47 +15,28 @@ Insertions</h3>
 <th>GRCh37</th>
 <th>GRCh38</th>
 <tr>
-<td>alu_insertion</td>
-<td>2,361,274</td>
-<td>2,356,644</td>
+<td>All</td>
+<td>1,322,707</td>
+<td>1,327,375</td>
 </tr>
 <tr>
-<td>herv_insertion</td>
-<td>473</td>
-<td>475</td>
+<td>Common</td>
+<td>138,871</td>
+<td>138,737</td>
 </tr>
 <tr>
-<td>insertion</td>
-<td>1,537,652</td>
-<td>1,548,184</td>
+<td>Pathogenic</td>
+<td>71</td>
+<td>71</td>
 </tr>
 <tr>
-<td>line1_insertion</td>
-<td>337,777</td>
-<td>337,701</td>
-</tr>
-<tr>
-<td>mobile_element_insertion</td>
-<td>92,462</td>
-<td>92,476</td>
-</tr>
-<tr>
-<td>novel_sequence_insertion</td>
-<td>4,073</td>
-<td>4,070</td>
-</tr>
-<tr>
-<td>sva_insertion</td>
-<td>139,394</td>
-<td>139,356</td>
-</tr>
-<tr>
-<td>Total Insertions</td>
-<td>4,473,105</td>
-<td>4,478,906</td>
+<td>Somatic</td>
+<td>0</td>
+<td>0</td>
 </tr>
 </tbody>
 </table>
+
 
 All files are available in **bed**, **bedpe**, and **tsv** formats:
 
