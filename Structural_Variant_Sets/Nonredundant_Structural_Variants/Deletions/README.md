@@ -15,42 +15,28 @@ Deletions</h3>
 <th>GRCh37</th>
 <th>GRCh38</th>
 <tr>
-<td>alu_deletion</td>
-<td>1,732,106</td>
-<td>1,720,422</td>
+<td>All</td>
+<td>2,565,798</td>
+<td>2,553,342</td>
 </tr>
 <tr>
-<td>copy_number_loss</td>
-<td>2,545,688</td>
-<td>2,513,755</td>
+<td>Common</td>
+<td>256,543</td>
+<td>255,992</td>
 </tr>
 <tr>
-<td>deletion</td>
-<td>13,554,708</td>
-<td>13,469,111</td>
+<td>Pathogenic</td>
+<td>11,296</td>
+<td>11,105</td>
 </tr>
 <tr>
-<td>herv_deletion</td>
-<td>726</td>
-<td>744</td>
-</tr>
-<tr>
-<td>line1_deletion</td>
-<td>88,830</td>
-<td>88,981</td>
-</tr>
-<tr>
-<td>sva_deletion</td>
-<td>16,943</td>
-<td>16,951</td>
-</tr>
-<tr>
-<td>Total Deletions</td>
-<td>17,939,001</td>
-<td>17,809,964</td>
+<td>Somatic</td>
+<td>23,360</td>
+<td>23,319</td>
 </tr>
 </tbody>
 </table>
+<h3>
 
 All files are available in **bed**, **bedpe**, and **tsv** formats:
 
