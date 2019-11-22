@@ -6,6 +6,7 @@ Documentation updated:  11/22/2019
 
 ## Data Summary
 
+<h3>
 Duplications</h3>
 <table>
 <tbody>
@@ -14,29 +15,24 @@ Duplications</h3>
 <th>GRCh37</th>
 <th>GRCh38</th>
 <tr>
-<td>copy_number_gain</td>
-<td>1,334,046</td>
-<td>1,304,135</td>
+<td>All</td>
+<td>428,103</td>
+<td>417,693</td>
 </tr>
 <tr>
-<td>copy_number_variation</td>
-<td>1,176,289</td>
-<td>1,136,659</td>
+<td>Common</td>
+<td>68,992</td>
+<td>68,447</td>
 </tr>
 <tr>
-<td>duplication</td>
-<td>2,024,437</td>
-<td>2,002,034</td>
+<td>Pathogenic</td>
+<td>4,337</td>
+<td>4,206</td>
 </tr>
 <tr>
-<td>tandem_duplication</td>
-<td>11,510</td>
-<td>11,490</td>
-</tr>
-<tr>
-<td>Total Duplications</td>
-<td>4,546,282</td>
-<td>4,454,318</td>
+<td>Somatic</td>
+<td>15,103</td>
+<td>15,077</td>
 </tr>
 </tbody>
 </table>
