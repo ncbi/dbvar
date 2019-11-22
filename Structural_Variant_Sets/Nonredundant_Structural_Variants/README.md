@@ -131,37 +131,6 @@ on exact overlap of coordinates, not on partial overlaps.
    * NR SV files in .bed format
    * NR SV files in .bedpe format
 
-## Variant types
-
-Variant types are grouped into three "aggregation types".  
-
-* deletions
-* duplications
-* insertions
-
-The variant types in each of the three "aggregation types" are:
-
-* "deletions" include:
-   * alu_deletion
-   * copy_number_loss
-   * deletion
-   * herv_deletion
-   * line1_deletion
-   * sva_deletion
-
-* "duplications" include:
-   * copy_number_gain
-   * copy_number_variation
-   * duplication
-   * tandem_duplication
-
-* "insertions" include:
-   * alu_insertion
-   * insertion
-   * line1_insertion
-   * mobile_element_insertion
-   * novel_sequence_insertion
-   * sva_insertion
 
 
 
