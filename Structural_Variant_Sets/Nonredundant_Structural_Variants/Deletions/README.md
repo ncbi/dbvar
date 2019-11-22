@@ -36,7 +36,7 @@ Deletions</h3>
 </tr>
 </tbody>
 </table>
-<h3>
+
 
 All files are available in **bed**, **bedpe**, and **tsv** formats:
 
