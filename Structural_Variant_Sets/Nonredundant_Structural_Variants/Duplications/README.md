@@ -1,27 +1,50 @@
-# dbVar non-redundant structural variation datasets for Duplication variants
+# dbVar Human Nonredundant Structural Variants – Duplications
 
-## Work in progress -- Data subject to change
+### Work in progress - data subject to change
 
-## Last updated:
-08/24/18
+## Documentation updated:
+11/22/2019
 
-## FTP Link:
+## Data Summary
+
+Duplications</h3>
+<table>
+<tbody>
+<tr>
+<th>Type</th>
+<th>GRCh37</th>
+<th>GRCh38</th>
+<tr>
+<td>copy_number_gain</td>
+<td>1,334,046</td>
+<td>1,304,135</td>
+</tr>
+<tr>
+<td>copy_number_variation</td>
+<td>1,176,289</td>
+<td>1,136,659</td>
+</tr>
+<tr>
+<td>duplication</td>
+<td>2,024,437</td>
+<td>2,002,034</td>
+</tr>
+<tr>
+<td>tandem_duplication</td>
+<td>11,510</td>
+<td>11,490</td>
+</tr>
+<tr>
+<td>Total Duplications</td>
+<td>4,546,282</td>
+<td>4,454,318</td>
+</tr>
+</tbody>
+</table>
+
+All files are available in **bed**, **bedpe**, and **tsv** formats:
 
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications/#github)
-
-# Introduction
-
-The non-redundant structural variants, "NR SVs", of type "duplication" are in
-these files on the FTP site:
-
-&nbsp;&nbsp;&nbsp;&nbsp;__GRCh38.nr_duplications.tsv.gz__   
-&nbsp;&nbsp;&nbsp;&nbsp;__GRCh37.nr_duplications.tsv.gz__   
-&nbsp;&nbsp;&nbsp;&nbsp;__GRCh38.nr_duplications.acmg_genes.tsv.gz__   
-&nbsp;&nbsp;&nbsp;&nbsp;__GRCh37.nr_duplications.acmg_genes.tsv.gz__   
-&nbsp;&nbsp;&nbsp;&nbsp;__GRCh38.nr_duplications.bed.gz__   
-&nbsp;&nbsp;&nbsp;&nbsp;__GRCh37.nr_duplications.bed.gz__   
-&nbsp;&nbsp;&nbsp;&nbsp;__GRCh38.nr_duplications.bedpe.gz__   
-&nbsp;&nbsp;&nbsp;&nbsp;__GRCh37.nr_duplications.bedpe.gz__   
 
 The variant types in the NR "duplications" files are:
 
@@ -30,9 +53,9 @@ The variant types in the NR "duplications" files are:
 * duplication
 * tandem_duplication
 
-# Records in the NR SV duplications files
+## Records in the NR SV duplications files
 
-## Please note:
+### Please note:
 
 * The fields type, method, analysis, platform, variant, study, clinical_significance, clinvar_accession, and gene may contain multiple values.
 * Each of the values is associated with one or more calls found in the variant field.
