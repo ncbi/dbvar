@@ -42,7 +42,14 @@ All files are available in **bed**, **bedpe**, and **tsv** formats:
 
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions/#github)
 
+The variant types in the NR "insertions" files are:
 
+ * alu_insertion
+ * insertion
+ * line1_insertion
+ * mobile_element_insertion
+ * novel_sequence_insertion
+ * sva_insertion
 
 ## Records in NR SV insertions files
 
