@@ -56,14 +56,6 @@ All files are available in **bed**, **bedpe**, and **tsv** formats:
 
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/deletions/#github)
 
-The variant types in the NR "deletions" files are:
-
-* alu_deletion
-* copy_number_loss
-* deletion
-* herv_deletion
-* line1_deletion
-* sva_deletion
 
 ## Records in the NR SV deletions files
 
