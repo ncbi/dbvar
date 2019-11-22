@@ -1,27 +1,65 @@
-# dbVar non-redundant structural variation datasets for Insertion variants
+# dbVar Human Nonredundant Structural Variants – Insertions
 
-## Work in progress – Data subject to change
+### Work in progress - data subject to change
 
-## Last updated:
-08/24/18
+## Documentation updated:
+11/22/2019
 
-## Link to FTP site:
+## Data Summary
+
+Insertions</h3>
+<table>
+<tbody>
+<tr>
+<th>Type</th>
+<th>GRCh37</th>
+<th>GRCh38</th>
+<tr>
+<td>alu_insertion</td>
+<td>2,361,274</td>
+<td>2,356,644</td>
+</tr>
+<tr>
+<td>herv_insertion</td>
+<td>473</td>
+<td>475</td>
+</tr>
+<tr>
+<td>insertion</td>
+<td>1,537,652</td>
+<td>1,548,184</td>
+</tr>
+<tr>
+<td>line1_insertion</td>
+<td>337,777</td>
+<td>337,701</td>
+</tr>
+<tr>
+<td>mobile_element_insertion</td>
+<td>92,462</td>
+<td>92,476</td>
+</tr>
+<tr>
+<td>novel_sequence_insertion</td>
+<td>4,073</td>
+<td>4,070</td>
+</tr>
+<tr>
+<td>sva_insertion</td>
+<td>139,394</td>
+<td>139,356</td>
+</tr>
+<tr>
+<td>Total Insertions</td>
+<td>4,473,105</td>
+<td>4,478,906</td>
+</tr>
+</tbody>
+</table>
+
+All files are available in **bed**, **bedpe**, and **tsv** formats:
 
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/insertions/#github)
-
-# Introduction
-
-The non-redundant structural variants, "NR SVs", of type "insertion" are in these
-files on the FTP site:
-
-&nbsp;&nbsp;&nbsp;&nbsp;__GRCh38.nr_insertions.tsv.gz__  
-&nbsp;&nbsp;&nbsp;&nbsp;__GRCh37.nr_insertions.tsv.gz__  
-&nbsp;&nbsp;&nbsp;&nbsp;__GRCh38.nr_insertions.acmg_genes.tsv.gz__  
-&nbsp;&nbsp;&nbsp;&nbsp;__GRCh37.nr_insertions.acmg_genes.tsv.gz__  
-&nbsp;&nbsp;&nbsp;&nbsp;__GRCh38.nr_insertions.bed.gz__  
-&nbsp;&nbsp;&nbsp;&nbsp;__GRCh37.nr_insertions.bed.gz__  
-&nbsp;&nbsp;&nbsp;&nbsp;__GRCh38.nr_insertions.bedpe.gz__  
-&nbsp;&nbsp;&nbsp;&nbsp;__GRCh37.nr_insertions.bedpe.gz__  
 
 The variant types in the NR "insertions" files are:
 
@@ -33,9 +71,9 @@ The variant types in the NR "insertions" files are:
 * sva_insertion
 
 
-# Records in NR SV insertions files
+## Records in NR SV insertions files
 
-Please note:
+### Please note:
 
 * The fields type, method, analysis, platform, variant, study, clinical_significance, clinvar_accession, and gene may contain multiple values.
 * Each of the values is associated with one or more calls found in the variant field.
