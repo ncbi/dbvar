@@ -2,8 +2,7 @@
 
 ### Work in progress - data subject to change
 
-## Documentation updated:
-11/22/2019
+Documentation updated:  11/22/2019
 
 ## Data Summary
 
