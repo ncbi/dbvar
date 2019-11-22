@@ -45,12 +45,6 @@ All files are available in **bed**, **bedpe**, and **tsv** formats:
 
 [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications/](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/duplications/#github)
 
-The variant types in the NR "duplications" files are:
-
-* copy_number_gain
-* copy_number_variation
-* duplication
-* tandem_duplication
 
 ## Records in the NR SV duplications files
 
