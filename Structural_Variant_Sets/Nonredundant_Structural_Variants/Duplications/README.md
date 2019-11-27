@@ -11,18 +11,18 @@ Duplications</h3>
 <table>
 <tbody>
 <tr>
-<th>Type</th>
+<th>Type and FTP Directory</th>
 <th>GRCh37</th>
 <th>GRCh38</th>
 <tr>
 <td>All</td>
-<td>428,103</td>
-<td>417,693</td>
+<td>418,648</td>
+<td>408,362</td>
 </tr>
 <tr>
 <td>Common</td>
-<td>68,992</td>
-<td>68,447</td>
+<td>59,576</td>
+<td>59,150</td>
 </tr>
 <tr>
 <td>Pathogenic</td>
