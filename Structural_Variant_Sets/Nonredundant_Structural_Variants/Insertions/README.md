@@ -2,7 +2,7 @@
 
 ### Work in progress - data subject to change
 
-Documentation updated:  11/22/2019
+Documentation updated:  11/27/2019
 
 ## Data Summary
 
@@ -11,18 +11,18 @@ Insertions</h3>
 <table>
 <tbody>
 <tr>
-<th>Type</th>
+<th>Type and FTP Directory</th>
 <th>GRCh37</th>
 <th>GRCh38</th>
 <tr>
 <td>All</td>
-<td>1,322,707</td>
-<td>1,327,375</td>
+<td>1,305,137</td>
+<td>1,309,867</td>
 </tr>
 <tr>
 <td>Common</td>
-<td>138,871</td>
-<td>138,737</td>
+<td>124,902</td>
+<td>124,833</td>
 </tr>
 <tr>
 <td>Pathogenic</td>
