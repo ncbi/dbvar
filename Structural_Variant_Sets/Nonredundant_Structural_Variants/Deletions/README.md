@@ -11,18 +11,18 @@ Deletions</h3>
 <table>
 <tbody>
 <tr>
-<th>Type</th>
+<th>Type and FTP Directory</th>
 <th>GRCh37</th>
 <th>GRCh38</th>
 <tr>
 <td>All</td>
-<td>2,565,798</td>
-<td>2,553,342</td>
+<td>2,520,481</td>
+<td>2,508,155</td>
 </tr>
 <tr>
 <td>Common</td>
-<td>256,543</td>
-<td>255,992</td>
+<td>211,888</td>
+<td>211,465</td>
 </tr>
 <tr>
 <td>Pathogenic</td>
@@ -36,7 +36,6 @@ Deletions</h3>
 </tr>
 </tbody>
 </table>
-
 
 All files are available in **bed**, **bedpe**, and **tsv** formats:
 
