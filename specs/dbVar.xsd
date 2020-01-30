@@ -282,6 +282,7 @@
             <xs:enumeration value="BAC aCGH"/>
             <xs:enumeration value="Curated"/>
             <xs:enumeration value="Digital array"/>
+            <xs:enumeration value="ddPCR"/>
             <xs:enumeration value="FISH"/>
             <xs:enumeration value="Gene expression array"/>
             <xs:enumeration value="Karyotyping"/>
