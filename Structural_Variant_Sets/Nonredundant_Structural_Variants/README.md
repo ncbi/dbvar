@@ -2,7 +2,7 @@
 
 ### Work in progress - data subject to change
 
-Documentation updated:  11/27/2019
+Documentation updated:  04/22/2020
 
 ## Data Summary
 
@@ -19,8 +19,8 @@ Deletions</h3>
 <th>GRCh38</th>
 <tr>
 <td>All</td>
-<td>2,520,481</td>
-<td>2,508,155</td>
+<td>2,544,938</td>
+<td>2,532,290</td>
 </tr>
 <tr>
 <td>Common</td>
@@ -29,13 +29,13 @@ Deletions</h3>
 </tr>
 <tr>
 <td>Pathogenic</td>
-<td>11,296</td>
-<td>11,105</td>
+<td>10,177</td>
+<td>9,977</td>
 </tr>
 <tr>
 <td>Somatic</td>
-<td>23,360</td>
-<td>23,319</td>
+<td>23,358</td>
+<td>23,317</td>
 </tr>
 </tbody>
 </table>
@@ -49,8 +49,8 @@ Duplications</h3>
 <th>GRCh38</th>
 <tr>
 <td>All</td>
-<td>418,648</td>
-<td>408,362</td>
+<td>435,739</td>
+<td>425,114</td>
 </tr>
 <tr>
 <td>Common</td>
@@ -59,13 +59,13 @@ Duplications</h3>
 </tr>
 <tr>
 <td>Pathogenic</td>
-<td>4,337</td>
-<td>4,206</td>
+<td>3,770</td>
+<td>3,634</td>
 </tr>
 <tr>
 <td>Somatic</td>
-<td>15,103</td>
-<td>15,077</td>
+<td>15,102</td>
+<td>15,076</td>
 </tr>
 </tbody>
 </table>
@@ -79,8 +79,8 @@ Insertions</h3>
 <th>GRCh38</th>
 <tr>
 <td>All</td>
-<td>1,305,137</td>
-<td>1,309,867</td>
+<td>1,304,891</td>
+<td>1,309,621</td>
 </tr>
 <tr>
 <td>Common</td>
@@ -89,8 +89,8 @@ Insertions</h3>
 </tr>
 <tr>
 <td>Pathogenic</td>
-<td>71</td>
-<td>71</td>
+<td>4</td>
+<td>4</td>
 </tr>
 <tr>
 <td>Somatic</td>
