@@ -2,103 +2,14 @@
 
 ### Work in progress - data subject to change
 
-Documentation updated:  04/22/2020
+Documentation updated:  04/23/2020
 
 ## Data Summary
 
 
 See also [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt#github)
-
-<h3>
-Deletions</h3>
-<table>
-<tbody>
-<tr>
-<th>Type and FTP Directory</th>
-<th>GRCh37</th>
-<th>GRCh38</th>
-<tr>
-<td>All</td>
-<td>2,544,938</td>
-<td>2,532,290</td>
-</tr>
-<tr>
-<td>Common</td>
-<td>211,888</td>
-<td>211,465</td>
-</tr>
-<tr>
-<td>Pathogenic</td>
-<td>10,177</td>
-<td>9,977</td>
-</tr>
-<tr>
-<td>Somatic</td>
-<td>23,358</td>
-<td>23,317</td>
-</tr>
-</tbody>
-</table>
-<h3>
-Duplications</h3>
-<table>
-<tbody>
-<tr>
-<th>Type and FTP Directory</th>
-<th>GRCh37</th>
-<th>GRCh38</th>
-<tr>
-<td>All</td>
-<td>435,739</td>
-<td>425,114</td>
-</tr>
-<tr>
-<td>Common</td>
-<td>59,576</td>
-<td>59,150</td>
-</tr>
-<tr>
-<td>Pathogenic</td>
-<td>3,770</td>
-<td>3,634</td>
-</tr>
-<tr>
-<td>Somatic</td>
-<td>15,102</td>
-<td>15,076</td>
-</tr>
-</tbody>
-</table>
-<h3>
-Insertions</h3>
-<table>
-<tbody>
-<tr>
-<th>Type and FTP Directory</th>
-<th>GRCh37</th>
-<th>GRCh38</th>
-<tr>
-<td>All</td>
-<td>1,304,891</td>
-<td>1,309,621</td>
-</tr>
-<tr>
-<td>Common</td>
-<td>124,902</td>
-<td>124,833</td>
-</tr>
-<tr>
-<td>Pathogenic</td>
-<td>4</td>
-<td>4</td>
-</tr>
-<tr>
-<td>Somatic</td>
-<td>0</td>
-<td>0</td>
-</tr>
-</tbody>
-</table>
+ 
+{~nr_counts.inc~}
 
 All files are available in **bed**, **bedpe**, and **tsv** formats:
 
