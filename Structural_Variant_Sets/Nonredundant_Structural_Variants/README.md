@@ -9,7 +9,7 @@ Documentation updated:  04/23/2020
 
 See also [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt#github)
  
-{% include 'nr_counts.html' %}
+![nr_tools](nr_counts.html "nr_tools")
 
 All files are available in **bed**, **bedpe**, and **tsv** formats:
 
