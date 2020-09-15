@@ -1938,7 +1938,7 @@
                         </xs:documentation>
                 </xs:annotation>
             </xs:attribute>
-            <xs:attribute name="allele_frequency" type="xs:float">
+            <xs:attribute name="allele_frequency" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>From 1000 Genomes VCF spec: AF : allele frequency for each ALT allele in the same order as listed: use this when estimated from primary 
                         </xs:documentation>
