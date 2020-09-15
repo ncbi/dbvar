@@ -4,6 +4,6 @@
 ### directory layout
 
     .
-    +-- README.md 
+    +-- README.md
     +-- dbVar.xsd                             # dbVar database schema
     +-- dbVarSubmissionTemplate_v3.5.xlsx     # dbVar Submission Template (Excel)    
