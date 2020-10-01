@@ -10,7 +10,7 @@ Documentation updated:  04/23/2020
 See also [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt#github)
  
 FTP Directory: <a href="https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant">nonredundant</a><br />
-Last modified: Aug 25, 2020<br />
+Last modified: Sep 30, 2020<br />
 File types: bed, bedpe, tsv<br />
 <h3>
 Deletions</h3>
@@ -22,8 +22,8 @@ Deletions</h3>
 <th>GRCh38</th>
 <tr>
 <td>All</td>
-<td>2,547,991</td>
-<td>2,535,364</td>
+<td>2,556,105</td>
+<td>2,543,452</td>
 </tr>
 <tr>
 <td>Common</td>
@@ -32,8 +32,8 @@ Deletions</h3>
 </tr>
 <tr>
 <td>Pathogenic</td>
-<td>12,062</td>
-<td>11,894</td>
+<td>12,153</td>
+<td>11,985</td>
 </tr>
 <tr>
 <td>Somatic</td>
@@ -72,8 +72,8 @@ Duplications</h3>
 <th>GRCh38</th>
 <tr>
 <td>All</td>
-<td>438,660</td>
-<td>428,062</td>
+<td>442,612</td>
+<td>431,820</td>
 </tr>
 <tr>
 <td>Common</td>
@@ -82,13 +82,13 @@ Duplications</h3>
 </tr>
 <tr>
 <td>Pathogenic</td>
-<td>4,020</td>
-<td>3,892</td>
+<td>4,030</td>
+<td>3,902</td>
 </tr>
 <tr>
 <td>Somatic</td>
-<td>15,103</td>
-<td>15,077</td>
+<td>15,102</td>
+<td>15,076</td>
 </tr>
 <tr>
 <td>All-ACMG</td>
@@ -122,8 +122,8 @@ Insertions</h3>
 <th>GRCh38</th>
 <tr>
 <td>All</td>
-<td>1,305,927</td>
-<td>1,310,643</td>
+<td>1,305,934</td>
+<td>1,310,650</td>
 </tr>
 <tr>
 <td>Common</td>
