@@ -10,7 +10,7 @@ Documentation updated:  04/23/2020
 See also [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt#github)
  
 FTP Directory: <a href="https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant">nonredundant</a><br />
-Last modified: Oct 20, 2021<br />
+Last modified: Jun 10, 2022<br />
 File types: bed, bedpe, tsv<br />
 <h3>
 Deletions</h3>
@@ -22,8 +22,8 @@ Deletions</h3>
 <th>GRCh38</th>
 <tr>
 <td>All</td>
-<td>2,956,465</td>
-<td>2,955,331</td>
+<td>3,017,898</td>
+<td>3,018,525</td>
 </tr>
 <tr>
 <td>Common</td>
@@ -32,18 +32,18 @@ Deletions</h3>
 </tr>
 <tr>
 <td>Pathogenic</td>
-<td>14,670</td>
-<td>14,494</td>
+<td>17,143</td>
+<td>16,970</td>
 </tr>
 <tr>
 <td>Somatic</td>
-<td>23,363</td>
-<td>23,322</td>
+<td>23,365</td>
+<td>23,324</td>
 </tr>
 <tr>
 <td>All-ACMG</td>
-<td>9,760</td>
-<td>9,911</td>
+<td>10,198</td>
+<td>10,342</td>
 </tr>
 <tr>
 <td>Common-ACMG</td>
@@ -52,13 +52,13 @@ Deletions</h3>
 </tr>
 <tr>
 <td>Pathogenic-ACMG</td>
-<td>2,548</td>
-<td>2,550</td>
+<td>2,807</td>
+<td>2,808</td>
 </tr>
 <tr>
 <td>Somatic-ACMG</td>
-<td>967</td>
 <td>966</td>
+<td>965</td>
 </tr>
 </tbody>
 </table>
@@ -72,8 +72,8 @@ Duplications</h3>
 <th>GRCh38</th>
 <tr>
 <td>All</td>
-<td>649,730</td>
-<td>650,249</td>
+<td>658,170</td>
+<td>659,054</td>
 </tr>
 <tr>
 <td>Common</td>
@@ -82,18 +82,18 @@ Duplications</h3>
 </tr>
 <tr>
 <td>Pathogenic</td>
-<td>4,395</td>
-<td>4,256</td>
+<td>4,633</td>
+<td>4,509</td>
 </tr>
 <tr>
 <td>Somatic</td>
-<td>15,103</td>
-<td>15,077</td>
+<td>15,105</td>
+<td>15,079</td>
 </tr>
 <tr>
 <td>All-ACMG</td>
-<td>4,372</td>
-<td>4,458</td>
+<td>4,602</td>
+<td>4,676</td>
 </tr>
 <tr>
 <td>Common-ACMG</td>
@@ -102,8 +102,8 @@ Duplications</h3>
 </tr>
 <tr>
 <td>Pathogenic-ACMG</td>
-<td>881</td>
-<td>880</td>
+<td>900</td>
+<td>899</td>
 </tr>
 <tr>
 <td>Somatic-ACMG</td>
@@ -122,8 +122,8 @@ Insertions</h3>
 <th>GRCh38</th>
 <tr>
 <td>All</td>
-<td>1,645,876</td>
-<td>1,656,319</td>
+<td>1,667,966</td>
+<td>1,678,776</td>
 </tr>
 <tr>
 <td>Common</td>
@@ -132,18 +132,13 @@ Insertions</h3>
 </tr>
 <tr>
 <td>Pathogenic</td>
-<td>77</td>
-<td>77</td>
-</tr>
-<tr>
-<td>Somatic</td>
-<td>2</td>
-<td>2</td>
+<td>177</td>
+<td>177</td>
 </tr>
 <tr>
 <td>All-ACMG</td>
-<td>3,344</td>
-<td>3,420</td>
+<td>3,413</td>
+<td>3,489</td>
 </tr>
 <tr>
 <td>Common-ACMG</td>
@@ -152,13 +147,8 @@ Insertions</h3>
 </tr>
 <tr>
 <td>Pathogenic-ACMG</td>
-<td>30</td>
-<td>30</td>
-</tr>
-<tr>
-<td>Somatic-ACMG</td>
-<td>1</td>
-<td>1</td>
+<td>55</td>
+<td>55</td>
 </tr>
 </tbody>
 </table>
