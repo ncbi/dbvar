@@ -10,7 +10,7 @@ Documentation updated:  04/23/2020
 See also [https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt](https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant/release_notes/NR_stats.latest.txt#github)
  
 FTP Directory: <a href="https://ftp.ncbi.nlm.nih.gov/pub/dbVar/sandbox/sv_datasets/nonredundant">nonredundant</a><br />
-Last modified: Jun 10, 2022<br />
+Last modified: Jul 5, 2022<br />
 File types: bed, bedpe, tsv<br />
 <h3>
 Deletions</h3>
@@ -22,8 +22,8 @@ Deletions</h3>
 <th>GRCh38</th>
 <tr>
 <td>All</td>
-<td>3,017,898</td>
-<td>3,018,525</td>
+<td>1,944,161</td>
+<td>1,944,525</td>
 </tr>
 <tr>
 <td>Common</td>
@@ -32,8 +32,8 @@ Deletions</h3>
 </tr>
 <tr>
 <td>Pathogenic</td>
-<td>17,143</td>
-<td>16,970</td>
+<td>17,269</td>
+<td>17,098</td>
 </tr>
 <tr>
 <td>Somatic</td>
@@ -42,8 +42,8 @@ Deletions</h3>
 </tr>
 <tr>
 <td>All-ACMG</td>
-<td>10,198</td>
-<td>10,342</td>
+<td>5,820</td>
+<td>5,831</td>
 </tr>
 <tr>
 <td>Common-ACMG</td>
@@ -52,8 +52,8 @@ Deletions</h3>
 </tr>
 <tr>
 <td>Pathogenic-ACMG</td>
-<td>2,807</td>
-<td>2,808</td>
+<td>2,830</td>
+<td>2,831</td>
 </tr>
 <tr>
 <td>Somatic-ACMG</td>
@@ -72,8 +72,8 @@ Duplications</h3>
 <th>GRCh38</th>
 <tr>
 <td>All</td>
-<td>658,170</td>
-<td>659,054</td>
+<td>658,200</td>
+<td>659,088</td>
 </tr>
 <tr>
 <td>Common</td>
@@ -82,8 +82,8 @@ Duplications</h3>
 </tr>
 <tr>
 <td>Pathogenic</td>
-<td>4,633</td>
-<td>4,509</td>
+<td>4,646</td>
+<td>4,523</td>
 </tr>
 <tr>
 <td>Somatic</td>
@@ -92,8 +92,8 @@ Duplications</h3>
 </tr>
 <tr>
 <td>All-ACMG</td>
-<td>4,602</td>
-<td>4,676</td>
+<td>4,607</td>
+<td>4,681</td>
 </tr>
 <tr>
 <td>Common-ACMG</td>
@@ -102,8 +102,8 @@ Duplications</h3>
 </tr>
 <tr>
 <td>Pathogenic-ACMG</td>
-<td>900</td>
-<td>899</td>
+<td>903</td>
+<td>902</td>
 </tr>
 <tr>
 <td>Somatic-ACMG</td>
@@ -122,8 +122,8 @@ Insertions</h3>
 <th>GRCh38</th>
 <tr>
 <td>All</td>
-<td>1,667,966</td>
-<td>1,678,776</td>
+<td>1,667,967</td>
+<td>1,678,777</td>
 </tr>
 <tr>
 <td>Common</td>
@@ -132,8 +132,8 @@ Insertions</h3>
 </tr>
 <tr>
 <td>Pathogenic</td>
-<td>177</td>
-<td>177</td>
+<td>178</td>
+<td>178</td>
 </tr>
 <tr>
 <td>All-ACMG</td>
