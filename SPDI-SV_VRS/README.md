@@ -1,1 +1,1 @@
-# VRS/SPDI and the SPDI-SV Specification
+# VRS/SPDI and the SPDIv2 Specification
